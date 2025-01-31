@@ -1,7 +1,10 @@
 # Dependencies
 node_modules/
-/.pnp
+.pnp
 .pnp.js
+
+# Ignore all files in node_modules
+node_modules/**
 
 # Testing
 /coverage
