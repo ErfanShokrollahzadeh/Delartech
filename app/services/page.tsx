@@ -84,7 +84,7 @@ export default function Services() {
     : serviceCategories.flatMap(cat => cat.services);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-zinc-900 to-black pt-32"></main>
+    <main className="min-h-screen bg-gradient-to-b from-zinc-900 to-black pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
@@ -133,7 +133,7 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="bg-zinc-800/50 rounded-2xl p-6 hover:bg-zinc-800/70 transition-colors"
-            ></motion.div>
+            >
               <h3 className="text-xl font-semibold text-white mb-4">{service.name}</h3>
               <p className="text-gray-400 mb-4">{service.description}</p>
               <div className="flex flex-wrap gap-2">
