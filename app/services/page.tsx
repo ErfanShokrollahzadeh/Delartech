@@ -6,7 +6,8 @@ import Link from "next/link";
 import { 
   Radio, CircuitBoard, Cpu, 
   Network, Settings, Server,
-  Antenna, Waves, Shield
+  Antenna, Waves, Shield,
+  Book
 } from "lucide-react";
 
 export default function Services() {
@@ -63,6 +64,97 @@ export default function Services() {
       areas: ["Technology Strategy", "System Optimization", "Performance Analysis"]
     }
   ];
+
+  const advancedServices = [
+    {
+      title: "RF System Design & Integration",
+      image: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?q=80&w=1000",
+      categories: [
+        {
+          name: "Circuit Design",
+          topics: [
+            "Power Amplifiers & LNAs",
+            "RF Mixers & Filters",
+            "Impedance Matching Networks",
+            "RF Front-end Components"
+          ],
+          resources: [
+            "RF Circuit Design by Chris Bowick",
+            "Analog Devices RF Design Guide",
+            "IEEE Xplore Technical Papers",
+            "Keysight RF Webinars"
+          ]
+        },
+        {
+          name: "Signal Integrity",
+          topics: [
+            "High-Speed PCB Design",
+            "Power Distribution",
+            "EMC Compliance",
+            "Signal Routing Optimization"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Wireless Communications",
+      image: "https://images.unsplash.com/photo-1451187863213-d1bcbaae3fa3?q=80&w=1000",
+      categories: [
+        {
+          name: "5G/6G Technologies",
+          topics: [
+            "MIMO Systems Design",
+            "Beamforming Solutions",
+            "Network Slicing",
+            "O-RAN Architecture"
+          ],
+          resources: [
+            "3GPP Technical Specifications",
+            "O-RAN Alliance Documentation",
+            "Wireless Communications by Rappaport",
+            "Nokia/Ericsson White Papers"
+          ]
+        }
+      ]
+    }
+  ];
+
+  const technicalResources = {
+    books: [
+      {
+        title: "RF Circuit Design",
+        author: "Chris Bowick",
+        topics: ["Power Amplifiers", "Impedance Matching", "RF Components"]
+      },
+      {
+        title: "Antenna Theory: Analysis and Design",
+        author: "Constantine Balanis",
+        topics: ["Antenna Design", "Radiation Patterns", "MIMO Systems"]
+      },
+      {
+        title: "High-Speed Digital Design",
+        author: "Howard Johnson",
+        topics: ["Signal Integrity", "PCB Layout", "Power Distribution"]
+      }
+    ],
+    tools: [
+      {
+        name: "ANSYS HFSS",
+        category: "EM Simulation",
+        image: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?q=80&w=1000"
+      },
+      {
+        name: "Altium Designer",
+        category: "PCB Design",
+        image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=1000"
+      },
+      {
+        name: "Keysight ADS",
+        category: "RF Design",
+        image: "https://images.unsplash.com/photo-1451187863213-d1bcbaae3fa3?q=80&w=1000"
+      }
+    ]
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
@@ -136,6 +228,88 @@ export default function Services() {
                       </span>
                     ))}
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Advanced Technical Services */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Advanced Technical Services
+          </h2>
+          <div className="space-y-12">
+            {advancedServices.map((service, index) => (
+              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl overflow-hidden">
+                <div className="relative h-64">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-black/60">
+                    <div className="p-8">
+                      <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-8 grid md:grid-cols-2 gap-8">
+                  {service.categories.map((category, i) => (
+                    <div key={i}>
+                      <h4 className="text-xl font-semibold text-green-400 mb-4">{category.name}</h4>
+                      <ul className="space-y-2 mb-6">
+                        {category.topics.map((topic, j) => (
+                          <li key={j} className="text-gray-300 flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+                            {topic}
+                          </li>
+                        ))}
+                      </ul>
+                      {category.resources && (
+                        <div className="mt-4">
+                          <h5 className="text-white mb-2">Recommended Resources:</h5>
+                          <ul className="space-y-2">
+                            {category.resources.map((resource, k) => (
+                              <li key={k} className="text-gray-400 flex items-center gap-2">
+                                <Book className="w-4 h-4 text-green-500" />
+                                {resource}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Technical Resources */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Technical Resources & Tools
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {technicalResources.tools.map((tool, index) => (
+              <div key={index} className="group relative rounded-2xl overflow-hidden">
+                <div className="absolute inset-0">
+                  <Image
+                    src={tool.image}
+                    alt={tool.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70" />
+                </div>
+                <div className="relative p-8">
+                  <h3 className="text-xl font-semibold text-white mb-2">{tool.name}</h3>
+                  <p className="text-green-400">{tool.category}</p>
                 </div>
               </div>
             ))}
