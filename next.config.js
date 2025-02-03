@@ -26,6 +26,11 @@ const nextConfig = {
       { module: /node_modules\/node-fetch\/lib\/index\.js/ },
       { module: /node_modules\/punycode\/punycode\.js/ },
     ];
+    // Add this to handle local images
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|svg|webp)$/i,
+      type: 'asset/resource',
+    });
     return config;
   },
   // Improved process handling

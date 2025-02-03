@@ -8,35 +8,35 @@ import Link from "next/link";
 export default function People() {
   const team = [
     {
-      name: "David Chen",
-      role: "Creative Director",
-      bio: "10+ years of experience in creative direction and brand strategy.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
+      name: "Alireza Tarighat Mehrabani",
+      role: "Co-Founder and RF Systems Engineer",
+      bio: "RF systems and architectures, communications theory, analog and digital silicon design and productization, characterization tools/frameworks for wireless products, advanced millimeter-wave phased arrays, cellular radio chipsets, Wi-Fi, and 4G and 5G cellular technologies, wireless-industry contributions with 50+ IEEE journal and conference publications and 30+ patents",
+      image: "/images/img1.webp",  // Updated path to use local image
       social: {
         twitter: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/alireza-tarighat-mehrabani/",
         github: "#"
       }
     },
     {
-      name: "Sarah Johnson",
-      role: "Lead Designer",
-      bio: "Passionate about creating beautiful and intuitive user experiences.",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
+      name: "Bill Fujimoto",
+      role: "Automation Engineer at Delart Technology Services.",
+      bio: " Hands-on system level and HW platform RF Engineer with expert proficiency in RF system design, RFIC design, and RF system integration Skilled as Principal RF Engineer, with expertise in effective engaging with colleagues across multiple disciplines and departments, while managing reference design projects.Skilled laboratory practices with expertise in using RF test and measurement tools such as Vector Network Analyzers, Spectrum Analyzers, Vector Signal Analyzers, Call box Emulators, and Vector Signal Generators.",
+      image: "/images/img2.jpeg",
       social: {
         twitter: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/billfujimoto/",
         github: "#"
       }
     },
     {
-      name: "Michael Park",
-      role: "Technical Lead",
-      bio: "Full-stack developer with expertise in modern web technologies.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop",
+      name: "Payam Torab",
+      role: "Systems and software | Inviting software developers (all levels)",
+      bio: "Full-stack developer with expertise in modern web technologies. Communications systems, networking and control theory Join me to write a lot of software for wireless, especially Wi-Fi and Bluetooth. Need your help",
+      image: "/images/img3.jpeg",
       social: {
         twitter: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/ptorab/",
         github: "#"
       }
     },
