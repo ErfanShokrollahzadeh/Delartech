@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -193,6 +194,11 @@ export default function About() {
           </Button>
         </div>
       </div>
+      <footer className="bg-zinc-900"> {/* change from class to className */}
+        <div className="container"> {/* change from class to className */}
+          {/* ...rest of footer content... */}
+        </div>
+      </footer>
     </main>
   );
 }
