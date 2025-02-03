@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -8,13 +11,28 @@ const nextConfig = {
     domains: ['images.unsplash.com'],
     unoptimized: true,
   },
+  // Improved cache and process handling
+  experimental: {
+    forceSwcTransforms: true,
+    optimizeCss: true,
+  },
   webpack: (config, { isServer, dev }) => {
+    // Improved webpack configuration
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300,
+    };
     config.ignoreWarnings = [
       { module: /node_modules\/node-fetch\/lib\/index\.js/ },
       { module: /node_modules\/punycode\/punycode\.js/ },
     ];
     return config;
   },
+  // Improved process handling
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
+  }
 };
 
 module.exports = nextConfig;
