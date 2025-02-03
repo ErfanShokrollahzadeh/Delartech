@@ -4,7 +4,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    domains: ['images.unsplash.com'],
+    unoptimized: true,
+  },
   webpack: (config, { isServer, dev }) => {
     config.ignoreWarnings = [
       { module: /node_modules\/node-fetch\/lib\/index\.js/ },
