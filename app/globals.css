@@ -95,6 +95,17 @@
   100% { transform: translateY(0); }
 }
 
+@keyframes techFlow {
+  0% { transform: translateY(0) translateX(0); opacity: 0.4; }
+  50% { transform: translateY(-10px) translateX(10px); opacity: 0.6; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+}
+
+@keyframes circuitScan {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
 .pulse-bg {
   background: radial-gradient(circle at center, rgba(22, 163, 74, 0.2), transparent);
   animation: pulse 6s infinite;
@@ -111,5 +122,34 @@
     rgba(22, 163, 74, 0.1) 1px,
     transparent 1px,
     transparent 10px
+  );
+}
+
+.tech-grid {
+  background-image: 
+    linear-gradient(rgba(22, 163, 74, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 163, 74, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: circuitScan 20s linear infinite;
+}
+
+.glow-effect {
+  background: radial-gradient(
+    circle at center,
+    rgba(22, 163, 74, 0.2) 0%,
+    rgba(22, 163, 74, 0.1) 30%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  animation: techFlow 8s ease-in-out infinite;
+}
+
+.diagonal-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(22, 163, 74, 0.03) 0px,
+    rgba(22, 163, 74, 0.03) 1px,
+    transparent 1px,
+    transparent 15px
   );
 }
