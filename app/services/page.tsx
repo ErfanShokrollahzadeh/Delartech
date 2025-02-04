@@ -13,39 +13,75 @@ import {
 export default function Services() {
   const services = [
     {
-      icon: <Radio className="w-8 h-8 text-green-500" />,
-      title: "RF Design Services",
-      description: "Expert RF circuit design and optimization for wireless applications",
-      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900",
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      title: "RF Testing & Measurement",
+      description: "Comprehensive RF testing and validation services for wireless products",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800",
       features: [
-        "Power Amplifier Design",
-        "Low Noise Amplifiers",
-        "RF Filter Design",
-        "Impedance Matching"
+        "Network Analyzer Testing",
+        "Spectrum Analysis",
+        "Power Measurements",
+        "Signal Quality Testing"
       ]
     },
     {
-      icon: <Antenna className="w-8 h-8 text-green-500" />,
-      title: "Antenna Solutions",
-      description: "Custom antenna design and optimization for modern wireless systems",
+      icon: <Settings className="w-8 h-8 text-green-500" />,
+      title: "EMC/EMI Testing",
+      description: "Full electromagnetic compatibility and interference testing solutions",
       image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800",
       features: [
-        "MIMO Antenna Arrays",
-        "Beamforming Systems",
-        "mmWave Antennas",
-        "Custom Antenna Design"
+        "EMC Compliance Testing",
+        "EMI Measurements",
+        "Radiation Testing",
+        "Immunity Testing"
       ]
     },
     {
       icon: <CircuitBoard className="w-8 h-8 text-green-500" />,
-      title: "PCB Design",
-      description: "High-frequency PCB layout and signal integrity optimization",
+      title: "RF Performance Testing",
+      description: "Advanced performance characterization and validation",
       image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800",
       features: [
-        "RF PCB Layout",
-        "Signal Integrity",
-        "Thermal Management",
-        "EMC Compliance"
+        "Gain/Loss Testing",
+        "Phase Measurements",
+        "Noise Figure Analysis",
+        "Intermodulation Testing"
+      ]
+    },
+    {
+      icon: <Waves className="w-8 h-8 text-green-500" />,
+      title: "Wireless Protocol Testing",
+      description: "Protocol conformance and interoperability testing",
+      image: "https://images.unsplash.com/photo-1539683255143-73a6b838b106?q=80&w=800",
+      features: [
+        "5G Protocol Testing",
+        "Bluetooth Testing",
+        "WiFi Certification",
+        "IoT Protocol Testing"
+      ]
+    },
+    {
+      icon: <Antenna className="w-8 h-8 text-green-500" />,
+      title: "Antenna Testing",
+      description: "Comprehensive antenna characterization and measurement",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800",
+      features: [
+        "Radiation Pattern Testing",
+        "Gain Measurements",
+        "VSWR Testing",
+        "Impedance Analysis"
+      ]
+    },
+    {
+      icon: <Server className="w-8 h-8 text-green-500" />,
+      title: "Environmental Testing",
+      description: "RF performance testing under various environmental conditions",
+      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900",
+      features: [
+        "Temperature Testing",
+        "Humidity Testing",
+        "Vibration Analysis",
+        "Altitude Testing"
       ]
     }
   ];
@@ -76,7 +112,11 @@ export default function Services() {
             "Power Amplifiers & LNAs",
             "RF Mixers & Filters",
             "Impedance Matching Networks",
-            "RF Front-end Components"
+            "RF Front-end Components",
+            "Oscillators & Synthesizers",
+            "RF Switches & Multiplexers",
+            "RF Power Dividers",
+            "Directional Couplers"
           ],
           resources: [
             "RF Circuit Design by Chris Bowick",
@@ -91,7 +131,11 @@ export default function Services() {
             "High-Speed PCB Design",
             "Power Distribution",
             "EMC Compliance",
-            "Signal Routing Optimization"
+            "Signal Routing Optimization",
+            "Crosstalk Analysis",
+            "Grounding Techniques",
+            "Transmission Line Theory",
+            "Noise Reduction"
           ]
         }
       ]
@@ -106,13 +150,68 @@ export default function Services() {
             "MIMO Systems Design",
             "Beamforming Solutions",
             "Network Slicing",
-            "O-RAN Architecture"
+            "O-RAN Architecture",
+            "Massive MIMO",
+            "mmWave Communications",
+            "Carrier Aggregation",
+            "Small Cell Deployment"
           ],
           resources: [
             "3GPP Technical Specifications",
             "O-RAN Alliance Documentation",
             "Wireless Communications by Rappaport",
             "Nokia/Ericsson White Papers"
+          ]
+        },
+        {
+          name: "IoT Networks",
+          topics: [
+            "LPWAN Technologies",
+            "IoT Security",
+            "Edge Computing",
+            "IoT Protocols",
+            "Smart Sensors",
+            "IoT Data Analytics",
+            "Device Management",
+            "IoT Cloud Platforms"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Antenna Design & Analysis",
+      image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=1000",
+      categories: [
+        {
+          name: "Antenna Types",
+          topics: [
+            "Dipole Antennas",
+            "Patch Antennas",
+            "Yagi-Uda Antennas",
+            "Log-Periodic Antennas",
+            "Helical Antennas",
+            "Parabolic Reflectors",
+            "Slot Antennas",
+            "Horn Antennas"
+          ],
+          resources: [
+            "Antenna Theory by Constantine Balanis",
+            "IEEE Antennas and Propagation Society",
+            "Antenna Design Software Tutorials",
+            "Antenna Measurement Techniques"
+          ]
+        },
+        {
+          name: "Antenna Performance",
+          topics: [
+            "Radiation Patterns",
+            "Gain and Directivity",
+            "Bandwidth and Efficiency",
+            "Polarization",
+            "VSWR and Return Loss",
+            "Antenna Arrays",
+            "Beamforming Techniques",
+            "Antenna Impedance Matching"
           ]
         }
       ]
