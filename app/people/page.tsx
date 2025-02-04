@@ -81,7 +81,7 @@ export default function People() {
         {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
-            Our <span className="text-green-500">Team</span>
+            Meet Our <span className="text-green-500">Team</span>
           </h1>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
             Meet the talented individuals who make our vision come to life through creativity, innovation, and dedication.
