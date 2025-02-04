@@ -30,6 +30,24 @@ export default function Home() {
       title: "Antenna Systems",
       description: "MIMO antenna design and optimization for wireless systems",
       image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800"
+    },
+    {
+      icon: <Network />,
+      title: "Network Optimization",
+      description: "Wireless network planning and optimization for performance",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800"
+    },
+    {
+      icon: <Microchip />,
+      title: "Firmware Development",
+      description: "Low-level firmware development for embedded systems",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800"
+    },
+    {
+      icon: <Server />,
+      title: "Cloud Integration",
+      description: "Integration of cloud services for IoT and wireless applications",
+      image: "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=800"
     }
   ];
 

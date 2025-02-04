@@ -34,6 +34,24 @@ export default function About() {
       title: "RF Circuit Design",
       description: "Custom RF circuit solutions and impedance matching networks",
       tech: ["ADS", "HFSS", "AWR"]
+    },
+    {
+      icon: <Antenna className="w-8 h-8 text-green-500" />,
+      title: "Antenna Arrays",
+      description: "Innovative antenna array designs and phased array systems",
+      tech: ["Beamforming", "Array Optimization", "Antenna Theory"]
+    },
+    {
+      icon: <Network className="w-8 h-8 text-green-500" />,
+      title: "Network Optimization",
+      description: "Wireless network planning and optimization for performance",
+      tech: ["Network Planning", "RF Testing", "Network Analysis"]
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-green-500" />,
+      title: "Firmware Development",
+      description: "Low-level firmware development for embedded systems",
+      tech: ["Embedded C", "RTOS", "FPGA"]
     }
   ];
 
@@ -61,6 +79,42 @@ export default function About() {
         "Published research papers",
         "Industry standard contributions"
       ]
+    },
+    {
+      title: "Technical Leadership",
+      description: "Leading the way in RF engineering and wireless system design",
+      points: [
+        "Expert RF consulting services",
+        "Innovative RF product development",
+        "RF training and education"
+      ]
+    },
+    {
+      title: "Industry Recognition",
+      description: "Recognized for excellence in RF engineering and wireless system design",
+      points: [
+        "Awards for RF innovation",
+        "Industry conference presentations",
+        "RF technology partnerships"
+      ]
+    },
+    {
+      title: "Customer Success",
+      description: "Delivering results for clients in RF engineering and wireless system design",
+      points: [
+        "Successful RF product launches",
+        "RF system performance improvements",
+        "Customer satisfaction and loyalty"
+      ]
+    },
+    {
+      title: "RF Design Excellence",
+      description: "Excelling in RF circuit design and wireless system engineering",
+      points: [
+        "High-performance RF circuits",
+        "Custom RF system solutions",
+        "RF design best practices"
+      ]
     }
   ];
 
@@ -69,11 +123,18 @@ export default function About() {
     expertise: [
       "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?q=80&w=800&auto=format&fit=crop", // RF Systems
       "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800&auto=format&fit=crop", // Wireless
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800&auto=format&fit=crop"  // Circuit Design
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800&auto=format&fit=crop",  // Circuit Design
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop", // Network Optimization
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop", // Firmware
+      "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=800&auto=format&fit=crop" //
     ],
     achievements: [
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop", // Innovation
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop"  // Research
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=900&auto=format&fit=crop"
     ],
     tech: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop"
   };
