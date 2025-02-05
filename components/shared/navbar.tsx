@@ -10,9 +10,11 @@ import {
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   // Add scroll lock when menu is open
   useEffect(() => {
@@ -108,11 +110,10 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-gray-100 hover:text-green-500 transition-all py-6 text-4xl font-light transform ${
-                  isMenuOpen 
-                    ? "translate-y-0 opacity-100" 
-                    : "translate-y-4 opacity-0"
-                }`}
+                className={`text-gray-100 transition-all py-6 text-4xl font-light transform
+                  ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
+                  ${pathname === link.href ? "text-green-500" : "hover:text-green-500"}
+                `}
                 style={{ transitionDelay: `${index * 100 + 300}ms` }}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -121,15 +122,18 @@ export function Navbar() {
             ))}
             <Button
               asChild
-              className={`mt-12 bg-green-500 hover:bg-green-600 text-white text-xl px-8 py-6 h-auto transform transition-all duration-300 ${
-                isMenuOpen 
-                  ? "translate-y-0 opacity-100" 
-                  : "translate-y-4 opacity-0"
-              }`}
-              style={{ transitionDelay: `${navLinks.length * 100 + 400}ms` }}
+              className={`mt-16 bg-green-500 hover:bg-green-600 text-white text-xl 
+                px-12 py-8 h-auto w-64 transform transition-all duration-500
+                ${isMenuOpen 
+                  ? "translate-y-0 opacity-100 scale-100" 
+                  : "translate-y-full opacity-0 scale-95"
+                }
+                ${pathname === '/contact' ? 'bg-green-600' : ''}
+              `}
+              style={{ transitionDelay: `${navLinks.length * 100 + 500}ms` }}
               onClick={() => setIsMenuOpen(false)}
             >
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Get in touch</Link>
             </Button>
           </div>
         </div>
