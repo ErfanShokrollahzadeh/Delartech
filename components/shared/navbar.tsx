@@ -39,6 +39,11 @@ export function Navbar() {
     { href: "/careers", label: "Careers" },
   ];
 
+  const isActive = (path: string) => {
+    if (!pathname) return false;
+    return pathname === path || pathname === `${path}/`;
+  };
+
   return (
     <>
       <nav className="fixed top-0 w-full bg-green-500/20 backdrop-blur-md z-[100]">
@@ -98,12 +103,7 @@ export function Navbar() {
           className={`fixed inset-0 pointer-events-auto ${
             isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           } transition-opacity duration-300 delay-200`}
-          onClick={(e) => {
-            e.stopPropagation();
-            if (e.target === e.currentTarget) {
-              setIsMenuOpen(false);
-            }
-          }}
+          onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col items-center justify-center min-h-screen px-4">
             {navLinks.map((link, index) => (
@@ -112,25 +112,31 @@ export function Navbar() {
                 href={link.href}
                 className={`text-gray-100 transition-all py-6 text-4xl font-light transform
                   ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-                  ${pathname === link.href ? "text-green-500" : "hover:text-green-500"}
+                  ${isActive(link.href) 
+                    ? "text-green-500 font-normal scale-110" 
+                    : "hover:text-green-400"}
                 `}
                 style={{ transitionDelay: `${index * 100 + 300}ms` }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
+                {isActive(link.href) && (
+                  <div className="h-1 w-full bg-green-500 mt-2 rounded-full" />
+                )}
               </Link>
             ))}
             <Button
               asChild
-              className={`mt-16 bg-green-500 hover:bg-green-600 text-white text-xl 
-                px-12 py-8 h-auto w-64 transform transition-all duration-500
-                ${isMenuOpen 
-                  ? "translate-y-0 opacity-100 scale-100" 
-                  : "translate-y-full opacity-0 scale-95"
-                }
-                ${pathname === '/contact' ? 'bg-green-600' : ''}
+              className={`mt-16 bg-black hover:bg-black/90 text-white text-xl 
+              px-12 py-8 h-auto w-64 rounded-[30px] transform transition-all duration-500
+              border-2 border-green-500 hover:border-green-400
+              ${isMenuOpen 
+                ? "translate-y-0 opacity-100 scale-100" 
+                : "translate-y-full opacity-0 scale-95"
+              }
+              ${isActive('/contact') ? 'border-green-400 scale-105 shadow-lg shadow-green-500/20' : ''}
               `}
-              style={{ transitionDelay: `${navLinks.length * 100 + 500}ms` }}
+              style={{ transitionDelay: `${navLinks.length * 0.2}s` }}
               onClick={() => setIsMenuOpen(false)}
             >
               <Link href="/contact">Get in touch</Link>
