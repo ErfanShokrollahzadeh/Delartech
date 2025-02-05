@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, Users, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -45,8 +45,13 @@ export function Navbar() {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <Users className="h-8 w-8 text-green-500" />
-                <span className="ml-2 text-white text-xl font-bold">Delart</span>
+                <span className="text-white text-3xl font-bold">Delart</span>
+                <div className="relative ml-2">
+                  {/* Shadow ball */}
+                  <div className="absolute w-5 h-5 rounded-full bg-green-500 -top-2 -right-2" />
+                  {/* Main ball */}
+                  <div className="relative w-5 h-5 rounded-full bg-green-500/50" />
+                </div>
               </Link>
             </div>
 
