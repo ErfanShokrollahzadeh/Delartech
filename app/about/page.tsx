@@ -1,10 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { 
-  Radio, Antenna, CircuitBoard, 
-  Waves, Cpu, Network 
-} from "lucide-react";
+import { Radio, Antenna, CircuitBoard, Waves, Cpu, Network } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -140,25 +137,22 @@ export default function About() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        {/* Hero Section with Background Image */}
-        <div className="relative text-center mb-20">
-          <div className="absolute inset-0 -z-10">
-            <Image
-              src={images.hero}
-              alt="RF Engineering Background"
-              fill
-              className="object-cover opacity-20"
-              priority
-              unoptimized // Add this for external images
-            />
-          </div>
-          <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-green-600">
+    <main className="min-h-screen bg-black text-white">
+      {/* Grid Background */}
+      <div className="fixed inset-0 grid grid-cols-6 gap-4 pointer-events-none">
+        {Array.from({ length: 36 }).map((_, i) => (
+          <div key={i} className="border-green-500/10 border-[0.5px]"></div>
+        ))}
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        {/* Hero Section */}
+        <div className="text-center mb-20">
+          <h1 className="text-7xl font-bold tracking-tight mb-8">
             RF Engineering Excellence
           </h1>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Leading the future of wireless technology through innovative RF solutions and expert system design.
+          <p className="text-2xl text-green-400 font-light mb-12">
+            Leading the future of wireless technology
           </p>
         </div>
 
@@ -166,16 +160,15 @@ export default function About() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, index) => (
             <div key={index} 
-                 className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-6 
-                           hover:bg-white/10 transition-all duration-300">
-              <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-green-500 
-                            bg-clip-text text-transparent mb-2">{stat.number}</div>
+                 className="p-6 rounded-lg border border-green-500/20 backdrop-blur-sm 
+                           bg-black/40 hover:border-green-500/40 transition group">
+              <div className="text-4xl font-bold text-green-400 mb-2">{stat.number}</div>
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>
 
-        {/* Expertise Section with Images */}
+        {/* Expertise Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Technical Expertise
@@ -183,23 +176,14 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             {expertise.map((item, index) => (
               <div key={index} 
-                   className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-8
-                             hover:bg-green-900/20 transition-all duration-300">
-                <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
-                  <Image
-                    src={images.expertise[index]}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="flex items-center justify-center mb-6">{item.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
+                   className="p-6 rounded-lg border border-green-500/20 backdrop-blur-sm 
+                             bg-black/40 hover:border-green-500/40 transition group">
+                <div className="text-green-400 mb-4 group-hover:scale-110 transition">{item.icon}</div>
+                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                 <p className="text-gray-400 mb-4">{item.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {item.tech.map((t, i) => (
-                    <span key={i} className="text-xs px-2 py-1 rounded-full bg-green-900/20 text-green-400">
+                    <span key={i} className="text-xs px-2 py-1 rounded-full border border-green-500/20 text-green-400">
                       {t}
                     </span>
                   ))}
@@ -209,55 +193,14 @@ export default function About() {
           </div>
         </div>
 
-        {/* Achievements Section with Images */}
+        {/* Technologies Section */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Achievements</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} 
-                   className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-8
-                             hover:bg-green-900/20 transition-all duration-300">
-                <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden">
-                  <Image
-                    src={images.achievements[index]}
-                    alt={achievement.title}
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-green-500 mb-4">{achievement.title}</h3>
-                <p className="text-gray-400 mb-6">{achievement.description}</p>
-                <ul className="space-y-2">
-                  {achievement.points.map((point, i) => (
-                    <li key={i} className="text-gray-300 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Technologies Section with Background Image */}
-        <div className="relative mb-20 p-12 rounded-3xl overflow-hidden">
-          <div className="absolute inset-0">
-            <Image
-              src={images.tech}
-              alt="RF Technologies Background"
-              fill
-              className="object-cover opacity-10"
-              unoptimized
-            />
-          </div>
           <h2 className="text-3xl font-bold text-white text-center mb-8">Technologies</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
               <span key={index} 
-                    className="px-4 py-2 rounded-full bg-gradient-to-r from-green-900/10 to-green-800/10 
-                              border border-green-900/20 text-gray-300 hover:text-green-400 transition-colors">
+                    className="px-4 py-2 rounded-full border border-green-500/20 text-gray-300 
+                              hover:text-green-400 hover:border-green-500/40 transition-colors">
                 {tech}
               </span>
             ))}
@@ -266,10 +209,16 @@ export default function About() {
 
         {/* Contact CTA */}
         <div className="text-center">
-          <Button asChild className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 
-                                   hover:to-green-700 text-white px-8 py-6 text-lg">
+          <Button asChild 
+                 className="bg-black hover:bg-black/80 text-green-400 border border-green-500/20 
+                           hover:border-green-500/40 px-8 py-6 text-lg">
             <Link href="/contact">Discuss Your RF Requirements</Link>
           </Button>
+        </div>
+
+        {/* Decorative Element */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <div className="w-1 h-16 bg-gradient-to-b from-green-500/0 to-green-500/20"></div>
         </div>
       </div>
     </main>
