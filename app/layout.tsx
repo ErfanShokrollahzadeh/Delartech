@@ -7,12 +7,10 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Delart',
+  title: 'DELART',
   description: 'We\'re a team of passionate individuals dedicated to creating exceptional digital experiences.',
   icons: {
-    icon: '/images/green-ball.jpg', // Path to your green ball icon
-    // You can also specify different sizes and types if needed
-    // apple: '/apple-touch-icon.png',
+    icon: '/images/green-ball.png',
   },
 };
 
