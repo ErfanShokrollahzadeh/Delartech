@@ -9,8 +9,8 @@ export default function People() {
   const team = [
     {
       name: "Alireza Tarighat Mehrabani",
-      role: "Co-Founder and RF Systems Engineer",
-      bio: "RF systems and architectures, communications theory, analog and digital silicon design and productization, characterization tools/frameworks for wireless products, advanced millimeter-wave phased arrays, cellular radio chipsets, Wi-Fi, and 4G and 5G cellular technologies, wireless-industry contributions with 50+ IEEE journal and conference publications and 30+ patents",
+      role: "Founder",
+      bio: "RF systems and architectures, communications theory.",
       image: "/images/img1.webp",  // Updated path to use local image
       social: {
         twitter: "#",
@@ -20,8 +20,8 @@ export default function People() {
     },
     {
       name: "Bill Fujimoto",
-      role: "Automation Engineer at Delart Technology Services.",
-      bio: " Hands-on system level and HW platform RF Engineer with expert proficiency in RF system design, RFIC design, and RF system integration Skilled as Principal RF Engineer, with expertise in effective engaging with colleagues across multiple disciplines and departments, while managing reference design projects.Skilled laboratory practices with expertise in using RF test and measurement tools such as Vector Network Analyzers, Spectrum Analyzers, Vector Signal Analyzers, Call box Emulators, and Vector Signal Generators.",
+      role: "RF Engineering",
+      bio: " Hands-on system level and HW platform RF Engineer.",
       image: "/images/img2.jpeg",
       social: {
         twitter: "#",
@@ -31,8 +31,8 @@ export default function People() {
     },
     {
       name: "Payam Torab",
-      role: "Systems and software | Inviting software developers (all levels)",
-      bio: "Full-stack developer with expertise in modern web technologies. Communications systems, networking and control theory Join me to write a lot of software for wireless, especially Wi-Fi and Bluetooth. Need your help",
+      role: "Wireless systems",
+      bio: "Full-stack developer with expertise in modern web technologies.",
       image: "/images/img3.jpeg",
       social: {
         twitter: "#",
@@ -41,10 +41,10 @@ export default function People() {
       }
     },
     {
-      name: "Emily Rodriguez",
-      role: "UX Researcher",
-      bio: "Specializes in user research and creating data-driven design solutions.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
+      name: "Rajesh Rasalkar",
+      role: "Technical lead",
+      bio: "Technical lead, access, transport, core networks, cloud native networks",
+      image: "/images/image-4.jpeg",
       social: {
         twitter: "#",
         linkedin: "#",
@@ -135,6 +135,11 @@ export default function People() {
                     <Github className="w-5 h-5" />
                   </Link>
                 </div>
+                <Link 
+                  href={`/people/${encodeURIComponent(member.name)}`}
+                  className="mt-4 block text-sm text-gray-500 hover:text-green-500 transition-colors">
+                  More Info
+                </Link>
               </div>
             ))}
           </div>
