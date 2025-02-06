@@ -158,7 +158,7 @@ export default function About() {
           {stats.map((stat, index) => (
             <div key={index} 
                  className="p-6 rounded-lg border border-green-500/20 backdrop-blur-sm 
-                           bg-white/40 hover:border-green-500/40 transition group">
+                           bg-black/40 hover:border-green-500/40 transition group">
               <div className="text-4xl font-bold text-green-600 mb-2">{stat.number}</div>
               <div className="text-gray-600">{stat.label}</div>
             </div>
@@ -227,7 +227,7 @@ export default function About() {
               {technologies.map((tech, index) => (
                 <span key={index} 
                       className="px-4 py-2 rounded-full bg-black/5 border 
-                               border-green-500/20 text-gray-800 
+                               border-green-500 text-white
                                hover:text-green-600 hover:border-green-500/40 
                                transition-colors">
                   {tech}
