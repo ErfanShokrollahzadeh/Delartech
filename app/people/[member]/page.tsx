@@ -45,10 +45,13 @@ He holds 20+ granted U.S. and worldwide patents.`,
 
 With leadership roles at Bell Labs, Alcatel-Lucent, Oracle, and successful startups, Rajesh brings a wealth of experience to the team. He holds a Master’s in Management Science and a Bachelor’s in Electronics Engineering, along with multiple patents and published research in Telco Cloud and Mobile Networks.`,
   },
-  "James Wilson": {
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
-    info: `James is a skilled Frontend Developer.
-Write your own personalized info here.`,
+  "DR. Vignesh Manohar": {
+    image: "/images/img-5.jpeg",
+    info: `Vignesh is a highly skilled antenna engineer with expertise in all stages of antenna development, from conceptualization and simulation to fabrication and measurement. He specializes in designing cellular, Wi-Fi, and GNSS antennas for next-generation AR/VR devices and leads the development of wireless charging coils for upcoming technologies.
+
+His postdoctoral research at Florida International University focused on compact, foldable ultra-wideband phased arrays with bandwidths exceeding 8:1, while his doctoral work at UCLA advanced reflector antennas for CubeSats and small satellites. With over 10 peer-reviewed publications and awards like the EMTS Young Scientist Award and Outstanding MS Thesis Award, Vignesh brings exceptional expertise to Delart.
+
+As CEO of Delart's Canadian operations, he is driving the company's growth in the U.S. and Canada.`,
   },
   "Lisa Chen": {
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&h=500&fit=crop",

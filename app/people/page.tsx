@@ -47,26 +47,26 @@ export default function People() {
       image: "/images/image-4.jpeg",
       social: {
         twitter: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/rajesh-rasalka/",
         github: "#"
       }
     },
     {
-      name: "James Wilson",
-      role: "Frontend Developer",
-      bio: "Expert in creating responsive and performant web applications.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
+      name: "DR. Vignesh Manohar",
+      role: "CEO",
+      bio: "Delart Canada",
+      image: "/images/img-5.jpeg",
       social: {
         twitter: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/vignesh-manohar-antenna/",
         github: "#"
       }
     },
     {
-      name: "Lisa Chen",
-      role: "Product Manager",
-      bio: "Experienced in leading cross-functional teams and delivering successful products.",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&h=500&fit=crop",
+      name: "Tim Danford",
+      role: "Head of Corporate Strategy",
+      bio: "",
+      image: "/images/img-6.jpeg",
       social: {
         twitter: "#",
         linkedin: "#",
