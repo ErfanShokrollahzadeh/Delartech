@@ -21,18 +21,29 @@ Alireza has made significant contributions to IEEE 802.11ad and 802.11ay standar
   },
   "Bill Fujimoto": {
     image: "/images/img2.jpeg",
-    info: `Bill is our RF Engineering expert with hands-on experience. 
-More personalized info goes here.`,
+    info: `Bill Fujimoto is an accomplished RF engineering expert with deep expertise in RF systems, validation, and productization. His experience includes system-level wireless hardware development across platforms like 60GHz, 4G LTE, and WiMAX, focusing on RF front-end architectures, analysis, and optimization.
+
+At Facebook, Bill designed 60GHz radio and antenna subsystems for the Terragraph project. Previously, he was a Senior Principal Engineer at Broadcom, specializing in RF front-end design for smartphones, and a Principal Engineer at Beceem Communications.
+
+Bill holds a Bachelor of Science in Electrical Engineering from California Polytechnic State University and brings a wealth of knowledge to advancing wireless technologies.`,
   },
   "Payam Torab": {
     image: "/images/img3.jpeg",
-    info: `Payam specializes in Wireless systems and software development.
-Custom info can be added here.`,
+    info: `Payam is a systems architect with a unique combination of skills ranging from systems and control theory to Internet architecture to wireless protocols and software development. He has developed embedded systems, all-optical network switching products for the Internet core, IPv4 and IPv6 protocol stacks, cutting-edge wireless chips and technologies, and much of the software that fuels these products.  
+
+Previously, he was a Senior Principal Scientist at Broadcom, developing millimeter-wave systems while contributing to IEEE802.11 standards. He also developed embedded IPv4/v6 protocol stacks for mobile devices in a different role. Prior to that, he was a Director of Software and Protocols at WiLinx Corporation, where he developed MAC architecture for an Ultra-Wide band (UWB) SoC Based on Wikimedia Alliance standards. Before WiLinx, He had various systems and software engineering roles in multiple networking companies, including ADVA Optical Networking, where he developed the first routing and path computation engine for a Generalized Multi-Protocol Label Switching (GMPLS) control plane for all-optical switches.  
+
+Payam has received multiple IEEE appreciation awards for his contributions to IEEE 802.11ad and 802.11ay standards, which extend Wi-Fi operation to the 60GHz spectrum. He is currently contributing to the 802.11be standard, the basis for the next generation of Wi-Fi after Wi-Fi 6.  
+
+Payam holds a Ph.D. and M.S. degree in Electrical Engineering from Georgia Institute of Technology, and a B.S. degree in Electrical Engineering from Sharif University of Technology.
+
+He holds 20+ granted U.S. and worldwide patents.`,
   },
   "Rajesh Rasalkar": {
     image: "/images/image-4.jpeg",
-    info: `Rajesh is our Technical Lead with deep expertise in networking and cloud. 
-Further details here.`,
+    info: `Rajesh is a seasoned network engineering expert with profound knowledge of access, transport, and core network technologies, down to the protocol level. His blend of research, telecom, and software expertise drives advancements in 5G cloud-native networks. He has led initiatives in network architecture design, planning models, automated tools, and technical specifications for service providers and smart cities.
+
+With leadership roles at Bell Labs, Alcatel-Lucent, Oracle, and successful startups, Rajesh brings a wealth of experience to the team. He holds a Master’s in Management Science and a Bachelor’s in Electronics Engineering, along with multiple patents and published research in Telco Cloud and Mobile Networks.`,
   },
   "James Wilson": {
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
