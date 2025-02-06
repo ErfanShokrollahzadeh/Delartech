@@ -9,8 +9,8 @@ export default function People() {
   const team = [
     {
       name: "Alireza Tarighat Mehrabani",
-      role: "Founder",
-      bio: "RF systems and architectures, communications theory.",
+      role: "FOUNDER WIRELESS SYSTEMS",
+      bio: "Wireless and RF System Engineer",
       image: "/images/img1.webp",  // Updated path to use local image
       social: {
         twitter: "#",
@@ -21,7 +21,7 @@ export default function People() {
     {
       name: "Bill Fujimoto",
       role: "RF Engineering",
-      bio: " Hands-on system level and HW platform RF Engineer.",
+      bio: " Automation Engineer",
       image: "/images/img2.jpeg",
       social: {
         twitter: "#",
@@ -32,7 +32,7 @@ export default function People() {
     {
       name: "Payam Torab",
       role: "Wireless systems",
-      bio: "Full-stack developer with expertise in modern web technologies.",
+      bio: "Systems and software | Inviting software developers (all levels)",
       image: "/images/img3.jpeg",
       social: {
         twitter: "#",
