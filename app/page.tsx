@@ -136,7 +136,9 @@ export default function Home() {
             Next-Gen RF Solutions
           </h1>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-8">
-            Pioneering the future of wireless technology through innovative RF design and systems engineering
+            Delart is home to a team of world-class engineers and project leaders dedicated to developing the next generation of advanced networking technologies, consumer devices, and innovative technology solutions. Trusted by some of the world’s leading technology companies, we deliver highly scalable, mission-critical solutions that power both consumer and business applications globally.
+
+            Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
           </p>
           <Button asChild className="bg-gradient-to-r from-green-500 to-green-600">
             <Link href="/contact">Explore Solutions</Link>
