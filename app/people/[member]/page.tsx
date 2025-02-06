@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface MemberProps {
   params: {
@@ -9,18 +10,14 @@ interface MemberProps {
   };
 }
 
-const memberData: Record<string, { image: string; info: string }> = {
+const memberData: Record<string, { image: string; info: string; scholarLink?: string }> = {
   "Alireza Tarighat Mehrabani": {
     image: "/images/img1.webp",
     info: `Alireza is the Delart founder, and a wireless systems expert with a deep understanding of RF systems and architectures, communications theory, and analog and digital silicon design and manufacturing. He has extensive experience with millimeter-wave, Wi-Fi, and 4G and 5G cellular technologies.  
 
 Alireza has had senior technical positions with leading communications companies, including Director of Engineering at SpaceX and Broadcom, where he was instrumental in the development of advanced millimeter-wave phased arrays and cellular radio chipsets. At Broadcom, he patented and productized a novel architecture to realize large millimeter-wave phased-array RF frontends through “tilting" modular subsystems. This novel architecture enabled a generation of low-cost, low-power, large-phased arrays for emerging terrestrial and satellite networks. He also led the RF systems team behind some of Broadcom's cellular radio chipsets. Prior to Broadcom, he was Director of Engineering at WiLinx, where he developed the first CMOS wide band (3-10 GHz) RF frontend and the baseband ASIC, Compliant with the WiMedia Alliance Ultra-Wideband (UWB) standard.
 
-Alireza has made significant contributions to IEEE 802.11ad and 802.11ay standards, which extend Wi-Fi operation to the 60GHz spectrum.  
-
-Alireza holds a Ph.D. and M.S. degree in electrical engineering from UCLA, where he received an outstanding Ph.D. dissertation award and a B.S. degree in electrical engineering from Sharif University of Technology.  
-
-He is a co-inventor on 35+ patents and a co-author on 55+ cited IEEE journals and conference publications:`,
+Alireza has made significant contributions to IEEE 802.11ad and 802.11ay standards, which extend Wi-Fi operation to the 60GHz spectrum. Alireza holds a Ph.D. and M.S. degree in electrical engineering from UCLA, where he received an outstanding Ph.D. dissertation award and a B.S. degree in electrical engineering from Sharif University of Technology. He is a co-inventor on 35+ patents and a co-author on 55+ cited IEEE journals and conference publications:`,scholarLink: "https://scholar.google.com/citations?user=tY-aHdQAAAAJ&hl=en"
   },
   "Bill Fujimoto": {
     image: "/images/img2.jpeg",
@@ -91,9 +88,24 @@ const MemberDetail = ({ params }: MemberProps) => {
         <div className="p-5 flex flex-col justify-center w-full mt-10">
           <h1 className="text-3xl font-bold text-green-500 mb-4">{memberName}</h1>
           <div className="max-w-prose">
-            {paragraphs.map((para, i) => (
-              <p key={i} className="mb-4 text-lg leading-relaxed">{para}</p>
-            ))}
+            {paragraphs.map((para, i) => {
+              // For the last paragraph, add the Google Scholar link
+              if (i === paragraphs.length - 1 && member.scholarLink) {
+                return (
+                  <p key={i} className="mb-4 text-lg leading-relaxed">
+                    {para}
+                    {/* Google Scholar link inserted here */}
+                    <Link href={member.scholarLink} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 ml-1">
+                      Google Scholar
+                    </Link>
+                  </p>
+                );
+              } else {
+                return (
+                  <p key={i} className="mb-4 text-lg leading-relaxed">{para}</p>
+                );
+              }
+            })}
           </div>
         </div>
       </div>
