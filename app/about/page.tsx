@@ -6,6 +6,27 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function About() {
+  const images = {
+    hero: "https://images.unsplash.com/photo-1617839625591-e5a789593135?q=80&w=2000&auto=format&fit=crop",
+    expertise: [
+      "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?q=80&w=800&auto=format&fit=crop", // RF Systems
+      "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800&auto=format&fit=crop", // Wireless
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800&auto=format&fit=crop",  // Circuit Design
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop", // Network Optimization
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop", // Firmware
+      "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=800&auto=format&fit=crop" //
+    ],
+    achievements: [
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop", // Innovation
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=900&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=900&auto=format&fit=crop"
+    ],
+    tech: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop"
+  };
+
   const stats = [
     { number: "25+", label: "Years RF Experience" },
     { number: "150+", label: "RF Projects" },
@@ -16,36 +37,42 @@ export default function About() {
   const expertise = [
     {
       icon: <Radio className="w-8 h-8 text-green-500" />,
+      bgImage: images.expertise[0],
       title: "RF System Engineering",
       description: "Specializing in advanced RF/microwave circuit design and signal integrity analysis",
       tech: ["Power Amplifiers", "RF Filters", "LNAs"]
     },
     {
       icon: <Waves className="w-8 h-8 text-green-500" />,
+      bgImage: images.expertise[1],
       title: "Wireless Systems",
       description: "Expert development of MIMO systems and beamforming solutions",
       tech: ["5G NR", "MIMO", "mmWave"]
     },
     {
       icon: <CircuitBoard className="w-8 h-8 text-green-500" />,
+      bgImage: images.expertise[2],
       title: "RF Circuit Design",
       description: "Custom RF circuit solutions and impedance matching networks",
       tech: ["ADS", "HFSS", "AWR"]
     },
     {
       icon: <Antenna className="w-8 h-8 text-green-500" />,
+      bgImage: images.expertise[3],
       title: "Antenna Arrays",
       description: "Innovative antenna array designs and phased array systems",
       tech: ["Beamforming", "Array Optimization", "Antenna Theory"]
     },
     {
       icon: <Network className="w-8 h-8 text-green-500" />,
+      bgImage: images.expertise[4],
       title: "Network Optimization",
       description: "Wireless network planning and optimization for performance",
       tech: ["Network Planning", "RF Testing", "Network Analysis"]
     },
     {
       icon: <Cpu className="w-8 h-8 text-green-500" />,
+      bgImage: images.expertise[5],
       title: "Firmware Development",
       description: "Low-level firmware development for embedded systems",
       tech: ["Embedded C", "RTOS", "FPGA"]
@@ -94,47 +121,8 @@ export default function About() {
         "Industry conference presentations",
         "RF technology partnerships"
       ]
-    },
-    {
-      title: "Customer Success",
-      description: "Delivering results for clients in RF engineering and wireless system design",
-      points: [
-        "Successful RF product launches",
-        "RF system performance improvements",
-        "Customer satisfaction and loyalty"
-      ]
-    },
-    {
-      title: "RF Design Excellence",
-      description: "Excelling in RF circuit design and wireless system engineering",
-      points: [
-        "High-performance RF circuits",
-        "Custom RF system solutions",
-        "RF design best practices"
-      ]
     }
   ];
-
-  const images = {
-    hero: "https://images.unsplash.com/photo-1617839625591-e5a789593135?q=80&w=2000&auto=format&fit=crop",
-    expertise: [
-      "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?q=80&w=800&auto=format&fit=crop", // RF Systems
-      "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800&auto=format&fit=crop", // Wireless
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800&auto=format&fit=crop",  // Circuit Design
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop", // Network Optimization
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop", // Firmware
-      "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=800&auto=format&fit=crop" //
-    ],
-    achievements: [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop", // Innovation
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=900&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=900&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=900&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=900&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=900&auto=format&fit=crop"
-    ],
-    tech: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop"
-  };
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -147,11 +135,20 @@ export default function About() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Hero Section */}
-        <div className="text-center mb-20">
-          <h1 className="text-7xl font-bold tracking-tight mb-8">
+        <div className="relative text-center mb-20">
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src={images.hero}
+              alt="RF Engineering"
+              fill
+              className="object-cover opacity-20"
+              priority
+            />
+          </div>
+          <h1 className="text-7xl text-green-600  font-bold tracking-tight mb-8">
             RF Engineering Excellence
           </h1>
-          <p className="text-2xl text-green-400 font-light mb-12">
+          <p className="text-2xl font-light mb-12">
             Leading the future of wireless technology
           </p>
         </div>
@@ -161,32 +158,49 @@ export default function About() {
           {stats.map((stat, index) => (
             <div key={index} 
                  className="p-6 rounded-lg border border-green-500/20 backdrop-blur-sm 
-                           bg-black/40 hover:border-green-500/40 transition group">
-              <div className="text-4xl font-bold text-green-400 mb-2">{stat.number}</div>
-              <div className="text-gray-400">{stat.label}</div>
+                           bg-white/40 hover:border-green-500/40 transition group">
+              <div className="text-4xl font-bold text-green-600 mb-2">{stat.number}</div>
+              <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
         </div>
 
         {/* Expertise Section */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl font-bold text-black text-center mb-12">
             Technical Expertise
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {expertise.map((item, index) => (
-              <div key={index} 
-                   className="p-6 rounded-lg border border-green-500/20 backdrop-blur-sm 
-                             bg-black/40 hover:border-green-500/40 transition group">
-                <div className="text-green-400 mb-4 group-hover:scale-110 transition">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-gray-400 mb-4">{item.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {item.tech.map((t, i) => (
-                    <span key={i} className="text-xs px-2 py-1 rounded-full border border-green-500/20 text-green-400">
-                      {t}
-                    </span>
-                  ))}
+              <div key={index} className="relative group h-[400px]">
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                  <Image
+                    src={item.bgImage}
+                    alt={item.title}
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-colors rounded-lg" />
+                </div>
+                
+                {/* Content */}
+                <div className="relative h-full p-6 flex flex-col">
+                  <div className="text-green-400 mb-4 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
+                  <p className="text-gray-200 mb-4">{item.description}</p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {item.tech.map((t, i) => (
+                      <span key={i} 
+                            className="text-xs px-2 py-1 rounded-full 
+                                     bg-black/50 border border-green-500/20 
+                                     text-green-400">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -194,23 +208,40 @@ export default function About() {
         </div>
 
         {/* Technologies Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Technologies</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {technologies.map((tech, index) => (
-              <span key={index} 
-                    className="px-4 py-2 rounded-full border border-green-500/20 text-gray-300 
-                              hover:text-green-400 hover:border-green-500/40 transition-colors">
-                {tech}
-              </span>
-            ))}
+        <div className="relative mb-20 py-16">
+          <div className="absolute inset-0">
+            <Image
+              src={images.tech}
+              alt="Technologies Background"
+              fill
+              className="object-cover rounded-lg opacity-20"
+            />
+            <div className="absolute inset-0 bg-black/80 rounded-lg" />
+          </div>
+          
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Technologies
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {technologies.map((tech, index) => (
+                <span key={index} 
+                      className="px-4 py-2 rounded-full bg-black/5 border 
+                               border-green-500/20 text-gray-800 
+                               hover:text-green-600 hover:border-green-500/40 
+                               transition-colors">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Contact CTA */}
-        <div className="text-center">
+        <div className="text-center relative z-10">
           <Button asChild 
-                 className="bg-black hover:bg-black/80 text-green-400 border border-green-500/20 
+                 className="bg-black hover:bg-black/80 text-green-400 
+                           border border-green-500/20 
                            hover:border-green-500/40 px-8 py-6 text-lg">
             <Link href="/contact">Discuss Your RF Requirements</Link>
           </Button>
