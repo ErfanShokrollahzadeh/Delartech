@@ -270,27 +270,28 @@ export default function Careers() {
              Join us and be part of a dynamic team that thrives on solving real-world challenges and driving meaningful change.
           </p>
         </div>
-        {/* New Future Building Section (modified heading) */}
-        <div className="flex flex-col md:flex-row items-center my-12 bg-gray-800 rounded-xl p-8">
+        {/* Future Building Section */}
+        <div className="flex flex-col md:flex-row items-center gap-8 my-10 bg-gray-800 rounded-xl p-4 sm:p-6 lg:p-8">
           {/* Left: Text */}
-          <div className="md:w-1/2 text-white space-y-4">
-            {/* Updated combined heading using spans for consistent hydration */}
-            <h2 className="text-4xl text-green-400 font-bold">
-              Build Your <span className="block">Future with</span> <span className="block">Delart</span>
+          <div className="w-full md:w-1/2 text-white space-y-4 sm:space-y-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
+              Build Your Future with Delart
             </h2>
-            <p className="text-3xl">
+            <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-gray-200">
               At Delart, we provide our employees with exceptional opportunities to grow and excel in their careers by tackling advanced and challenging problems. Our involvement in cutting-edge technologies and end-to-end product development offers a unique environment for technical growth.
             </p>
           </div>
+          
           {/* Right: Rotating Image */}
-            <div className="md:w-1/2  mt-8 md:mt-0 md:pl-8">
-            <div className="relative w-full h-[32rem] rounded-xl overflow-hidden border-4 border-green-500 shadow-xl">
+          <div className="w-full md:w-1/2 h-[300px] sm:h-[400px] lg:h-[500px]">
+            <div className="relative w-full h-full rounded-xl overflow-hidden border-2 sm:border-4 border-green-500 shadow-xl">
               <Image
-          src={rotatingImages[currentImageIndex]}
-          alt="Future at Delart"
-          layout="fill"
-          objectFit="cover"
-          className="transition-all duration-500"
+                src={rotatingImages[currentImageIndex]}
+                alt="Future at Delart"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+                className="object-cover transition-all duration-500 hover:scale-105"
               />
             </div>
           </div>
