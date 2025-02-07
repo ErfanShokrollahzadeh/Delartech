@@ -168,11 +168,13 @@ export default function Home() {
         <div className="absolute top-20 right-1/4 w-24 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-10 left-10 w-16 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-20 right-1/3 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-30 left-5 w-12 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-1/2 left-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/3 right-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/4 left-10 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/2 left-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Hero Section */}
@@ -278,10 +280,10 @@ export default function Home() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <Button asChild className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 
-                                   hover:to-green-700 text-white px-8 py-6 text-lg">
+            <Button asChild className="bg-black text-white border border-green-500 hover:bg-green-500 
+                         hover:text-black font-bold px-8 py-6 text-lg transition-all duration-300">
             <Link href="/contact">Start Your RF Project</Link>
-          </Button>
+            </Button>
         </div>
         <br />
         {/* New Section: Pioneering the Future */}
