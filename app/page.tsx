@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import "@/styles/animations.css"; // add import for animation styles
 
 export default function Home() {
   const heroImage = "https://images.unsplash.com/photo-1617839625591-e5a789593135?q=80&w=2000&auto=format&fit=crop";
@@ -118,6 +120,46 @@ export default function Home() {
     }
   ];
 
+  // New state for accordion section
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const accordionItems = [
+    {
+      title: "Smart Glasses Development",
+      details: `Delart contributed to the development and productization of various systems within today's leading smart glasses.
+       Our expertise has advanced:
+
+        • Wireless connectivity systems and RF modules for seamless communication.
+        • lectrical engineering and sensing subsystems critical to modern wearable technologies.`
+    },
+    {
+      title: "Augmented Reality (AR) Glasses",
+      details: `Our team contributed to the development of prototype AR glasses by designing and optimizing:
+        • Core systems, firmware, and hardware.
+        • Advanced algorithms for enhanced user experiences.`
+    },
+    {
+      title: "Fixed-Wireless Broadband Solutions",
+      details: `Delart has contributed to cutting-edge broadband solutions, including:
+        • Advanced mmWave technology for high-speed data delivery.
+        • Mesh network solutions optimized for dense urban environments.`
+    },
+    {
+      title: "ORAN-Based Systems",
+      details: `Our engineers have contributed to the integration, validation, and testing of ORAN-based Radio Units (RUs) by:
+        • Conducting lab trials for Massive MIMO (maMIMO) technology.
+        • Ensuring interoperability and performance optimization in next-generation networks.`
+    },
+    {
+      title: "IEEE & 3GPP Standards Contributions",
+      details: `In collaboration with our partners, Delart has significantly impacted global technology standards by:
+        • Delivering hundreds of technical contributions to IEEE 802.11 (Wi-Fi) standards.
+        • Driving key innovations within 5G standardization efforts.`
+    }
+  ];
+  function toggleAccordion(index: number) {
+    setActiveIndex(activeIndex === index ? null : index);
+  }
+
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
       {/* Hardware-like Overlay */}
@@ -125,12 +167,12 @@ export default function Home() {
         <div className="absolute top-10 left-1/3 w-20 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-20 right-1/4 w-24 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-10 left-10 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-20 right-1/3 w-20 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-1/2 left-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/3 right-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/4 left-10 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
-        <div className="absolute top-2/3 left-1/2 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Hero Section */}
@@ -152,8 +194,8 @@ export default function Home() {
 
             Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
           </p>
-          <Button asChild className="bg-gradient-to-r from-green-500 to-green-600">
-            <Link href="/contact">Explore Solutions</Link>
+          <Button className="bg-black text-white border border-green-500 font-extrabold hover:bg-green-500 hover:text-black">
+            <Link href="/about">LAERN MORE</Link>
           </Button>
         </div>
 
@@ -241,6 +283,52 @@ export default function Home() {
             <Link href="/contact">Start Your RF Project</Link>
           </Button>
         </div>
+        <br />
+        {/* New Section: Pioneering the Future */}
+        <section className="py-16 px-4 bg-gray-900 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-400 mb-4">
+            PIONEERING THE FUTURE
+          </h2>
+          <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6">
+            One Breakthrough At a Time
+          </h3>
+          <p className="max-w-3xl mx-auto text-gray-300 text-lg">
+            We bring together the brightest engineering minds to turn bold ideas into reality. With world-class expertise in systems and software, we advance the frontier of wireless technology through innovative research and development. Our mission is clear, deliver impactful solutions that push boundaries, shape industries, and drive meaningful progress.
+          </p>
+        </section>
+        <br /><br />
+        
+        {/* New Accordion Section */}
+        <section className="py-16 px-4 bg-gray-800 text-white relative">
+          <h2 className="text-4xl text-green-600 font-bold text-center mb-8">
+            Select Ideas We Helped Bring to Life
+          </h2>
+          <p className="max-w-3xl mx-auto text-center mb-12 text-lg">
+            At Delart Technologies, we take pride in collaborating with industry leaders to bring groundbreaking products and solutions to life. Here are some of the projects and innovations that our team has contributed to:
+          </p>
+          <div className="relative">
+            {accordionItems.map((item, index) => (
+              <div key={index} className="relative">
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="flex justify-between items-center w-full p-4"
+                >
+                  <span className="font-semibold">{item.title}</span>
+                  <span className="text-green-400 text-3xl font-bold">
+                    {activeIndex === index ? '-' : '+'}
+                  </span>
+                </button>
+                {activeIndex === index && (
+                  <div className="mb-1 p-4 animate-slideDown transition-all duration-300 ease-out">
+                    <p className="whitespace-pre-wrap">{item.details}</p>
+                  </div>
+                )}
+                {index < accordionItems.length - 1 && <hr className="my-2 border-green-500" />}
+              </div>
+            ))}
+          </div>
+        </section>
+        
       </div>
     </main>
   );
