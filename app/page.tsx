@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@/styles/animations.css"; // add import for animation styles
 
 export default function Home() {
@@ -160,6 +160,21 @@ export default function Home() {
     setActiveIndex(activeIndex === index ? null : index);
   }
 
+  // New state for rotating image showcase
+  const imageShowcaseImages = [
+    "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=800",
+    "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=800",
+    "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+  ];
+  const [currentShowcaseIndex, setCurrentShowcaseIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentShowcaseIndex(prev => (prev + 1) % imageShowcaseImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [imageShowcaseImages.length]);
+
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
       {/* Hardware-like Overlay */}
@@ -172,9 +187,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/3 right-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
-        <div className="absolute bottom-1/4 left-10 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
-        <div className="absolute bottom-1/2 left-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Hero Section */}
@@ -328,6 +341,18 @@ export default function Home() {
                 {index < accordionItems.length - 1 && <hr className="my-2 border-green-500" />}
               </div>
             ))}
+          </div>
+        </section>
+        <br />
+        
+        {/* New Image Showcase Section */}
+        <section className="py-8 px-4  text-center">
+          <div className="relative mx-auto w-full max-w-7xl max-h-screen rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
+            <img
+              src={imageShowcaseImages[currentShowcaseIndex]}
+              alt="Showcase"
+              className="w-full h-full object-cover transition-all duration-500"
+            />
           </div>
         </section>
         
