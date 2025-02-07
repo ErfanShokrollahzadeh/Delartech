@@ -53,9 +53,15 @@ His postdoctoral research at Florida International University focused on compact
 
 As CEO of Delart's Canadian operations, he is driving the company's growth in the U.S. and Canada.`,
   },
-  "Lisa Chen": {
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&h=500&fit=crop",
-    info: `Lisa is the Product Manager leading our teams.
+  "Tim Danford": {
+    image: "/images/img-6.jpeg",
+    info: `Tim is the head of Corporate Development and Strategy at Delart. He is a communications engineer with a deep background in WiFi, millimeter-wave, 4G, 5G, IP Networking, and VoIP. 
+
+Tim has over 30 years of experience working in and investing in Silicon Valley companies, including Corporate Development at Cisco Systems, leading strategic investments and M&A transactions. He was a Managing Director at Storm Ventures, where he started and incubated multiple companies, including Airespace and Mobile Iron. Both returned 40% of the Storm funds invested in the two companies. He was a Venture Partner at Lightspeed Venture Partners and an Investment Director at Intel Capital.
+
+Tim led a research team at Facebook Connectivity Lab, where he and Alireza worked together on the millimeter-wave Terragraph project.
+
+Tim served in the U.S. Coast Guard, studied Criminal Justice at Kent State University, and completed the master's equivalent program at Applied Data Networking Institute in Madison, Wisconsin. Tim co-authored End-to-end Planning of Fixed Millimeter-Wave Networks, Cornell University Library, May 20, 2017, and was granted US Patent Virtual Instance architecture for mobile device management systems US8060074..
 Add your custom info here.`,
   },
 };

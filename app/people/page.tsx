@@ -65,11 +65,11 @@ export default function People() {
     {
       name: "Tim Danford",
       role: "Head of Corporate Strategy",
-      bio: "",
+      bio: "CEO | Board Member| Entrepreneur | Leader | Investor | Advisor | Mentor | Grateful",
       image: "/images/img-6.jpeg",
       social: {
         twitter: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/timdanford/",
         github: "#"
       }
     }
