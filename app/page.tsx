@@ -119,7 +119,19 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
+    <main className="relative min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
+      {/* Hardware-like Overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-1/3 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-20 right-1/4 w-24 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-10 left-10 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-1/2 left-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-1/3 right-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/4 left-10 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-2/3 left-1/2 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Hero Section */}
         <div className="relative text-center mb-20">

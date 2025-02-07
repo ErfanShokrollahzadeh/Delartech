@@ -86,7 +86,16 @@ const MemberDetail = ({ params }: MemberProps) => {
   const paragraphs = member.info.split('\n\n').slice(0, 3);
 
   return (
-    <main className="min-h-screen bg-gray-900 text-white p-8 flex items-center justify-center">
+    <main className="relative min-h-screen bg-gray-900 text-white p-8 flex items-center justify-center">
+      {/* Hardware-like Overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-6 left-1/3 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-16 right-1/4 w-24 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-6 left-10 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-16 right-10 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-1/2 left-8 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/2 right-8 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+      </div>
       {/* Updated container with top margin */}
       <div className="max-w-7xl mx-auto bg-gray-800 rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 mt-16">
         

@@ -125,7 +125,19 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="relative min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
+      {/* Hardware-like Overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-12 left-1/4 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-24 right-1/3 w-24 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-12 left-12 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-1/3 right-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/3 left-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-1/4 right-1/4 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/4 right-1/2 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-1/2 right-1/3 w-12 h-1 bg-green-500 animate-pulse" />
+      </div>
       {/* Grid Background */}
       <div className="fixed inset-0 grid grid-cols-6 gap-4 pointer-events-none">
         {Array.from({ length: 36 }).map((_, i) => (
@@ -148,7 +160,7 @@ export default function About() {
           <h1 className="text-7xl text-green-600  font-bold tracking-tight mb-8">
             RF Engineering Excellence
           </h1>
-          <p className="text-2xl font-light mb-12">
+          <p className="text-2xl text-white font-light mb-12">
             Leading the future of wireless technology
           </p>
         </div>
