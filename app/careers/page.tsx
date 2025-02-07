@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { 
   Radio, Book, GraduationCap, Award, 
@@ -12,6 +12,20 @@ import Image from "next/image";
 
 export default function Careers() {
   const [searchQuery, setSearchQuery] = useState("");
+  // New state for rotating images
+  const rotatingImages = [
+    "/images/img-c-1.jpg",
+    "/images/img-c-2.jpg",
+    "/images/img-c-3.jpg",
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % rotatingImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [rotatingImages.length]);
 
   const openPositions = [
     {
@@ -256,7 +270,31 @@ export default function Careers() {
              Join us and be part of a dynamic team that thrives on solving real-world challenges and driving meaningful change.
           </p>
         </div>
-
+        {/* New Future Building Section (modified heading) */}
+        <div className="flex flex-col md:flex-row items-center my-12 bg-gray-800 rounded-xl p-8">
+          {/* Left: Text */}
+          <div className="md:w-1/2 text-white space-y-4">
+            {/* Updated combined heading using spans for consistent hydration */}
+            <h2 className="text-4xl text-green-400 font-bold">
+              Build Your <span className="block">Future with</span> <span className="block">Delart</span>
+            </h2>
+            <p className="text-3xl">
+              At Delart, we provide our employees with exceptional opportunities to grow and excel in their careers by tackling advanced and challenging problems. Our involvement in cutting-edge technologies and end-to-end product development offers a unique environment for technical growth.
+            </p>
+          </div>
+          {/* Right: Rotating Image */}
+            <div className="md:w-1/2  mt-8 md:mt-0 md:pl-8">
+            <div className="relative w-full h-[32rem] rounded-xl overflow-hidden border-4 border-green-500 shadow-xl">
+              <Image
+          src={rotatingImages[currentImageIndex]}
+          alt="Future at Delart"
+          layout="fill"
+          objectFit="cover"
+          className="transition-all duration-500"
+              />
+            </div>
+          </div>
+        </div>
         {/* Modern Job Search Bar */}
         <div className="mb-8 flex justify-center">
           <input 
