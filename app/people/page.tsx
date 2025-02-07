@@ -87,8 +87,27 @@ export default function People() {
         <div className="absolute bottom-1/4 right-1/4 w-[800px] h-[800px] pulse-bg float-bg" style={{ animationDelay: '-3s' }} />
         <div className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] pulse-bg float-bg" style={{ animationDelay: '-1.5s' }} />
 
-        {/* Gradient Overlay */}
+        {/* Existing Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-radial from-transparent via-zinc-900/50 to-zinc-900" />
+
+        {/* Updated Hardware-like Elements with additional lines and balls */}
+        {/* Existing elements */}
+        <div className="absolute top-10 left-1/3 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-20 right-1/4 w-28 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-1/2 left-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-10 right-10 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-5 right-1/4 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-5 left-1/4 w-24 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-2/3 left-1/2 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        {/* Additional lines */}
+        <div className="absolute top-20 right-1/2 w-24 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-10 left-10 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-3/4 left-20 w-20 h-1 bg-green-500 animate-pulse" />
+        {/* Additional bouncing balls */}
+        <div className="absolute bottom-1/2 right-20 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute top-1/3 right-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/4 left-10 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
       </div>
 
       {/* Content Container */}
