@@ -352,13 +352,38 @@ export default function Home() {
         <br />
         
         {/* New Image Showcase Section */}
-        <section className="py-8 px-4  text-center">
+        <section className="py-8 px-4 text-center">
           <div className="relative mx-auto w-full max-w-7xl max-h-screen rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
             <img
               src={imageShowcaseImages[currentShowcaseIndex]}
               alt="Showcase"
               className="w-full h-full object-cover transition-all duration-500"
             />
+          </div>
+        </section>
+        <br />
+
+        {/* New Text Topics Section */}
+        <section className="py-20 px-4 text-white">
+          <div className="max-w-5xl mx-auto space-y-4">
+            <p className="text-2xl font-thin">Wireless Systems Engineering</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">RF and Antenna Solutions</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">Embedded Firmware Development</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">Embedded Hardware Design and Prototyping</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">Silicon Design and Productization</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">High-Performance Networking Infrastructure</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">Software and Machine Learning Development</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">Mechanical Engineering &amp; Prototyping</p>
+            <hr className="border-green-600" />
+            <p className="text-2xl font-thin">Technical Program Management (TPM)</p>
+            <hr className="border-green-600" />
           </div>
         </section>
         
