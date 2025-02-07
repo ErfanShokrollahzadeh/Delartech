@@ -1,15 +1,18 @@
 "use client";
-
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { 
   Radio, Book, GraduationCap, Award, 
   Brain, Users, Target, CircuitBoard,
-  Antenna, Waves, Cpu, Network 
+  Antenna, Waves, Cpu, Network,
+  DollarSign, Package, Calendar  // added new icons
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Careers() {
+  const [searchQuery, setSearchQuery] = useState("");
+
   const openPositions = [
     {
       title: "Senior RF Design Engineer",
@@ -157,6 +160,10 @@ export default function Careers() {
     }
   ];
 
+  const filteredPositions = openPositions.filter(position =>
+    position.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const benefits = [
     {
       icon: <Brain className="w-8 h-8 text-green-500" />,
@@ -243,20 +250,34 @@ export default function Careers() {
             />
           </div>
           <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-green-600">
-            RF Engineering Careers
+            Careers
           </h1>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Join our team of RF experts and shape the future of wireless technology
+             Join us and be part of a dynamic team that thrives on solving real-world challenges and driving meaningful change.
           </p>
         </div>
 
+        {/* Modern Job Search Bar */}
+        <div className="mb-8 flex justify-center">
+          <input 
+            type="text" 
+            placeholder="Search jobs..." 
+            value={searchQuery} 
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full max-w-md p-3 rounded-xl border border-green-500/40 bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 transition-colors"
+          />
+        </div>
+        {/* Job count display */}
+        <div className="mb-4 text-center text-white text-lg">
+          {filteredPositions.length} {filteredPositions.length === 1 ? "job" : "jobs"} available
+        </div>
         {/* Open Positions */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Current Opportunities
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {openPositions.map((position, index) => (
+            {filteredPositions.map((position, index) => (
               <div key={index} className="group relative rounded-2xl overflow-hidden">
                 <div className="absolute inset-0">
                   <Image
@@ -367,6 +388,48 @@ export default function Careers() {
               </div>
             ))}
           </div>
+        </div>
+        {/* What We Offer Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">What We Offer</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-gray-300">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <DollarSign className="w-8 h-8 text-green-500" />
+                <h3 className="text-2xl font-semibold">Competitive Compensation</h3>
+              </div>
+              <p>We ensure that your hard work is rewarded with competitive salaries and comprehensive benefits.</p>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <Package className="w-8 h-8 text-green-500" />
+                <h3 className="text-2xl font-semibold">Comprehensive Benefits Package</h3>
+              </div>
+              <ul className="list-disc list-inside">
+                <li>Low-deductible PPO and HMO health insurance plans, covering medical, dental, and vision for employees and their families</li>
+                <li>Life insurance</li>
+                <li>Short/long-term disability coverage</li>
+                <li>A company-matched 401(k) plan</li>
+                <li>Flexible Spending Account (FSA)</li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-8 h-8 text-green-500" />
+                <h3 className="text-2xl font-semibold">Generous Paid Time Off</h3>
+              </div>
+              <ul className="list-disc list-inside">
+                <li>Three weeks of paid vacation to relax and recharge</li>
+                <li>Additional paid time off and sick leave</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+        {/* New Text Section */}
+        <div className="text-center my-8 text-white font-light text-xl max-w-3xl mx-auto">
+          <p>Join Delart and be part of a team where innovation thrives, and your contributions drive meaningful impact.</p>
+          <p>Together, let’s solve the challenges of tomorrow.</p>
         </div>
       </div>
     </main>
