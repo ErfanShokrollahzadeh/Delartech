@@ -162,9 +162,10 @@ export default function Home() {
 
   // New state for rotating image showcase
   const imageShowcaseImages = [
-    "https://images.unsplash.com/photo-1593642532400-2682810df593?q=80&w=800",
-    "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=800",
-    "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800"
+    "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734192460527-KQC8B4BLQPKK430ZVNZP/2151039378.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734193233782-IV7Z5XF6ZB6CICWK0TEW/89671.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734362759351-JAGLXPEECC533YS94DM4/8864%2B%25281%2529.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734649762646-5UG9TV8ZTEP89X30FVDH/eyeglasses-lens-reflects-fashion-modern-technology-illustration-generated-by-ai.jpg?format=2500w",
   ];
   const [currentShowcaseIndex, setCurrentShowcaseIndex] = useState(0);
 
