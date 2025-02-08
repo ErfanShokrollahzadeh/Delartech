@@ -24,14 +24,14 @@ export default function About() {
       "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=900&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=900&auto=format&fit=crop"
     ],
-    tech: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop"
+    tech: "/images/img-7.jpg"
   };
 
   const stats = [
-    { number: "25+", label: "Years RF Experience" },
-    { number: "150+", label: "RF Projects" },
+    { number: "8+", label: "Years RF Experience" },
+    { number: "100+", label: "RF Projects" },
     { number: "35+", label: "RF Patents" },
-    { number: "99.9%", label: "Design Accuracy" }
+    { number: "90%", label: "Design Accuracy" }
   ];
 
   const expertise = [
@@ -190,13 +190,52 @@ export default function About() {
           {stats.map((stat, index) => (
             <div key={index} 
                  className="p-6 rounded-lg border border-green-500/20 backdrop-blur-sm 
-                           bg-black/40 hover:border-green-500/40 transition group">
+                           bg-slate-900 hover:border-green-500/40 transition group">
               <div className="text-4xl font-bold text-green-600 mb-2">{stat.number}</div>
-              <div className="text-gray-600">{stat.label}</div>
+              <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>
 
+        {/* About Section */}
+        <div className="flex flex-col md:flex-row items-start mb-20">
+          <div className="md:w-1/2">
+            <h2 className="text-2xl font-bold text-white mb-4">ABOUT</h2>
+            <h3 className="text-5xl font-bold text-green-700 mb-4">Shaping Tomorrow, <span className="text-7xl">Together</span></h3>
+            <p className="text-gray-100 font-extralight">
+              Since 2017, Delart's world-class engineers have contributed to the design and development of some of the most advanced telecommunications and consumer products globally. With the agility of a startup, we deliver specialized engineering services, including hardware and software development, systems engineering, and the creation of cutting-edge networking and wireless communication standards.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            {/* ...optional content or leave empty... */}
+          </div>
+        </div>
+        <br />
+
+        {/* New Section */}
+        <div className="flex flex-col bg-slate-950 md:flex-row items-center mb-20">
+          <div className="md:w-1/2 p-4">
+            <p className="font-mono text-2xl text-white mt-5">EMPOWERING TECHNOLOGY LEADERS</p>
+            <h2 className="text-5xl md:text-7xl text-white mt-2">What We Do</h2>
+            <p className="text-gray-100 text-lg mb-6  mt-4">
+              We partner with top technology leaders to drive innovation and bring their long-term product visions to life. Our specialized engineering services support the creation of groundbreaking consumer and telecommunications products — and the standards that make them possible.
+              Whether we’re advancing wireless technologies like mmWave, Wi-Fi, Bluetooth, and Ultra-Wideband (UWB), shaping the future of AR/VR, or building open, accessible 5G infrastructure, our team stays at the forefront of transformative technology development.
+            </p>
+            <Button className="bg-black hover:bg-green-500 hover:text-black text-white border border-green-500 hover:border-green-500/40 px-8 py-4 text-lg">
+              <Link href="/contact">LEARN MORE</Link>
+            </Button>
+          </div>
+          <div className="md:w-1/2 relative h-80">
+            <Image
+              src={images.tech}
+              alt="Innovative Technology"
+              fill
+              style={{ objectFit: 'cover' }}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+        
         {/* Expertise Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
