@@ -327,6 +327,36 @@ export default function About() {
         </div>
         <br />
 
+        {/* Team Section */}
+        <div className="mb-20 bg-slate-950 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-start gap-12">
+            {/* Left Side */}
+            <div className="md:w-1/2">
+              <h2 className="text-4xl md:text-6xl font-bold text-white">
+                A Global Team <br />
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">
+                  of Innovators
+                </span>
+              </h2>
+            </div>
+            
+            {/* Right Side */}
+            <div className="md:w-1/2">
+              <h3 className="text-3xl font-bold text-green-500 mb-6">of Innovators</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Our team unites talented professionals from across the globe, blending diverse expertise, 
+                experiences, and perspectives. From wireless engineers to systems architects, our 
+                multidisciplinary teams tackle complex challenges with creativity and precision. 
+                We foster a culture of collaboration and inclusivity, driving engaging work experiences 
+                and delivering exceptional results for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        {/* Achievements Section */}
+
         {/* Expertise Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -389,6 +419,32 @@ export default function About() {
                   {tech}
                 </span>
               ))}
+            </div>
+          </div>
+        </div>
+        <br />
+
+        {/* new topic text inside image */}
+        <div className="mb-20">
+          <div className="relative w-full h-[500px] rounded-xl overflow-hidden group">
+            {/* Background Image */}
+            <Image
+              src="https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734631369411-586BF1EAK798URZY7CWP/unsplash-image-PGRlGx_6Ehk.jpg?format=2500w"
+              alt="Technology Background"
+              fill
+              className="object-cover brightness-50 group-hover:scale-105 transition-transform duration-700"
+              priority
+            />
+            
+            {/* Overlay gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/5" />
+            
+            {/* Content */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+                Headquartered in
+                <span className="block mt-2 text-green-400">Santa Monica, California.</span>
+              </h2>
             </div>
           </div>
         </div>
