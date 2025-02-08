@@ -24,7 +24,8 @@ export default function About() {
       "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=900&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=900&auto=format&fit=crop"
     ],
-    tech: "/images/img-7.jpg"
+    tech: "/images/img-7.jpg",
+    culture: "/images/img-8.jpg"
   };
 
   const stats = [
@@ -217,7 +218,7 @@ export default function About() {
           <div className="md:w-1/2 p-4">
             <p className="font-mono text-2xl text-white mt-5">EMPOWERING TECHNOLOGY LEADERS</p>
             <h2 className="text-5xl md:text-7xl text-white mt-2">What We Do</h2>
-            <p className="text-gray-100 text-lg mb-6  mt-4">
+            <p className="text-gray-100 text-lg mb-6 mt-4 font-sans">
               We partner with top technology leaders to drive innovation and bring their long-term product visions to life. Our specialized engineering services support the creation of groundbreaking consumer and telecommunications products — and the standards that make them possible.
               Whether we’re advancing wireless technologies like mmWave, Wi-Fi, Bluetooth, and Ultra-Wideband (UWB), shaping the future of AR/VR, or building open, accessible 5G infrastructure, our team stays at the forefront of transformative technology development.
             </p>
@@ -235,7 +236,33 @@ export default function About() {
             />
           </div>
         </div>
-        
+
+        {/* New Culture Section */}
+        <div className="flex flex-col md:flex-row items-center bg-slate-950 mb-20 min-h-[600px]">
+          <div className="md:w-1/2 relative h-[600px] mr-20">
+            <Image
+              src={images.culture}
+              alt="Our Culture"
+              fill
+              style={{ objectFit: 'cover' }}
+              className="rounded-lg"
+            />
+          </div>
+          <div className="md:w-1/2 p-4">
+            <h2 className="text-2xl text-white mb-4">Driving Innovation, Together</h2>
+            <h3 className="text-6xl font-bold text-green-700 mb-6">Culture</h3>
+            <p className="text-gray-100 text-lg mb-4">
+              Collaboration, innovation, and strategic impact define our culture. We are a dynamic team of engineers, architects, and problem-solvers dedicated to pushing technological boundaries and enabling clients to achieve long-term goals. With a mission-driven focus, we prioritize decisions that align with the best interests of every project.
+            </p>
+            <p className="text-gray-100 text-lg mb-4">
+              We embrace open-minded, solution-oriented thinking at the core of everything we do. By blending talent from diverse industries, we uncover unique insights and smarter solutions. Flexibility is key—whether working remotely, on-site, or in a hybrid capacity, our approach balances creativity with efficiency.
+            </p>
+            <p className="text-gray-100 text-lg">
+              Communication and feedback are integral to our success, fostering an environment where ideas thrive and every team member feels empowered. Independent thinking, combined with a highly collaborative framework, ensures each person’s expertise is valued and leveraged effectively. Dynamic, innovative, and synergistic, our culture fuels curiosity, growth, and the relentless pursuit of excellence.
+            </p>
+          </div>
+        </div>
+
         {/* Expertise Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
