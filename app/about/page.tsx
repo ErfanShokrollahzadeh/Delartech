@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Radio, Antenna, CircuitBoard, Waves, Cpu, Network } from "lucide-react";
 import Link from "next/link";
@@ -25,7 +26,11 @@ export default function About() {
       "https://images.unsplash.com/photo-1632571401005-458e9d244591?q=80&w=900&auto=format&fit=crop"
     ],
     tech: "/images/img-7.jpg",
-    culture: "/images/img-8.jpg"
+    culture: "/images/img-8.jpg",
+    expertise_2: [
+      "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1735585849722-NDLBMCMTLUNYM4YYQLIR/21443.jpg?format=2500w",
+      "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1736636310922-XW4PLOOB9OHKU4WZP2BW/2148816366.jpg?format=2500w"
+    ],
   };
 
   const stats = [
@@ -125,6 +130,15 @@ export default function About() {
     }
   ];
 
+  // New code: Image Slider State and Effect
+  const [sliderIndex, setSliderIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSliderIndex(prev => (prev + 1) % images.expertise.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [images.expertise.length]);
+
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
       {/* Hardware-like Overlay */}
@@ -132,6 +146,8 @@ export default function About() {
         <div className="absolute top-12 left-1/4 w-20 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-24 right-1/3 w-24 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-12 left-12 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-5 right-1/4 w-28 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-9 right-3/4 w-28 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-1/3 right-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/3 left-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/4 right-1/4 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
@@ -236,6 +252,7 @@ export default function About() {
             />
           </div>
         </div>
+        <br />
 
         {/* New Culture Section */}
         <div className="flex flex-col md:flex-row items-center bg-slate-950 mb-20 min-h-[600px]">
@@ -260,6 +277,19 @@ export default function About() {
             <p className="text-gray-100 text-lg">
               Communication and feedback are integral to our success, fostering an environment where ideas thrive and every team member feels empowered. Independent thinking, combined with a highly collaborative framework, ensures each person’s expertise is valued and leveraged effectively. Dynamic, innovative, and synergistic, our culture fuels curiosity, growth, and the relentless pursuit of excellence.
             </p>
+          </div>
+        </div>
+        <br />
+
+        {/* New Image Slider Section */}
+        <div className="mb-20">
+          <div className="relative w-full h-[700px] border-2 border-green-500 rounded-lg overflow-hidden">
+            <Image
+              src={images.expertise_2[sliderIndex % images.expertise_2.length]}
+              alt={`Slider Image ${sliderIndex + 1}`}
+              fill
+              className="object-cover transition-opacity duration-500"
+            />
           </div>
         </div>
 
