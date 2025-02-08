@@ -96,6 +96,7 @@ const MemberDetail = ({ params }: MemberProps) => {
         <div className="absolute top-1/2 left-8 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/2 right-8 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
       </div>
+      
       {/* Updated container with top margin */}
       <div className="max-w-7xl mx-auto bg-gray-800 rounded-lg shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2 mt-16">
         

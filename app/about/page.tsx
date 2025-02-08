@@ -138,10 +138,30 @@ export default function About() {
         <div className="absolute bottom-1/4 right-1/2 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/2 right-1/3 w-12 h-1 bg-green-500 animate-pulse" />
       </div>
+      {/* Background Dots */}
+      <div className="fixed inset-0 pointer-events-none">
+        {Array.from({ length: 100 }).map((_, i) => (
+          <div
+        key={i}
+        className="absolute w-1 h-1 bg-green-100/10 rounded-full"
+        style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`
+        }}
+          />
+        ))}
+      </div>
       {/* Grid Background */}
-      <div className="fixed inset-0 grid grid-cols-6 gap-4 pointer-events-none">
-        {Array.from({ length: 36 }).map((_, i) => (
-          <div key={i} className="border-green-500/10 border-[0.5px]"></div>
+      <div className="fixed inset-0 pointer-events-none flex items-center justify-center">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div
+        key={i}
+        className="absolute border border-green-400/10 rounded-full"
+        style={{
+          width: `${(i + 1) * 20}%`,
+          height: `${(i + 1) * 20}%`,
+        }}
+          ></div>
         ))}
       </div>
 
@@ -179,7 +199,7 @@ export default function About() {
 
         {/* Expertise Section */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-black text-center mb-12">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
             Technical Expertise
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -222,13 +242,7 @@ export default function About() {
         {/* Technologies Section */}
         <div className="relative mb-20 py-16">
           <div className="absolute inset-0">
-            <Image
-              src={images.tech}
-              alt="Technologies Background"
-              fill
-              className="object-cover rounded-lg opacity-20"
-            />
-            <div className="absolute inset-0 bg-black/80 rounded-lg" />
+            <div className="absolute inset-0  rounded-lg" />
           </div>
           
           <div className="relative z-10">

@@ -90,9 +90,37 @@ export default function Contact() {
         <div className="absolute top-8 left-1/4 w-20 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-16 right-1/3 w-24 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-8 left-10 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-16 right-1/4 w-28 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-1/3 right-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/3 left-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
       </div>
+      {/* Background Dots */}
+      <div className="fixed inset-0 pointer-events-none">
+        {Array.from({ length: 100 }).map((_, i) => (
+          <div
+        key={i}
+        className="absolute w-1 h-1 bg-green-100/10 rounded-full"
+        style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`
+        }}
+          />
+        ))}
+      </div>
+      {/* Grid Background */}
+      <div className="fixed inset-0 pointer-events-none flex items-center justify-center">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div
+        key={i}
+        className="absolute border border-green-400/10 rounded-full"
+        style={{
+          width: `${(i + 1) * 20}%`,
+          height: `${(i + 1) * 20}%`,
+        }}
+          ></div>
+        ))}
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Hero Section */}
         <div className="relative text-center mb-20">
@@ -105,7 +133,7 @@ export default function Contact() {
               unoptimized
             />
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-green-600">
+          <h1 className="text-6xl p-2 md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-green-600">
             Let's Work Together
           </h1>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">

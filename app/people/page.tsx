@@ -103,11 +103,35 @@ export default function People() {
         {/* Additional lines */}
         <div className="absolute top-20 right-1/2 w-24 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-10 left-10 w-16 h-1 bg-green-500 animate-pulse" />
-        <div className="absolute top-3/4 left-20 w-20 h-1 bg-green-500 animate-pulse" />
         {/* Additional bouncing balls */}
-        <div className="absolute bottom-1/2 right-20 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/3 right-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
-        <div className="absolute bottom-1/4 left-10 w-10 h-10 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+      </div>
+
+      {/* Background Dots */}
+      <div className="fixed inset-0 pointer-events-none">
+        {Array.from({ length: 100 }).map((_, i) => (
+          <div
+        key={i}
+        className="absolute w-1 h-1 bg-green-100/10 rounded-full"
+        style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`
+        }}
+          />
+        ))}
+      </div>
+      {/* Grid Background */}
+      <div className="fixed inset-0 pointer-events-none flex items-center justify-center">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div
+        key={i}
+        className="absolute border border-green-400/10 rounded-full"
+        style={{
+          width: `${(i + 1) * 20}%`,
+          height: `${(i + 1) * 20}%`,
+        }}
+          ></div>
+        ))}
       </div>
 
       {/* Content Container */}
