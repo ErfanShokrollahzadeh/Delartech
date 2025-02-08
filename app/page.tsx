@@ -353,7 +353,7 @@ export default function Home() {
         
         {/* New Image Showcase Section */}
         <section className="py-8 px-4 text-center">
-          <div className="relative mx-auto w-full max-w-7xl max-h-screen rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
+          <div className="relative mx-auto w-full max-w-7xl h-screen rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
             <img
               src={imageShowcaseImages[currentShowcaseIndex]}
               alt="Showcase"
