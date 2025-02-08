@@ -448,6 +448,24 @@ export default function About() {
             </div>
           </div>
         </div>
+        <br />
+
+        {/* New Section: Scaling Business Globally */}
+        <div className="mb-20 flex flex-col md:flex-row items-start">
+          <div className="md:w-1/2">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text'>Scaling Business Globally</span>
+            </h2>
+            <p className="text-gray-100 text-lg">
+              We collaborate with partners and clients around the world to combine strategy, innovation, and engineering excellence, unlocking the potential of technology to create the future.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            {/* ...optional content or leave empty... */}
+          </div>
+        </div>
+
+        {/* anoter text section */}
 
         {/* Contact CTA */}
         <div className="text-center relative z-10">
