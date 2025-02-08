@@ -429,7 +429,7 @@ export default function About() {
           <div className="relative w-full h-[500px] rounded-xl overflow-hidden group">
             {/* Background Image */}
             <Image
-              src="https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734631369411-586BF1EAK798URZY7CWP/unsplash-image-PGRlGx_6Ehk.jpg?format=2500w"
+              src="/images/img-11.jpg"
               alt="Technology Background"
               fill
               className="object-cover brightness-50 group-hover:scale-105 transition-transform duration-700"
