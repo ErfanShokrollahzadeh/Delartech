@@ -298,6 +298,34 @@ export default function About() {
             />
           </div>
         </div>
+        <br />
+
+        {/* map image Section */}
+        <div className="mb-20">
+          {/* <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+            Delart’s Global Operations
+          </h2> */}
+          <div className="relative w-full h-[600px]  rounded-xl overflow-hidden group">
+            <Image
+              src="/images/img-10.png" // Make sure to add this image to your public/images folder
+              alt="Global Presence"
+              fill
+              className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+              priority
+            />
+            {/* Optional: Add glowing dots for office locations */}
+            {/* <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-green-500 rounded-full animate-pulse">
+              <div className="absolute -inset-1 bg-green-500/20 rounded-full animate-ping" />
+            </div>
+            <div className="absolute top-1/4 right-1/3 w-4 h-4 bg-green-500 rounded-full animate-pulse">
+              <div className="absolute -inset-1 bg-green-500/20 rounded-full animate-ping" />
+            </div>
+            <div className="absolute bottom-1/3 right-1/4 w-4 h-4 bg-green-500 rounded-full animate-pulse">
+              <div className="absolute -inset-1 bg-green-500/20 rounded-full animate-ping" />
+            </div> */}
+          </div>
+        </div>
+        <br />
 
         {/* Expertise Section */}
         <div className="mb-20">
