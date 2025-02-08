@@ -139,6 +139,12 @@ export default function About() {
     return () => clearInterval(interval);
   }, [images.expertise.length]);
 
+  // Pre-calculate dot positions using a grid pattern instead of random
+  const dotPositions = Array.from({ length: 100 }, (_, i) => ({
+    left: `${(i % 10) * 10 + 5}%`,
+    top: `${Math.floor(i / 10) * 10 + 5}%`
+  }));
+
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
       {/* Hardware-like Overlay */}
@@ -155,16 +161,16 @@ export default function About() {
         <div className="absolute bottom-1/4 right-1/2 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/2 right-1/3 w-12 h-1 bg-green-500 animate-pulse" />
       </div>
-      {/* Background Dots */}
+      {/* Updated Background Dots */}
       <div className="fixed inset-0 pointer-events-none">
-        {Array.from({ length: 100 }).map((_, i) => (
+        {dotPositions.map((pos, i) => (
           <div
-        key={i}
-        className="absolute w-1 h-1 bg-green-100/10 rounded-full"
-        style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`
-        }}
+            key={i}
+            className="absolute w-1 h-1 bg-green-100/10 rounded-full"
+            style={{
+              left: pos.left,
+              top: pos.top
+            }}
           />
         ))}
       </div>
