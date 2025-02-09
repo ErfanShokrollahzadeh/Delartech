@@ -465,15 +465,27 @@ export default function About() {
           </div>
         </div>
 
+        {/* New Section with h2 tag on the right side */}
+        <div className="flex flex-col md:flex-row items-start ml-96 mb-20">
+          <div className="md:w-1/2">
+            {/* ...optional content or leave empty... */}
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="text-6xl font-bold text-white">One Day</h2>
+            <h3 className="text-6xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">at a Time.</h3>
+          </div>
+        </div>
+
         {/* anoter text section */}
+        
 
         {/* Contact CTA */}
         <div className="text-center relative z-10">
           <Button asChild 
-                 className="bg-black hover:bg-black/80 text-green-400 
-                           border border-green-500/20 
+                 className="bg-black hover:bg-green-400 hover:text-black text-white 
+                           border border-green-500 
                            hover:border-green-500/40 px-8 py-6 text-lg">
-            <Link href="/contact">Discuss Your RF Requirements</Link>
+            <Link href="/contact" className='font-extralight'>GET IN TOUCH</Link>
           </Button>
         </div>
 
