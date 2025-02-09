@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Radio, Antenna, CircuitBoard, Waves, Cpu, Network } from "lucide-react";
+import { Radio, Antenna, CircuitBoard, Waves, Cpu, Network, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -475,9 +475,80 @@ export default function About() {
             <h3 className="text-6xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">at a Time.</h3>
           </div>
         </div>
+        <br /> <br />
 
         {/* anoter text section */}
         
+
+        {/* delart offices location */}
+        <div className="mb-20">
+          <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
+            Delart’s <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">Offices</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Santa Monica Office */}
+            <div className="p-8 rounded-xl border border-green-500/20 hover:border-green-500/40 
+                          transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 
+                          backdrop-blur-sm bg-black/20 group">
+              <div className="flex flex-col items-center text-center mb-6">
+                <MapPin className="w-12 h-12 text-green-500 mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-semibold text-white mb-2">Santa Monica</h3>
+                <span className="text-green-500 text-sm uppercase tracking-wider">California</span>
+              </div>
+              <p className="text-gray-400 text-center text-lg">
+                312 Arizona Ave,<br />
+                Santa Monica, CA 90401
+              </p>
+            </div>
+
+            {/* Sunnyvale Office */}
+            <div className="p-8 rounded-xl border border-green-500/20 hover:border-green-500/40 
+                          transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 
+                          backdrop-blur-sm bg-black/20 group">
+              <div className="flex flex-col items-center text-center mb-6">
+                <MapPin className="w-12 h-12 text-green-500 mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-semibold text-white mb-2">Sunnyvale</h3>
+                <span className="text-green-500 text-sm uppercase tracking-wider">California</span>
+              </div>
+              <p className="text-gray-400 text-center text-lg">
+                1309 S Mary Ave,<br />
+                Suite 206,<br />
+                Sunnyvale CA 94087
+              </p>
+            </div>
+
+            {/* Ontario Office */}
+            <div className="p-8 rounded-xl border border-green-500/20 hover:border-green-500/40 
+                          transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 
+                          backdrop-blur-sm bg-black/20 group">
+              <div className="flex flex-col items-center text-center mb-6">
+                <MapPin className="w-12 h-12 text-green-500 mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-semibold text-white mb-2">Mississauga</h3>
+                <span className="text-green-500 text-sm uppercase tracking-wider">Ontario</span>
+              </div>
+              <p className="text-gray-400 text-center text-lg">
+                2 Robert speck pkwy,<br />
+                Mississauga, Ontario L4Z1H8
+              </p>
+            </div>
+
+            {/* Shanghai Office */}
+            <div className="p-8 rounded-xl border border-green-500/20 hover:border-green-500/40 
+                          transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 
+                          backdrop-blur-sm bg-black/20 group">
+              <div className="flex flex-col items-center text-center mb-6">
+                <MapPin className="w-12 h-12 text-green-500 mb-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-semibold text-white mb-2">Shanghai</h3>
+                <span className="text-green-500 text-sm uppercase tracking-wider">China</span>
+              </div>
+              <p className="text-gray-400 text-center text-lg">
+                NO.35 Boxia RD,<br />
+                Pudong Shanghai,<br />
+                201203
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Contact CTA */}
         <div className="text-center relative z-10">
@@ -488,6 +559,8 @@ export default function About() {
             <Link href="/contact" className='font-extralight'>GET IN TOUCH</Link>
           </Button>
         </div>
+
+        {/* delart offices location */}
 
         {/* Decorative Element */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
