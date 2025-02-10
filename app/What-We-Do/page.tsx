@@ -232,27 +232,30 @@ export default function Home() {
         </div>
               
         {/* New Text Topics Section */}
-        <section className="py-20 px-4 text-white">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="pb-32 px-4 text-white">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-14">
             {[
-              { title: "Wireless Systems Engineering", icon: <Antenna className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "RF and Antenna Solutions", icon: <Radio className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "Embedded Firmware Development", icon: <Cpu className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "Embedded Hardware Design and Prototyping", icon: <CircuitBoard className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "Silicon Design and Productization", icon: <Microchip className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "High-Performance Networking Infrastructure", icon: <Network className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "Software and Machine Learning Development", icon: <Laptop className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "Mechanical Engineering & Prototyping", icon: <Shield className="w-8 h-8 text-green-500 mx-auto" /> },
-              { title: "Technical Program Management (TPM)", icon: <Book className="w-8 h-8 text-green-500 mx-auto" /> }
+              { title: "Wireless Systems Engineering", icon: <Antenna className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "RF and Antenna Solutions", icon: <Radio className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "Embedded Firmware Development", icon: <Cpu className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "Embedded Hardware Design and Prototyping", icon: <CircuitBoard className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "Silicon Design and Productization", icon: <Microchip className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "High-Performance Networking Infrastructure", icon: <Network className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "Software and Machine Learning Development", icon: <Laptop className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "Mechanical Engineering & Prototyping", icon: <Shield className="w-10 h-10 text-green-500 mx-auto" /> },
+              { title: "Technical Program Management (TPM)", icon: <Book className="w-10 h-10 text-green-500 mx-auto" /> }
             ].map((topic, index) => (
               <div key={index} className="flex flex-col items-center">
                 {topic.icon}
-                <p className="text-2xl font-thin mt-2 text-center">{topic.title}</p>
-                {index < 8 && <hr className="border-green-600 w-full mt-4" />}
+                <p className="text-1xl font-light mt-2 text-center">{topic.title}</p>
+                {index < 9 && (
+                  <hr className="w-full mt-4 h-[2px] border-0 bg-gradient-to-r from-pink-700 via-green-500 to-orange-500 animate-gradient" />
+                )}
               </div>
             ))}
           </div>
-        </section>
+              </section>
+        <br /> <br />
 
         {/* Expertise Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
@@ -278,38 +281,7 @@ export default function Home() {
         </div>
 
         {/* Technical Areas */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Technical Expertise</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {technicalAreas.map((area, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-green-500 mb-6">{area.title}</h3>
-                <div className="mb-6">
-                  <h4 className="text-white mb-3">Key Topics:</h4>
-                  <ul className="space-y-2">
-                    {area.topics.map((topic, i) => (
-                      <li key={i} className="text-gray-400 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                        {topic}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-white mb-3">Resources:</h4>
-                  <ul className="space-y-2">
-                    {area.resources.map((resource, i) => (
-                      <li key={i} className="text-gray-400 flex items-center gap-2">
-                        <Book className="w-4 h-4 text-green-500" />
-                        {resource}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Research Areas */}
         <div className="mb-20">
