@@ -111,7 +111,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-gray-100 transition-all py-6 text-4xl font-light transform
+                className={`text-gray-100 transition-all py-5 text-4xl font-light transform
                   ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
                   ${isActive(link.href) 
                     ? "text-green-500 font-normal scale-110" 
@@ -130,7 +130,7 @@ export function Navbar() {
               asChild
               className={`mt-16 bg-black hover:bg-black/90 text-white text-xl 
               px-12 py-8 h-auto w-64 rounded-[30px] transform transition-all duration-500
-              border-2 border-green-500 hover:border-green-400
+              border-2 border-green-500 hover:border-green-400 hover:bg-green-400 hover:text-black
               ${isMenuOpen 
                 ? "translate-y-0 opacity-100 scale-100" 
                 : "translate-y-full opacity-0 scale-95"
