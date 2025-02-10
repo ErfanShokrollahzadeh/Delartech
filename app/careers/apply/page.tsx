@@ -8,8 +8,267 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Upload, AtSign, Phone, User, Calendar, Briefcase, File, Send } from "lucide-react";
 import { useState } from "react";
+import { useSearchParams } from "next/navigation"; // New import
 
 export default function Apply() {
+  const searchParams = useSearchParams();
+  const appliedPosition = searchParams?.get("position") || "";
+  
+  // Updated mapping with richer details; added new entry for "Hardware EE Validation Engineer"
+  const jobDetails: Record<string, string> = {
+    "Senior RF Design Engineer": 
+      "Focus on advanced RF circuit design, signal integrity analysis, and system optimization.\n\nIn this role, you'll work on cutting-edge technologies, collaborate with cross-functional teams, and bring your expertise in RF theory to life.",
+    
+    // New job details for
+    "RF Systems Architect": 
+      "Architect complex RF systems integrating various wireless solutions.\n\nYou will be responsible for designing system-level architectures, collaborating with product teams, and ensuring that our designs meet the highest performance and reliability standards.",
+    
+    // New job details for
+    "Embedded Systems Engineer": 
+      "Develop embedded hardware and firmware for innovative products.\n\nLeverage your skills in low-level programming and hardware interfacing to build robust systems in a fast-paced environment.",
+    
+    // New job details for
+    "RF Test Engineer": 
+      "Execute testing and validation of RF equipment for high-performance reliability.\n\nDesign and run comprehensive test suites to guarantee product quality across a range of challenging operating conditions.",
+    
+    // New job details for
+    "PCB Layout EngineerNew": 
+        `About the job
+
+Delart is home to a team of world-class engineers and project leaders dedicated to developing the next generation of advanced networking technologies, consumer devices, and innovative technology solutions. Trusted by some of the world’s leading technology companies, we deliver highly scalable, mission-critical solutions that power both consumer and business applications globally. Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
+
+Job Description: In this role you will be working with JDM, hardware engineers and PCB/Assembly vendors to determine PCB stack-up, apply design constraints, perform component placement and signal routing and DFM. You will assist hardware engineers to perform signal integrity and power integrity analysis, and release fab and assembly packages.
+
+Responsibilities: 
+
+• Own and improve PCB/FPC design processes, work with Portal hardware team and JDM PCB team to deliver ok2fab.
+• Own complex PCB/FPC designs, containing analog, digital, RF, Camera, Display, Audio, Sensors and power charging components.
+• Manage and coach JDM and PCB vendors on placement/routing/DFM/Working Gerber review to meet design quality.
+• Create and manage PCB documentation including fabrication and assembly packages, such as Gerber, ODB, BoM, fab and assembly drawings.
+• Interface with board fabrication vendor to select proper materials and stack-up, use correct impedance and DFX rulesets.
+• Work with assembly vendors to supply data and seek assembly design requirements. Resolve DFM and manufacturing related issue.
+• Work with hardware engineers and document control departments to release fab and assembly packages into a company-wide PLM system. Author ECO’s if necessary.
+• Work closely with ECAD librarians on maintaining and expanding the company-wide library.
+
+Minimum Qualifications:
+
+• BS in EE or equivalent practical experience.
+• 7+ years of PCB design experience using Cadence tool sets.
+• Experience in managing and coaching JDM and PCB vendors.
+• Experience interpreting datasheets and schematics, generating netlists and constraints, and using schematic for layout and routing reference.
+• Experience with PLM systems such as Agile.
+• Knowledge and understanding of IPC, JEDEC, IEEE, and other electronic standards.
+• Experience with HDI design. Knowledge of multilayer PCB layout, fabrication and assembly techniques including blind/buried vias, and microvias.
+• Experience with Rigid, Flex, and Rigid-Flex boards design and manufacturing.
+• Experience in PCB layout design constraints for mixed/RF signal, high speed signal impedance control, memory interfaces, power distribution, heat dissipation, and optimization for EMI performance.
+
+Preferred Qualifications:
+
+• 10+ years experience of PCB layout design using Cadence Allegro.
+• Proven track record to design & manage all aspects of the printed board design used in high volume consumer products.
+• Experience in cost effective consumer electronics design.
+• Knowledge in EMC compliance, environmental safety compliance.
+
+Benefits
+
+Delart provides competitive benefits and compensation across all regions where we operate. In the United States, our benefits package includes premium PPO and HMO medical insurance, dental and vision coverage, flexible spending accounts (FSA), life insurance, short- and long-term disability insurance, a company-matched 401(k) plan, and a generous paid time off policy.
+
+Join us in shaping the future of technology. Apply today!
+
+Delart is an equal opportunity employer. We celebrate diversity and are dedicated to fostering an inclusive workplace for all employees. We strictly prohibit discrimination or harassment of any kind based on race, color, religion, age, sex, national origin, disability, genetics, veteran status, sexual orientation, gender identity, or any other characteristic protected by law.`,
+    
+    // New job details for
+    "PCB Layout Engineer": 
+      `About the job
+
+Delart is home to a team of world-class engineers and project leaders dedicated to developing the next generation of advanced networking technologies, consumer devices, and innovative technology solutions. Trusted by some of the world’s leading technology companies, we deliver highly scalable, mission-critical solutions that power both consumer and business applications globally. Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
+
+Job Description: In this role you will be working with JDM, hardware engineers and PCB/Assembly vendors to determine PCB stack-up, apply design constraints, perform component placement and signal routing and DFM. You will assist hardware engineers to perform signal integrity and power integrity analysis, and release fab and assembly packages.
+
+Responsibilities: 
+
+• Own and improve PCB/FPC design processes, work with Portal hardware team and JDM PCB team to deliver ok2fab.
+• Own complex PCB/FPC designs, containing analog, digital, RF, Camera, Display, Audio, Sensors and power charging components.
+• Manage and coach JDM and PCB vendors on placement/routing/DFM/Working Gerber review to meet design quality.
+• Create and manage PCB documentation including fabrication and assembly packages, such as Gerber, ODB, BoM, fab and assembly drawings.
+• Interface with board fabrication vendor to select proper materials and stack-up, use correct impedance and DFX rulesets.
+• Work with assembly vendors to supply data and seek assembly design requirements. Resolve DFM and manufacturing related issue.
+• Work with hardware engineers and document control departments to release fab and assembly packages into a company-wide PLM system. Author ECO’s if necessary.
+• Work closely with ECAD librarians on maintaining and expanding the company-wide library.
+
+Minimum Qualifications: 
+
+• BS in EE or equivalent practical experience.
+• 7+ years of PCB design experience using Cadence tool sets.
+• Experience in managing and coaching JDM and PCB vendors.
+• Experience interpreting datasheets and schematics, generating netlists and constraints, and using schematic for layout and routing reference.
+• Experience with PLM systems such as Agile.
+• Knowledge and understanding of IPC, JEDEC, IEEE, and other electronic standards.
+• Experience with HDI design. Knowledge of multilayer PCB layout, fabrication and assembly techniques including blind/buried vias, and microvias.
+• Experience with Rigid, Flex, and Rigid-Flex boards design and manufacturing.
+• Experience in PCB layout design constraints for mixed/RF signal, high speed signal impedance control, memory interfaces, power distribution, heat dissipation, and optimization for EMI performance.
+
+Preferred Qualifications:
+
+• 10+ years experience of PCB layout design using Cadence Allegro.
+• Proven track record to design & manage all aspects of the printed board design used in high volume consumer products.
+• Experience in cost effective consumer electronics design.
+•Knowledge in EMC compliance, environmental safety compliance.
+
+Benefits
+
+Delart provides competitive benefits and compensation across all regions where we operate. In the United States, our benefits package includes premium PPO and HMO medical insurance, dental and vision coverage, flexible spending accounts (FSA), life insurance, short- and long-term disability insurance, a company-matched 401(k) plan, and a generous paid time off policy.
+
+Join us in shaping the future of technology. Apply today!
+
+Delart is an equal opportunity employer. We celebrate diversity and are dedicated to fostering an inclusive workplace for all employees. We strictly prohibit discrimination or harassment of any kind based on race, color, religion, age, sex, national origin, disability, genetics, veteran status, sexual orientation, gender identity, or any other characteristic protected by law.`,    
+    
+    // New job details for
+    "Lab Systems and Network Engineer": 
+      `About the job
+
+Delart is home to a team of world-class engineers and project leaders dedicated to developing the next generation of advanced networking technologies, consumer devices, and innovative technology solutions. Trusted by some of the world’s leading technology companies, we deliver highly scalable, mission-critical solutions that power both consumer and business applications globally. Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
+
+Overview:
+
+Delart is seeking a hands-on, detail-oriented Lab Systems and Network Engineer to manage and maintain continuous lab services for a high-tech and networking testing environment. You will be the first line of defense for system issues, ensuring operational excellence, troubleshooting, and supporting systems engineers with networking and testbed requirements. This role is critical to the efficient operation of our state-of-the-art lab, and you'll work closely with a dynamic team of software and network engineers and lab program managers.
+
+Responsibilities:
+
+• Perform daily system health checks and respond to on-call requirements for lab services.
+• Monitor and maintain: Lab network infrastructure, lab VMs (NUCs/Servers), wireless connectivity infra (Cellular, WiFi), and various hardware/software test stations.
+• Proactively identify, manage, and resolve system issues, escalating to SMEs as needed.
+• Deploy, configure, and tear down testbeds as required.
+• Rack, stack, and cable equipment.
+• Provision new servers, virtual machines, and devices (e.g., Test Phones, WiFi APs).
+• Configure basic network registration and labnet systems.
+• Develop automation scripts and tools/dashboard for streamlining above operations
+• Perform and execute system and end-to-end tests and create test reports
+• Serve as the on-site point of contact for lab and support requests.
+• Conduct cable, network, and inventory checks during debugging sessions.
+• Collaborate with other stakeholders engineers on operational needs and initiatives.
+• Track and update inventory locations, project associations, and equipment allocations.
+• Identify and procure frequently used items to ensure adequate stock levels.
+• Drive quarterly efficiency projects, such as standardizing monitoring and auditing under-utilized testbeds.
+
+Qualifications: 
+
+• Experience working in a lab environment, with a focus on operational excellence.
+• Familiarity with network equipment and wireless systems (WiFi, cellular).
+• Proficiency with all major operating systems, command-line interfaces, and scripting/automation.
+• Strong attention to detail and thorough documentation practices.
+• Hands-on experience with cabling (USB, RF) and hardware setups.
+• Familiarity with Android/iOS devices and cellular/wireless/app testing setups.
+• BS/MS in engineering or relevant fields
+• Preferred: prior exposure to lab monitoring tools and runbook creation.
+• Preferred: Knowledge of Amarisoft, ESXi, and testbed provisioning.
+• Lab Systems and Network Engineer Range
+
+Lab Systems and Network Engineer Range
+$110,000 - $150,000 USD
+
+Benefits
+
+Delart provides competitive benefits and compensation across all regions where we operate. In the United States, our benefits package includes premium PPO and HMO medical insurance, dental and vision coverage, flexible spending accounts (FSA), life insurance, short- and long-term disability insurance, a company-matched 401(k) plan, and a generous paid time off policy.
+
+Join us in shaping the future of technology. Apply today!
+
+Delart is an equal opportunity employer. We celebrate diversity and are dedicated to fostering an inclusive workplace for all employees. We strictly prohibit discrimination or harassment of any kind based on race, color, religion, age, sex, national origin, disability, genetics, veteran status, sexual orientation, gender identity, or any other characteristic protected by law.`,
+    
+    // New job details for
+    "IPD and RF Packaging Engineer": 
+      `About the job
+
+Delart is home to a team of world-class engineers and project leaders dedicated to developing the next generation of advanced networking technologies, consumer devices, and innovative technology solutions. Trusted by some of the world’s leading technology companies, we deliver highly scalable, mission-critical solutions that power both consumer and business applications globally. Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
+
+Responsibilities:
+
+• Design, simulate and validate RF/mmWave package/IPD solutions from prototype to mass production.
+• Partner with fabrication vendors to manufacture and qualify the RF/mmWaveF package with high yield.
+• Ensure seamless integration of the RF packages into wireless systems, including reliability and manufacturability.
+• RF lab debug, tuning and characterization of RF/mmWave packages.
+• Understand fabrication vendor's technology/capabilities and down-select suitable vendors for implementation.
+• Flash firmware images onto hardware systems as part of the testing and debugging process.
+• Utilize lab equipment such as VNAs, MIPI analyzers, and other high-speed interface tools for testing and troubleshooting.
+• Develop and execute tests based on specifications, ensuring accuracy and completeness of results.
+• Create detailed test reports to document findings and provide actionable insights.
+• Implement basic automation scripts in LabVIEW; Python scripting is a plus.
+• Collaborate with design teams to validate and troubleshoot hardware, contributing to design improvements.
+
+Qualifications: 
+
+• BS or MS in Electrical/Electronic engineering with at least 5 years of RF/mmWave packaging experience.
+• Excellent knowledge/experience in the following area.
+  • Wafer-level packaging, including RDL design.
+  • Silicon/LTCC/TFS passives design, including IPDs.
+  • FEM package design.
+  • SAW/BAW filters package design.
+  • mmWave package design, including design of mmWave components on substrate.
+• Excellent knowledge/experience of RF/mmWave measurement techniques and lab equipment, including load pull techniques and RF/mmWave probe station.
+• Good understanding of wireless standards and compliance requirements (e.g. FCC)
+• Excellent understanding of RF concepts such as power and noise matching, Smith charts, coupling, supply isolation, radar, de-sense, power supply rejection, transmission lines and mmWave components (e.g. coupler, filters, etc)
+• Experienced in developing test plans, test procedures and compliance matrices.
+• Familiar with circuit simulation tools (e.g. ADS), EM tools (e.g. HFSS), PCB design and layout tools (e.g. Allegro) and scripting languages (e.g. Python).
+• Knowledge of wireless standards and wireless systems (e.g. WiFi/BT, Cellular, GNSS, UWB)
+
+RF Design Engineer - IPD and Passives on Silicon Range
+$165,000 - $210,000 USD
+
+Benefits
+
+Delart provides competitive benefits and compensation across all regions where we operate. In the United States, our benefits package includes premium PPO and HMO medical insurance, dental and vision coverage, flexible spending accounts (FSA), life insurance, short- and long-term disability insurance, a company-matched 401(k) plan, and a generous paid time off policy.
+
+Join us in shaping the future of technology. Apply today!
+
+Delart is an equal opportunity employer. We celebrate diversity and are dedicated to fostering an inclusive workplace for all employees. We strictly prohibit discrimination or harassment of any kind based on race, color, religion, age, sex, national origin, disability, genetics, veteran status, sexual orientation, gender identity, or any other characteristic protected by law.`,
+
+    // New job details for
+    "Hardware EE Validation Engineer":
+     `About the job
+
+Delart is home to a team of world-class engineers and project leaders dedicated to developing the next generation of advanced networking technologies, consumer devices, and innovative technology solutions. Trusted by some of the world’s leading technology companies, we deliver highly scalable, mission-critical solutions that power both consumer and business applications globally. Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
+
+Job Summary:
+
+Delart Technologies is seeking a skilled HW EE Validation Engineer to join our team. This role focuses on the validation and testing of consumer electronics hardware in the electrical engineering domain, with an emphasis on debugging and troubleshooting at both the hardware and electrical levels. The ideal candidate will have hands-on experience with high-speed interfaces, lab test equipment, and scripting for automation and data analysis.
+
+Responsibilities:
+
+• Conduct validation and testing of embedded hardware systems, focusing on electrical engineering aspects.
+• Perform hardware-level debugging and troubleshooting to identify and resolve design and functional issues.
+• Debug electrical systems, ensuring proper operation and signal integrity.
+• Work with MIPI interfaces and protocols, and I2C and SPI.
+• Perform power consumption measurements using current probes and other tools.
+• Flash firmware images onto hardware systems as part of the testing and debugging process.
+• Utilize lab equipment such as VNAs, MIPI analyzers, and other high-speed interface tools for testing and troubleshooting.
+• Develop and execute tests based on specifications, ensuring accuracy and completeness of results.
+• Create detailed test reports to document findings and provide actionable insights.
+• Implement basic automation scripts in LabVIEW; Python scripting is a plus.
+• Collaborate with design teams to validate and troubleshoot hardware, contributing to design improvements.
+
+Qualifications:
+
+• Bachelor’s degree in Electrical Engineering or a related field.
+• Strong ability to debug and troubleshoot issues at both the electrical and hardware levels.
+• Familiarity with MIPI, I2C, and SPI protocols and interfaces.
+• Experience in EE design is a strong advantage.
+• Proficiency in using lab test equipment and conducting hands-on testing.
+• Ability to analyze power consumption and signal integrity measurements.
+• Knowledge of scripting for test automation and data analysis (LabVIEW; Python preferred).
+
+Hardware EE Validation Engineer Range:
+
+$130,000 - $170,000 USD
+
+Benefits:
+
+Delart provides competitive benefits and compensation across all regions where we operate. In the United States, our benefits package includes premium PPO and HMO medical insurance, dental and vision coverage, flexible spending accounts (FSA), life insurance, short- and long-term disability insurance, a company-matched 401(k) plan, and a generous paid time off policy.
+
+Join us in shaping the future of technology. Apply today!
+
+Delart is an equal opportunity employer. We celebrate diversity and are dedicated to fostering an inclusive workplace for all employees. We strictly prohibit discrimination or harassment of any kind based on race, color, religion, age, sex, national origin, disability, genetics, veteran status, sexual orientation, gender identity, or any other characteristic protected by law.`
+  };
+
   const [formData, setFormData] = useState({
     position: "",
     firstName: "",
@@ -69,11 +328,21 @@ export default function Apply() {
             Please fill out the form below to apply for your selected position
           </p>
         </div>
-
+        
+        {/* Job Explanation Section */}
+        {appliedPosition && (
+          <div className="mb-8 p-6 bg-gray-800 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-2">{appliedPosition}</h2>
+            <p className="text-gray-400 whitespace-pre-line">
+              {jobDetails[appliedPosition] || "Additional job details coming soon."}
+            </p>
+          </div>
+        )}
+        
         {/* Application Form */}
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Position Selection */}
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <Label htmlFor="position" className="text-white">Position</Label>
             <Select
               value={formData.position}
@@ -90,7 +359,7 @@ export default function Apply() {
                 ))}
               </SelectContent>
             </Select>
-          </div>
+          </div> */}
 
           {/* Personal Information */}
           <div className="grid md:grid-cols-2 gap-6">
