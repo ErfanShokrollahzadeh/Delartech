@@ -134,7 +134,7 @@ export default function Contact() {
             />
           </div>
           <h1 className="text-6xl p-2 md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-green-600">
-            Let's Work Together
+            Contact Us
           </h1>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
             Discuss your RF engineering requirements with our expert team
@@ -145,11 +145,11 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Contact Form */}
           <div className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-8">Project Inquiry</h2>
+            <h2 className="text-2xl font-bold text-white mb-8">GET IN TOUCH</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name" className="text-white">Name</Label>
+                  <Label htmlFor="name" className="text-white">Full Name</Label>
                   <Input
                     id="name"
                     className="bg-white/5 border-green-900/20 text-white"

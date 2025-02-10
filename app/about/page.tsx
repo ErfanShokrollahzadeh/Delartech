@@ -213,7 +213,7 @@ export default function About() {
           {stats.map((stat, index) => (
             <div key={index} 
                  className="p-6 rounded-lg border border-green-500/20 backdrop-blur-sm 
-                           bg-slate-900 hover:border-green-500/40 transition group">
+                           bg-black hover:border-green-500/40 transition group">
               <div className="text-4xl font-bold text-green-600 mb-2">{stat.number}</div>
               <div className="text-gray-400">{stat.label}</div>
             </div>
@@ -236,10 +236,10 @@ export default function About() {
         <br />
 
         {/* New Section */}
-        <div className="flex flex-col bg-slate-950 md:flex-row items-center mb-20">
+        <div className="flex flex-col  md:flex-row items-center mb-20">
           <div className="md:w-1/2 p-4">
             <p className="font-mono text-2xl text-white mt-5">EMPOWERING TECHNOLOGY LEADERS</p>
-            <h2 className="text-5xl md:text-7xl text-white mt-2">What We Do</h2>
+            <h2 className="text-5xl md:text-7xl text-green-500 mt-2">What We Do</h2>
             <p className="text-gray-100 text-lg mb-6 mt-4 font-sans">
               We partner with top technology leaders to drive innovation and bring their long-term product visions to life. Our specialized engineering services support the creation of groundbreaking consumer and telecommunications products — and the standards that make them possible.
               Whether we’re advancing wireless technologies like mmWave, Wi-Fi, Bluetooth, and Ultra-Wideband (UWB), shaping the future of AR/VR, or building open, accessible 5G infrastructure, our team stays at the forefront of transformative technology development.
@@ -261,7 +261,7 @@ export default function About() {
         <br />
 
         {/* New Culture Section */}
-        <div className="flex flex-col md:flex-row items-center bg-slate-950 mb-20 min-h-[600px]">
+        <div className="flex flex-col md:flex-row items-center bg-black mb-20 min-h-[600px]">
           <div className="md:w-1/2 relative h-[600px] mr-20">
             <Image
               src={images.culture}

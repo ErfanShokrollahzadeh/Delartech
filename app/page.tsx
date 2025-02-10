@@ -333,7 +333,7 @@ export default function Home() {
         </div>
         <br />
         {/* New Section: Pioneering the Future */}
-        <section className="py-16 px-4 bg-gray-900 text-center">
+        <section className="py-16 px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-green-400 mb-4">
             PIONEERING THE FUTURE
           </h2>
@@ -347,7 +347,7 @@ export default function Home() {
         <br /><br />
         
         {/* New Accordion Section */}
-        <section className="py-16 px-4 bg-gray-800 text-white relative">
+        <section className="py-16 px-4 text-white relative">
           <h2 className="text-4xl text-green-600 font-bold text-center mb-8">
             Select Ideas We Helped Bring to Life
           </h2>
@@ -391,7 +391,7 @@ export default function Home() {
         <br />
 
         {/* New Text Topics Section */}
-        <section className="py-20 px-4 text-white">
+        {/* <section className="py-20 px-4 text-white">
           <div className="max-w-5xl mx-auto space-y-4">
             <p className="text-2xl font-thin">Wireless Systems Engineering</p>
             <hr className="border-green-600" />
@@ -412,7 +412,7 @@ export default function Home() {
             <p className="text-2xl font-thin">Technical Program Management (TPM)</p>
             <hr className="border-green-600" />
           </div>
-        </section>
+        </section> */}
         
       </div>
     </main>
