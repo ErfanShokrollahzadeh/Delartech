@@ -37,6 +37,7 @@ export function Navbar() {
     { href: "/services", label: "Services" },
     { href: "/people", label: "People" },
     { href: "/careers", label: "Careers" },
+    { href: "/What-We-Do", label: "What We Do" },
   ];
 
   const isActive = (path: string) => {
