@@ -29,9 +29,9 @@ export default function Careers() {
 
   const openPositions = [
     {
-      title: "Senior RF Design Engineer",
+      title: "Hardware EE Validation Engineer",
       type: "Full-time",
-      location: "Boston, MA",
+      location: "Sunnyvale, CA",
       image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900",
       requirements: [
         "10+ years RF/Microwave design experience",
@@ -47,9 +47,9 @@ export default function Careers() {
       ]
     },
     {
-      title: "RF Systems Architect",
+      title: "IPD and RF Packaging Engineer",
       type: "Full-time",
-      location: "Cambridge, MA",
+      location: "San Jose, CA",
       image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800",
       requirements: [
         "PhD in RF/Microwave Engineering",
@@ -65,9 +65,9 @@ export default function Careers() {
       ]
     },
     {
-      title: "Embedded Systems Engineer",
+      title: "Lab Systems and Network Engineer",
       type: "Full-time",
-      location: "Remote",
+      location: "Palo Alto, CA",
       image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800",
       requirements: [
         "5+ years embedded systems experience",
@@ -83,9 +83,9 @@ export default function Careers() {
       ]
     },
     {
-      title: "RF Test Engineer",
-      type: "Full-time",
-      location: "Boston, MA",
+      title: "PCB Layout Engineer",
+      type: "Remote",
+      location: "United States",
       image: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?q=80&w=1000",
       requirements: [
         "5+ years RF testing experience",
@@ -101,9 +101,9 @@ export default function Careers() {
       ]
     },
     {
-      title: "Antenna Design Engineer",
-      type: "Full-time",
-      location: "Cambridge, MA",
+      title: "PCB Layout EngineerNew",
+      type: "Remote",
+      location: "China",
       image: "https://images.unsplash.com/photo-1451187863213-d1bcbaae3fa3?q=80&w=1000",
       requirements: [
         "MS/PhD in Electrical Engineering",
@@ -118,60 +118,6 @@ export default function Careers() {
         "Develop beamforming solutions"
       ]
     },
-    {
-      title: "RF Power Amplifier Designer",
-      type: "Full-time",
-      location: "Remote",
-      image: "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?q=80&w=800",
-      requirements: [
-        "7+ years PA design experience",
-        "GaN/GaAs amplifier expertise",
-        "Knowledge of DPD techniques",
-        "Experience with ADS"
-      ],
-      responsibilities: [
-        "Design high-efficiency PAs",
-        "Optimize linearity performance",
-        "Develop matching networks",
-        "Thermal management solutions"
-      ]
-    },
-    {
-      title: "5G Protocol Engineer",
-      type: "Contract",
-      location: "Remote",
-      image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800",
-      requirements: [
-        "Strong 3GPP standards knowledge",
-        "Experience with O-RAN",
-        "Protocol stack expertise",
-        "System integration skills"
-      ],
-      responsibilities: [
-        "Implement 5G protocols",
-        "Develop O-RAN solutions",
-        "System integration testing",
-        "Performance optimization"
-      ]
-    },
-    {
-      title: "RF Hardware Engineer",
-      type: "Full-time",
-      location: "Boston, MA",
-      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800",
-      requirements: [
-        "BSEE/MSEE degree",
-        "PCB design experience",
-        "Signal integrity expertise",
-        "High-speed design skills"
-      ],
-      responsibilities: [
-        "RF PCB design",
-        "Component selection",
-        "EMC compliance testing",
-        "Hardware debugging"
-      ]
-    }
   ];
 
   const filteredPositions = openPositions.filter(position =>
@@ -299,7 +245,7 @@ export default function Careers() {
           </p>
         </div>
         {/* Future Building Section */}
-        <div className="flex flex-col md:flex-row items-center gap-8 my-10 bg-gray-800 rounded-xl p-4 sm:p-6 lg:p-8">
+        <div className="mb-32 flex flex-col md:flex-row items-center gap-8 my-10 bg-gray-800 rounded-xl p-4 sm:p-6 lg:p-8">
           {/* Left: Text */}
           <div className="w-full md:w-1/2 text-white space-y-4 sm:space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
@@ -354,7 +300,7 @@ export default function Careers() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     unoptimized
                   />
-                  <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70" />
+                  <div className="absolute inset-5 bg-black/70 group-hover:bg-black/90" />
                 </div>
                 <div className="relative p-8">
                   <h3 className="text-2xl font-semibold text-white mb-2">{position.title}</h3>
