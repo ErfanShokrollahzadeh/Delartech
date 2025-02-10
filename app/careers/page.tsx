@@ -300,7 +300,7 @@ export default function Careers() {
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 unoptimized
                 />
-                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50" />
+                <div className="absolute inset-0 bg-black/80 group-hover:bg-black/95" />
               </div>
                 <div className="relative p-8">
                   <h3 className="text-2xl font-semibold text-white mb-2">{position.title}</h3>
