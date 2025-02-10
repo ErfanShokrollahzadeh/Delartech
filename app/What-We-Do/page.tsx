@@ -53,109 +53,10 @@ export default function Home() {
     }
   ];
 
-  const technicalAreas = [
-    {
-      title: "RF Design & Engineering",
-      topics: [
-        "RF Circuit Design and Analysis",
-        "Signal Integrity and Power Distribution",
-        "High-Frequency PCB Layout",
-        "Impedance Matching Networks"
-      ],
-      resources: [
-        "RF Circuit Design by Chris Bowick",
-        "Analog Devices Technical Guides",
-        "IEEE RF Design Papers",
-        "Keysight RF Webinars"
-      ]
-    },
-    {
-      title: "Embedded Systems",
-      topics: [
-        "RTOS Development",
-        "Device Driver Implementation",
-        "Firmware Architecture",
-        "Low-Power Design"
-      ],
-      resources: [
-        "Programming Embedded Systems in C/C++",
-        "FreeRTOS Documentation",
-        "ARM Cortex-M Guides",
-        "Linux Device Drivers"
-      ]
-    },
-    {
-      title: "Wireless Communications",
-      topics: [
-        "5G NR Protocol Stack",
-        "MIMO Systems Design",
-        "OpenRAN Architecture",
-        "Network Optimization"
-      ],
-      resources: [
-        "3GPP Technical Specifications",
-        "O-RAN Alliance Documentation",
-        "Wireless Communications by Rappaport",
-        "IEEE 802 Standards"
-      ]
-    }
-  ];
-
-  const researchAreas = [
-    {
-      title: "Advanced RF Solutions",
-      papers: [
-        "Novel MIMO Antenna Configurations for 5G",
-        "RF Front-end Design Optimization",
-        "Beamforming Techniques in mmWave"
-      ]
-    },
-    {
-      title: "System Architecture",
-      papers: [
-        "Hardware Acceleration in RF Processing",
-        "Low-latency Network Design",
-        "Power-efficient RF Circuits"
-      ]
-    }
-  ];
-
-  // New state for accordion section
+    
+ // New state for accordion section
+    
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const accordionItems = [
-    {
-      title: "Smart Glasses Development",
-      details: `Delart contributed to the development and productization of various systems within today's leading smart glasses.
-       Our expertise has advanced:
-
-        • Wireless connectivity systems and RF modules for seamless communication.
-        • lectrical engineering and sensing subsystems critical to modern wearable technologies.`
-    },
-    {
-      title: "Augmented Reality (AR) Glasses",
-      details: `Our team contributed to the development of prototype AR glasses by designing and optimizing:
-        • Core systems, firmware, and hardware.
-        • Advanced algorithms for enhanced user experiences.`
-    },
-    {
-      title: "Fixed-Wireless Broadband Solutions",
-      details: `Delart has contributed to cutting-edge broadband solutions, including:
-        • Advanced mmWave technology for high-speed data delivery.
-        • Mesh network solutions optimized for dense urban environments.`
-    },
-    {
-      title: "ORAN-Based Systems",
-      details: `Our engineers have contributed to the integration, validation, and testing of ORAN-based Radio Units (RUs) by:
-        • Conducting lab trials for Massive MIMO (maMIMO) technology.
-        • Ensuring interoperability and performance optimization in next-generation networks.`
-    },
-    {
-      title: "IEEE & 3GPP Standards Contributions",
-      details: `In collaboration with our partners, Delart has significantly impacted global technology standards by:
-        • Delivering hundreds of technical contributions to IEEE 802.11 (Wi-Fi) standards.
-        • Driving key innovations within 5G standardization efforts.`
-    }
-  ];
   function toggleAccordion(index: number) {
     setActiveIndex(activeIndex === index ? null : index);
   }
@@ -164,8 +65,6 @@ export default function Home() {
   const imageShowcaseImages = [
     "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734192460527-KQC8B4BLQPKK430ZVNZP/2151039378.jpg?format=2500w",
     "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734193233782-IV7Z5XF6ZB6CICWK0TEW/89671.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734362759351-JAGLXPEECC533YS94DM4/8864%2B%25281%2529.jpg?format=2500w",
-    "https://images.squarespace-cdn.com/content/v1/673ca833f29ece2c9aeef137/1734649762646-5UG9TV8ZTEP89X30FVDH/eyeglasses-lens-reflects-fashion-modern-technology-illustration-generated-by-ai.jpg?format=2500w",
   ];
   const [currentShowcaseIndex, setCurrentShowcaseIndex] = useState(0);
 
@@ -180,13 +79,15 @@ export default function Home() {
     <main className="relative min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
       {/* Hardware-like Overlay */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-1/3 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-20 left-1/3 w-20 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-20 right-1/4 w-24 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-10 left-10 w-16 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-20 right-1/3 w-20 h-1 bg-green-500 animate-pulse" />
         <div className="absolute bottom-30 left-5 w-12 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-1/4 left-10 w-16 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-1/3 right-10 w-20 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-1/4 left-10 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute left left-10 w-16 h-1 bg-green-500 animate-pulse" />
         <div className="absolute top-1/2 left-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute bottom-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
         <div className="absolute top-1/3 right-5 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
@@ -514,26 +415,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Research Areas */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Research & Innovation</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {researchAreas.map((area, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-green-500 mb-6">{area.title}</h3>
-                <ul className="space-y-4">
-                  {area.papers.map((paper, i) => (
-                    <li key={i} className="text-gray-400 flex items-start gap-3">
-                      <Database className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                      {paper}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+              
 
         {/* CTA Section */}
         <div className="text-center">
@@ -543,63 +425,8 @@ export default function Home() {
             </Button>
         </div>
         <br />
-        {/* New Section: Pioneering the Future */}
-        <section className="py-16 px-4 bg-gray-900 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-green-400 mb-4">
-            PIONEERING THE FUTURE
-          </h2>
-          <h3 className="text-2xl md:text-3xl font-semibold text-white mb-6">
-            One Breakthrough At a Time
-          </h3>
-          <p className="max-w-3xl mx-auto text-gray-300 text-lg">
-            We bring together the brightest engineering minds to turn bold ideas into reality. With world-class expertise in systems and software, we advance the frontier of wireless technology through innovative research and development. Our mission is clear, deliver impactful solutions that push boundaries, shape industries, and drive meaningful progress.
-          </p>
-        </section>
-        <br /><br />
-        
-        {/* New Accordion Section */}
-        <section className="py-16 px-4 bg-gray-800 text-white relative">
-          <h2 className="text-4xl text-green-600 font-bold text-center mb-8">
-            Select Ideas We Helped Bring to Life
-          </h2>
-          <p className="max-w-3xl mx-auto text-center mb-12 text-lg">
-            At Delart Technologies, we take pride in collaborating with industry leaders to bring groundbreaking products and solutions to life. Here are some of the projects and innovations that our team has contributed to:
-          </p>
-          <div className="relative">
-            {accordionItems.map((item, index) => (
-              <div key={index} className="relative">
-                <button
-                  onClick={() => toggleAccordion(index)}
-                  className="flex justify-between items-center w-full p-4"
-                >
-                  <span className="font-semibold">{item.title}</span>
-                  <span className="text-green-400 text-3xl font-bold">
-                    {activeIndex === index ? '-' : '+'}
-                  </span>
-                </button>
-                {activeIndex === index && (
-                  <div className="mb-1 p-4 animate-slideDown transition-all duration-300 ease-out">
-                    <p className="whitespace-pre-wrap">{item.details}</p>
-                  </div>
-                )}
-                {index < accordionItems.length - 1 && <hr className="my-2 border-green-500" />}
-              </div>
-            ))}
-          </div>
-        </section>
-        <br />
-        
-        {/* New Image Showcase Section */}
-        <section className="py-8 px-4 text-center">
-          <div className="relative mx-auto w-full max-w-7xl h-screen rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
-            <img
-              src={imageShowcaseImages[currentShowcaseIndex]}
-              alt="Showcase"
-              className="w-full h-full object-cover transition-all duration-500"
-            />
-          </div>
-        </section>
-        <br />
+
+
       </div>
     </main>
   );
