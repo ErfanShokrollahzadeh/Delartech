@@ -304,13 +304,17 @@ export default function About() {
         <br />
 
         {/* map image Section */}
-        <div className="relative h-[650px] w-full rounded-2xl overflow-hidden">
+        <div className="mb-20 h-[650px] w-full rounded-2xl overflow-hidden">
+            <div className="top-0 z-10 w-full flex items-center justify-center py-4 space-x-4">
+            <MapPin className="w-12 h-12 text-green-500" />
+            <h2 className="text-5xl bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">Delart's Global Operations</h2>
+            </div>
           <LeafletMap />
         </div>
         <br />
 
         {/* Team Section */}
-        <div className="mb-20 bg-slate-950 p-8 rounded-lg">
+        <div className="mb-20  p-8 rounded-lg">
           <div className="flex flex-col md:flex-row items-start gap-12">
             {/* Left Side */}
             <div className="md:w-1/2">

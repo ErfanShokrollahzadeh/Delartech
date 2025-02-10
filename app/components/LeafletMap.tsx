@@ -37,7 +37,6 @@ export default function LeafletMap() {
 
   return (
     <div className="w-full h-full rounded-xl overflow-hidden border-2 border-green-500/20">
-      <h2 className="text-2xl font-bold text-center mb-4">Delart’s Global Operations</h2>
       <MapContainer
         center={mapConfig.center as L.LatLngExpression}
         zoom={mapConfig.zoom}
