@@ -289,19 +289,19 @@ export default function Careers() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Current Opportunities
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
             {filteredPositions.map((position, index) => (
               <div key={index} className="group relative rounded-2xl overflow-hidden">
-                <div className="absolute inset-0">
-                  <Image
-                    src={position.image}
-                    alt={position.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    unoptimized
-                  />
-                  <div className="absolute inset-5 bg-black/70 group-hover:bg-black/90" />
-                </div>
+              <div className="absolute inset-0">
+                <Image
+                src={position.image}
+                alt={position.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                unoptimized
+                />
+                <div className="absolute inset-0 bg-black/70 group-hover:bg-black/50" />
+              </div>
                 <div className="relative p-8">
                   <h3 className="text-2xl font-semibold text-white mb-2">{position.title}</h3>
                   <div className="flex items-center gap-2 mb-6">
@@ -334,7 +334,7 @@ export default function Careers() {
                   <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 
                                    hover:from-green-600 hover:to-green-700" asChild>
                     <Link href={`/careers/apply?position=${position.title}`}>
-                      Apply Now
+                      More Info & Apply
                     </Link>
                   </Button>
                 </div>
