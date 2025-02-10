@@ -279,6 +279,7 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <br />
 
         {/* Video Area */}
         <div className="mb-20">
@@ -288,6 +289,32 @@ export default function Home() {
           </video>
           {/* Ensure the file is located at /Users/delart/Desktop/Delartech/public/videos/v-1.mp4 */}
         </div>
+        <br />
+              
+        {/* text Areas */}
+        <div className="mb-20 bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-start gap-12">
+            {/* Left Side */}
+            <div className="md:w-1/2">
+              <h2 className="text-6xl md:text-6xl font-bold text-white">
+                Engineering, Research &<br />
+                <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">
+                  Development.
+                </span>
+              </h2>
+            </div>
+            
+            {/* Right Side */}
+            <div className="md:w-1/2">
+              <p className="text-gray-50 text-lg leading-relaxed">
+                We don’t just offer services — we partner with you to bring ideas to life.
+                Whether it’s cutting-edge hardware, software innovation, or advanced wireless systems,
+                we customize our expertise to fit your vision. Your products, our engineering — shaping the future, together.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
 
         {/* Research Areas */}
         <div className="mb-20">
