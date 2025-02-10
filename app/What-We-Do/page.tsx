@@ -315,6 +315,205 @@ export default function Home() {
           </div>
         </div>
         <br />
+              
+        {/* compare of text and image */}
+        <section className="bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Text Side (Left) */}
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">Wireless Systems Engineering</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Development of wireless technologies, including 4G/5G, Bluetooth, Wi-Fi, and implementation of mmWave and ORAN Infra.</li>
+                <li>Expertise in wireless protocols, system integration, and firmware for cellular/Wi-Fi solutions.</li>
+                <li>Architecture design and simulations for emerging technologies, such as next-generation IEEE and 3GPP standards and beamforming for satellite applications.</li>
+              </ul>
+            </div>
+            {/* Image Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <img 
+                src="/images/img-12.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </section>
+
+         <section className=" bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Image Side (Left) */}
+            <div className="md:w-1/2">
+              <img 
+                src="/images/img-13.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+            {/* Text Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">RF and Antenna Solutions</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Design of highly integrated RF modules encompassing RF SoC and Front-End components and antenna solutions.</li>
+                <li>Optimization of advanced phased-array RF solutions supporting emerging satellite and mmWave applications.</li>
+                <li>RF system-level integration and comprehensive testing and optimization for wireless coexistence and performance.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Text Side (Left) */}
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">Embedded Firmware Development</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Development of C/C++ firmware for embedded systems.</li>
+                <li>High-performance firmware optimized for commercial or custom AI silicon accelerators.</li>
+                <li>Expertise in RTOS, hardware interfaces (USB, PCIe), and driver development for Wi-Fi, Bluetooth, 5G, sensors, displays, cameras, and more.</li>
+              </ul>
+            </div>
+            {/* Image Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <img 
+                src="/images/img14.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </section>      
+        
+        <section className=" bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Image Side (Left) */}
+            <div className="md:w-1/2">
+              <img 
+                src="/images/img-15.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+            {/* Text Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">Embedded Hardware Design & Prototyping</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Hardware design, prototyping, and system-level bring-up for high-speed interfaces.</li>
+                <li>Expertise in PCB/module design, signal integrity, and power optimization.</li>
+                <li>System bring-up and optimization for complex hardware architectures.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+              
+        <section className="bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Text Side (Left) */}
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">Silicon Design and Productization</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>RTL design, verification, and emulation for custom silicon solutions.</li>
+                <li>Reference design development, including hardware, firmware, and FPGA-based systems.</li>
+                <li>Silicon-level optimization and design validation for advanced applications.</li>
+              </ul>
+            </div>
+            {/* Image Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <img 
+                src="/images/img-16.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className=" bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Image Side (Left) */}
+            <div className="md:w-1/2">
+              <img 
+                src="/images/img-17.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+            {/* Text Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">High-Performance Networking Infrastructure</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Expertise in networking technologies, protocols, edge deployments, and e2e performance optimization.</li>
+                <li>Development of robust networking systems for high-performance computing (HPC) data centers and emerging use cases.</li>
+                <li>Optimizing end-to-end audio/video quality-of-experience (QoE) for seamless delivery from data centers to mobile devices.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Text Side (Left) */}
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">Software and Machine Learning Development</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Machine learning applications, including: training custom AI models and algorithm optimization at SW and FW levels.</li>
+                <li>Development of highly scalable and high-performance software solutions tailored for real-time applications that handle billions of events at scale.</li>
+                <li>Development of scalable test automation frameworks and tools.</li>
+              </ul>
+            </div>
+            {/* Image Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <img 
+                src="/images/img-18.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </section>
+        
+        <section className=" bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Image Side (Left) */}
+            <div className="md:w-1/2">
+              <img 
+                src="/images/img-19.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+            {/* Text Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">Mechanical Engineering & Prototyping</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Packaging design and rapid prototyping services, including solutions for consumer devices, and industrial applications.</li>
+                <li>Advanced thermal modeling, simulation, and optimization.</li>
+                <li>Fabrication of enclosures and mechanical components with system-level integration.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+              
+        <section className="mb-20 bg-gray-800 p-8 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Text Side (Left) */}
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-bold text-green-400 mb-4">Technical Program Management (TPM)</h2>
+              <ul className="text-white list-disc pl-4 space-y-4">
+                <li>Provision of Technical Program Management services with a strong emphasis on technical expertise for engineering programs.</li>
+                <li>Specializing in managing complex hardware, software projects, development labs, and networking initiatives.</li>
+                <li>Ensuring seamless coordination, timely delivery, and alignment with technical objectives for complex engineering programs.</li>
+              </ul>
+            </div>
+            {/* Image Side (Right) */}
+            <div className="md:w-1/2 ml-12">
+              <img 
+                src="/images/img-20.jpg" 
+                alt="Compare Image" 
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Research Areas */}
         <div className="mb-20">
