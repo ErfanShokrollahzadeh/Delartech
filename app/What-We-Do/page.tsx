@@ -255,7 +255,7 @@ export default function Home() {
             ))}
           </div>
               </section>
-        <br /> <br />
+        <br />
 
         {/* Expertise Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
@@ -280,8 +280,14 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Technical Areas */}
-        
+        {/* Video Area */}
+        <div className="mb-20">
+          <video playsInline className="w-full max-w-7xl mx-auto rounded-xl shadow-xl" autoPlay loop muted>
+            <source src="/videos/v-1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Ensure the file is located at /Users/delart/Desktop/Delartech/public/videos/v-1.mp4 */}
+        </div>
 
         {/* Research Areas */}
         <div className="mb-20">
