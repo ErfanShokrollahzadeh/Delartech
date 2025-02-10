@@ -22,16 +22,19 @@ To install the project, follow these steps:
 ## Usage
 
 To start the development server, run the following command:
+
 ```bash
 npm run dev
 ```
 
 To build the project for production, run the following command:
+
 ```bash
 npm run build
 ```
 
 To start the production server, run the following command:
+
 ```bash
 npm start
 ```
@@ -111,3 +114,10 @@ We welcome contributions to the project. If you would like to contribute, please
 
 For any questions or suggestions, feel free to contact us at [hello@delart.com](mailto:hello@delart.com).
 
+## Additional Installation Step
+
+If you encounter issues with peer dependencies while installing `react-leaflet`, use the following command in your project root:
+
+```bash
+sudo npm install --legacy-peer-deps react-leaflet leaflet
+```

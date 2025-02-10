@@ -1,10 +1,13 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Radio, Antenna, CircuitBoard, Waves, Cpu, Network, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+// Dynamically import LeafletMap to avoid SSR issues
+const LeafletMap = dynamic(() => import("../components/LeafletMap"), { ssr: false });
 
 export default function About() {
   const images = {
@@ -301,29 +304,8 @@ export default function About() {
         <br />
 
         {/* map image Section */}
-        <div className="mb-20">
-          {/* <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
-            Delart’s Global Operations
-          </h2> */}
-          <div className="relative w-full h-[600px]  rounded-xl overflow-hidden group">
-            <Image
-              src="/images/img-10.png" // Make sure to add this image to your public/images folder
-              alt="Global Presence"
-              fill
-              className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-              priority
-            />
-            {/* Optional: Add glowing dots for office locations */}
-            {/* <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-green-500 rounded-full animate-pulse">
-              <div className="absolute -inset-1 bg-green-500/20 rounded-full animate-ping" />
-            </div>
-            <div className="absolute top-1/4 right-1/3 w-4 h-4 bg-green-500 rounded-full animate-pulse">
-              <div className="absolute -inset-1 bg-green-500/20 rounded-full animate-ping" />
-            </div>
-            <div className="absolute bottom-1/3 right-1/4 w-4 h-4 bg-green-500 rounded-full animate-pulse">
-              <div className="absolute -inset-1 bg-green-500/20 rounded-full animate-ping" />
-            </div> */}
-          </div>
+        <div className="relative h-[650px] w-full rounded-2xl overflow-hidden">
+          <LeafletMap />
         </div>
         <br />
 
