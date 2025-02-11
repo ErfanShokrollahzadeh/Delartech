@@ -34,16 +34,16 @@ export default function Careers() {
       location: "Sunnyvale, CA",
       image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900",
       requirements: [
-        "Conduct validation and testing of...",
-        "Perform hardware-level debugging...",
-        "Debug electrical systems and circuits...",
-        "Flash firmware images onto hardware..."
+        "Conduct validation and testing of embedded hardware systems.",
+        "Perform hardware-level debugging and troubleshooting to identify.",
+        "Debug electrical systems, ensuring proper operation",
+        "Work with MIPI interfaces and protocols, and I2C and SPI"
       ],
       responsibilities: [
-        "Lead RF system architecture design",
-        "Develop mmWave circuits and systems",
-        "Optimize RF front-end performance",
-        "Mentor junior RF engineers"
+        "Bachelor’s degree in Electrical Engineering or a related field.",
+        "Strong ability to debug and troubleshoot issues at both.",
+        "Create detailed test reports to document findings.",
+        "Implement basic automation scripts in LabVIEW."
       ]
     },
     {
@@ -52,16 +52,16 @@ export default function Careers() {
       location: "San Jose, CA",
       image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800",
       requirements: [
-        "PhD in RF/Microwave Engineering",
-        "Experience with beamforming systems",
-        "Knowledge of O-RAN architecture",
-        "Signal processing expertise"
+        "Wafer-level packaging, including RDL design. QFN package design.",
+        "Silicon/LTCC/TFS passives design, including IPDs.",
+        "mmWave package design, including design of mmWave components on substrate.",
+        "Understand fabrication vendor's technology/capabilities."
       ],
       responsibilities: [
-        "Design RF system architectures",
-        "Lead technical innovation",
-        "Develop RF testing strategies",
-        "Drive technology roadmap"
+        "Design, simulate and validate RF/mmWave package/IPD",
+        "Partner with fabrication vendors to manufacture",
+        "Ensure seamless integration of the RF packages into wireless systems",
+        "RF lab debug, tuning and characterization of RF/mmWave packages."
       ]
     },
     {
@@ -70,16 +70,16 @@ export default function Careers() {
       location: "Palo Alto, CA",
       image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800",
       requirements: [
-        "5+ years embedded systems experience",
-        "Expertise in RTOS and bare-metal programming",
-        "Strong C/C++ skills",
-        "Experience with RF firmware development"
+        "Perform daily system health checks and respond to on-call.",
+        "Monitor and maintain: Lab network infrastructure.",
+        "Deploy, configure, and tear down testbeds as required.",
+        "Configure basic network registration and labnet systems."
       ],
       responsibilities: [
-        "Develop RF control firmware",
-        "Optimize system performance",
-        "Implement communication protocols",
-        "Design driver architecture"
+        "Develop automation scripts and tools/dashboard for streamlining above operations",
+        "Configure basic network registration and labnet systems.",
+        "Serve as the on-site point of contact for lab and support requests.",
+        "Conduct cable, network, and inventory checks during debugging sessions."
       ]
     },
     {
@@ -101,7 +101,7 @@ export default function Careers() {
       ]
     },
     {
-      title: "PCB Layout EngineerNew",
+      title: "PCB Layout Engineer",
       type: "Remote",
       location: "China",
       image: "https://images.unsplash.com/photo-1451187863213-d1bcbaae3fa3?q=80&w=1000",
@@ -513,11 +513,6 @@ export default function Careers() {
               <p className="text-green-400 font-medium">
           Together, let's solve the challenges of tomorrow.
               </p>
-            </div>
-            <div className="pt-6">
-              <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700">
-          Apply Now
-              </Button>
             </div>
           </div>
         </div>
