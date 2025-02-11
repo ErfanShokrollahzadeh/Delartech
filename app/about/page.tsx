@@ -291,6 +291,7 @@ export default function About() {
         <br />
 
         {/* New Image Slider Section */}
+        
         <div className="mb-20">
           <div className="relative w-full h-[700px] border-2 border-green-500 rounded-lg overflow-hidden">
             <Image
