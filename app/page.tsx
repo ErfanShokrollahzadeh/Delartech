@@ -306,16 +306,35 @@ export default function Home() {
 
         {/* Research Areas */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Research & Innovation</h2>
+          <h2 className="text-3xl font-bold text-white text-center mb-4">Research & Innovation</h2>
+          <p className="text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+            Pushing boundaries through cutting-edge research and innovative solutions in RF technology and system architecture.
+          </p>
           <div className="grid md:grid-cols-2 gap-8">
             {researchAreas.map((area, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-8">
-                <h3 className="text-xl font-semibold text-green-500 mb-6">{area.title}</h3>
+              <div key={index} 
+                className="backdrop-blur-lg bg-white/5 border border-green-500/20 rounded-2xl p-8 
+                         hover:border-green-500/40 transition-all duration-300 
+                         hover:shadow-lg hover:shadow-green-500/10"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  {index === 0 ? (
+                    <Radio className="w-6 h-6 text-green-500" />
+                  ) : (
+                    <Cpu className="w-6 h-6 text-green-500" />
+                  )}
+                  <h3 className="text-xl font-semibold text-green-500">{area.title}</h3>
+                </div>
                 <ul className="space-y-4">
                   {area.papers.map((paper, i) => (
-                    <li key={i} className="text-gray-400 flex items-start gap-3">
+                    <li key={i} 
+                      className="text-gray-400 flex items-start gap-3 p-3 rounded-lg
+                               hover:bg-white/5 transition-colors duration-200"
+                    >
                       <Database className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
-                      {paper}
+                      <span className="hover:text-green-400 transition-colors duration-200">
+                        {paper}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -391,28 +410,41 @@ export default function Home() {
         <br />
 
         {/* New Text Topics Section */}
-        {/* <section className="py-20 px-4 text-white">
-          <div className="max-w-5xl mx-auto space-y-4">
-            <p className="text-2xl font-thin">Wireless Systems Engineering</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">RF and Antenna Solutions</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">Embedded Firmware Development</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">Embedded Hardware Design and Prototyping</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">Silicon Design and Productization</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">High-Performance Networking Infrastructure</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">Software and Machine Learning Development</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">Mechanical Engineering &amp; Prototyping</p>
-            <hr className="border-green-600" />
-            <p className="text-2xl font-thin">Technical Program Management (TPM)</p>
-            <hr className="border-green-600" />
+        <section className="py-20 px-4 text-white">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 text-green-400">Our Core Competencies</h2>
+            <div className="space-y-6">
+              {[
+                { text: "Wireless Systems Engineering", icon: <Radio className="w-6 h-6" /> },
+                { text: "RF and Antenna Solutions", icon: <Antenna className="w-6 h-6" /> },
+                { text: "Embedded Firmware Development", icon: <Microchip className="w-6 h-6" /> },
+                { text: "Embedded Hardware Design and Prototyping", icon: <CircuitBoard className="w-6 h-6" /> },
+                { text: "Silicon Design and Productization", icon: <Cpu className="w-6 h-6" /> },
+                { text: "High-Performance Networking Infrastructure", icon: <Network className="w-6 h-6" /> },
+                { text: "Software and Machine Learning Development", icon: <Laptop className="w-6 h-6" /> },
+                { text: "Mechanical Engineering & Prototyping", icon: <CircuitBoard className="w-6 h-6" /> },
+                { text: "Technical Program Management (TPM)", icon: <Database className="w-6 h-6" /> }
+              ].map((item, index) => (
+                <div 
+                  key={index} 
+                  className="group relative"
+                >
+                  <div className="flex items-center space-x-4 p-6 rounded-lg backdrop-blur-sm bg-white/5 border border-green-500/20 
+                               hover:border-green-500/40 transition-all duration-300 hover:bg-white/10
+                               transform hover:translate-x-2">
+                    <div className="text-green-500 transition-all duration-300 group-hover:scale-110">
+                      {item.icon}
+                    </div>
+                    <p className="text-2xl font-light tracking-wide">{item.text}</p>
+                  </div>
+                  {index < 8 && (
+                    <div className="absolute left-7 top-full h-6 w-px bg-gradient-to-b from-green-500/50 to-transparent" />
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </section> */}
+        </section>
         
       </div>
     </main>
