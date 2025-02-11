@@ -48,42 +48,42 @@ export default function About() {
       icon: <Radio className="w-8 h-8 text-green-500" />,
       bgImage: images.expertise[0],
       title: "RF System Engineering",
-      description: "Specializing in advanced RF/microwave circuit design and signal integrity analysis",
+      description: "Specializing in advanced RF/microwave circuit design and signal integrity analysis for wireless systems, radar, and satellite communications also RF system design and integration for wireless communications and radar systems.",
       tech: ["Power Amplifiers", "RF Filters", "LNAs"]
     },
     {
       icon: <Waves className="w-8 h-8 text-green-500" />,
       bgImage: images.expertise[1],
       title: "Wireless Systems",
-      description: "Expert development of MIMO systems and beamforming solutions",
+      description: "Expert development of MIMO systems and beamforming solutions for 5G and beyond wireless networks also RF system design and integration for wireless communications and radar systems. So we are expert in RF system design and integration for wireless communications and radar systems.",
       tech: ["5G NR", "MIMO", "mmWave"]
     },
     {
       icon: <CircuitBoard className="w-8 h-8 text-green-500" />,
       bgImage: images.expertise[2],
       title: "RF Circuit Design",
-      description: "Custom RF circuit solutions and impedance matching networks",
+      description: "Custom RF circuit solutions and impedance matching networks for high-frequency applications also RF system design and integration for wireless communications and radar systems.",
       tech: ["ADS", "HFSS", "AWR"]
     },
     {
       icon: <Antenna className="w-8 h-8 text-green-500" />,
       bgImage: images.expertise[3],
       title: "Antenna Arrays",
-      description: "Innovative antenna array designs and phased array systems",
+      description: "Innovative antenna array designs and phased array systems for wireless communications and radar applications also RF system design and integration for wireless communications and radar systems.",
       tech: ["Beamforming", "Array Optimization", "Antenna Theory"]
     },
     {
       icon: <Network className="w-8 h-8 text-green-500" />,
       bgImage: images.expertise[4],
       title: "Network Optimization",
-      description: "Wireless network planning and optimization for performance",
+      description: "Wireless network planning and optimization for performance and capacity improvements also RF system design and integration for wireless communications and radar systems.",
       tech: ["Network Planning", "RF Testing", "Network Analysis"]
     },
     {
       icon: <Cpu className="w-8 h-8 text-green-500" />,
       bgImage: images.expertise[5],
       title: "Firmware Development",
-      description: "Low-level firmware development for embedded systems",
+      description: "Low-level firmware development for embedded systems, with a focus on optimizing performance for wireless technologies. Also RF system design and integration for wireless communications and radar systems.",
       tech: ["Embedded C", "RTOS", "FPGA"]
     }
   ];
@@ -305,12 +305,14 @@ export default function About() {
         <br />
 
         {/* map image Section */}
-        <div className="mb-20 h-[650px] w-full rounded-2xl overflow-hidden">
-            <div className="top-0 z-10 w-full flex items-center justify-center py-4 space-x-4">
-            <MapPin className="w-12 h-12 text-green-500" />
-            <h2 className="text-5xl bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">Delart's Global Operations</h2>
+        <div className="mb-4 flex items-center justify-center space-x-4">
+          <MapPin className="w-12 h-12 text-green-500" />
+          <h2 className="text-5xl bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">Delart's Global Operations</h2>
+        </div>
+        <div className="mb-20 h-[650px] w-full rounded-2xl overflow-hidden relative">
+            <div className="h-full w-full">
+              <LeafletMap />
             </div>
-          <LeafletMap />
         </div>
         <br />
 
@@ -389,22 +391,30 @@ export default function About() {
         {/* Technologies Section */}
         <div className="relative mb-20 py-16">
           <div className="absolute inset-0">
-            <div className="absolute inset-0  rounded-lg" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80 rounded-lg" />
           </div>
           
           <div className="relative z-10">
-            <h2 className="text-3xl font-bold text-white text-center mb-8">
-              Technologies
+            <h2 className="text-5xl font-bold text-center mb-12">
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+          Core Technologies
+              </span>
             </h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
               {technologies.map((tech, index) => (
-                <span key={index} 
-                      className="px-4 py-2 rounded-full bg-black/5 border 
-                               border-green-500 text-white
-                               hover:text-green-600 hover:border-green-500/40 
-                               transition-colors">
-                  {tech}
-                </span>
+          <span key={index} 
+                className="px-6 py-3 rounded-full 
+                   bg-black/40 backdrop-blur-sm
+                   border border-green-500/20 
+                   text-green-400 font-medium
+                   hover:border-green-500 
+                   hover:bg-black/60
+                   hover:scale-110
+                   hover:shadow-lg hover:shadow-green-500/20
+                   transition-all duration-300 
+                   cursor-pointer">
+            {tech}
+          </span>
               ))}
             </div>
           </div>

@@ -36,37 +36,39 @@ export default function LeafletMap() {
   };
 
   return (
-    <div className="w-full h-full rounded-xl overflow-hidden border-2 border-green-500/20">
-      <MapContainer
-        center={mapConfig.center as L.LatLngExpression}
-        zoom={mapConfig.zoom}
-        minZoom={mapConfig.minZoom}
-        maxBounds={mapConfig.maxBounds as L.LatLngBoundsExpression}
-        maxBoundsViscosity={mapConfig.maxBoundsViscosity}
-        style={{ height: '100%', width: '100%' }}
-        className="z-0" // Ensure map stays behind other elements
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          noWrap={true}
-          className="" // Add custom styling for dark theme
-        />
-        {offices.map((office, index) => (
-          <Marker 
-            key={index} 
-            position={office.location as L.LatLngExpression}
-            icon={greenIcon}
-          >
-            <Popup className="custom-popup">
-              <div className="text-black">
-                <h3 className="font-bold">{office.name}</h3>
-                <p>{office.address}</p>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+    <div className="w-full h-full rounded-xl overflow-hidden border-2 border-green-500/20 relative">
+      {/* MapContainer with pointer-events-auto to ensure it doesn't interfere with other elements */}
+      <div className="absolute inset-0 pointer-events-auto">
+        <MapContainer
+          center={mapConfig.center as L.LatLngExpression}
+          zoom={mapConfig.zoom}
+          minZoom={mapConfig.minZoom}
+          maxBounds={mapConfig.maxBounds as L.LatLngBoundsExpression}
+          maxBoundsViscosity={mapConfig.maxBoundsViscosity}
+          style={{ height: '100%', width: '100%' }}
+          className="z-[1]" // Lower z-index than header
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            noWrap={true}
+          />
+          {offices.map((office, index) => (
+            <Marker 
+              key={index} 
+              position={office.location as L.LatLngExpression}
+              icon={greenIcon}
+            >
+              <Popup className="custom-popup">
+                <div className="text-black">
+                  <h3 className="font-bold">{office.name}</h3>
+                  <p>{office.address}</p>
+                </div>
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
     </div>
   );
 }
