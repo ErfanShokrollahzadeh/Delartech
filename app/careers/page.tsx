@@ -245,7 +245,7 @@ export default function Careers() {
           </p>
         </div>
         {/* Future Building Section */}
-        <div className="mb-32 flex flex-col md:flex-row items-center gap-8 my-10 bg-gray-800 rounded-xl p-4 sm:p-6 lg:p-8">
+        <div className="mb-32 flex flex-col md:flex-row items-center gap-8 my-10 bg-black rounded-xl p-4 sm:p-6 lg:p-8">
           {/* Left: Text */}
           <div className="w-full md:w-1/2 text-white space-y-4 sm:space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
@@ -403,46 +403,102 @@ export default function Careers() {
           </div>
         </div>
         {/* What We Offer Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">What We Offer</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-gray-300">
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <DollarSign className="w-8 h-8 text-green-500" />
-                <h3 className="text-2xl font-semibold">Competitive Compensation</h3>
+        <section className="py-20 px-4 text-white">
+          <div className="max-w-5xl mx-auto space-y-12">
+            <h2 className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-green-600">
+              What We Offer
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="group rounded-xl border border-green-500/20 backdrop-blur-sm bg-black/20 p-8 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 space-y-4">
+                <div className="flex items-center gap-4 group-hover:translate 0.5s ease-in-out">
+                  <div className="p-3 rounded-lg bg-green-500/10 group-hover:bg-green-500/20 transition-colors duration-300">
+                    <DollarSign className="w-8 h-8 text-green-500" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white">Competitive Compensation</h3>
+                </div>
+                <p className="text-gray-400 text-lg leading-relaxed">
+                  We ensure that your hard work is rewarded with competitive salaries and comprehensive benefits that recognize your expertise and contributions.
+                </p>
               </div>
-              <p>We ensure that your hard work is rewarded with competitive salaries and comprehensive benefits.</p>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Package className="w-8 h-8 text-green-500" />
-                <h3 className="text-2xl font-semibold">Comprehensive Benefits Package</h3>
+
+              <div className="group rounded-xl border border-green-500/20 backdrop-blur-sm bg-black/20 p-8 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-lg bg-green-500/10 group-hover:bg-green-500/20 transition-colors duration-300">
+                    <Package className="w-8 h-8 text-green-500" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white">Benefits Package</h3>
+                </div>
+                <ul className="text-gray-400 space-y-3 list-inside">
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Premium PPO/HMO health insurance with medical, dental, and vision coverage</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Life and disability insurance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Company-matched 401(k) plan</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Flexible Spending Account (FSA)</span>
+                  </li>
+                </ul>
               </div>
-              <ul className="list-disc list-inside">
-                <li>Low-deductible PPO and HMO health insurance plans, covering medical, dental, and vision for employees and their families</li>
-                <li>Life insurance</li>
-                <li>Short/long-term disability coverage</li>
-                <li>A company-matched 401(k) plan</li>
-                <li>Flexible Spending Account (FSA)</li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-8 h-8 text-green-500" />
-                <h3 className="text-2xl font-semibold">Generous Paid Time Off</h3>
+
+              <div className="group rounded-xl border border-green-500/20 backdrop-blur-sm bg-black/20 p-8 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10 space-y-4">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-lg bg-green-500/10 group-hover:bg-green-500/20 transition-colors duration-300">
+                    <Calendar className="w-8 h-8 text-green-500" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white">Generous Time Off</h3>
+                </div>
+                <ul className="text-gray-400 space-y-3 list-inside">
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Three weeks paid vacation</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Flexible paid time off policy</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Comprehensive sick leave</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-2 h-2 mt-2 rounded-full bg-green-500 flex-shrink-0" />
+                    <span>Company holidays</span>
+                  </li>
+                </ul>
               </div>
-              <ul className="list-disc list-inside">
-                <li>Three weeks of paid vacation to relax and recharge</li>
-                <li>Additional paid time off and sick leave</li>
-              </ul>
             </div>
           </div>
-        </div>
+        </section>
         <br />
         {/* New Text Section */}
-        <div className="text-center my-8 text-white font-light text-xl max-w-3xl mx-auto">
-          <p>Join Delart and be part of a team where innovation thrives, and your contributions drive meaningful impact.</p>
-          <p>Together, let’s solve the challenges of tomorrow.</p>
+        <div className="relative py-16 px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-transparent to-green-500/10 rounded-xl" />
+          <div className="relative text-center space-y-6">
+            <h3 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
+              Join Our Journey
+            </h3>
+            <div className="text-xl font-light tracking-wide max-w-3xl mx-auto space-y-4">
+              <p className="text-gray-200">
+          Join Delart and be part of a team where innovation thrives, and your contributions drive meaningful impact.
+              </p>
+              <p className="text-green-400 font-medium">
+          Together, let's solve the challenges of tomorrow.
+              </p>
+            </div>
+            <div className="pt-6">
+              <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700">
+          Apply Now
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </main>

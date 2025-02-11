@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { 
   Radio, Book, Cpu, Network, Database,
   CircuitBoard, Waves, Antenna, Shield, 
-  Microchip, Server, Laptop 
+  Microchip, Server, Laptop, DollarSign, Package, Calendar 
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -445,7 +445,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
       </div>
     </main>
   );
