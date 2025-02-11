@@ -46,24 +46,24 @@ export default function Careers() {
         "Implement basic automation scripts in LabVIEW."
       ]
     },
-    {
-      title: "IPD and RF Packaging Engineer",
-      type: "Full-time",
-      location: "San Jose, CA",
-      image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800",
-      requirements: [
-        "Wafer-level packaging, including RDL design. QFN package design.",
-        "Silicon/LTCC/TFS passives design, including IPDs.",
-        "mmWave package design, including design of mmWave components on substrate.",
-        "Understand fabrication vendor's technology/capabilities."
-      ],
-      responsibilities: [
-        "Design, simulate and validate RF/mmWave package/IPD",
-        "Partner with fabrication vendors to manufacture",
-        "Ensure seamless integration of the RF packages into wireless systems",
-        "RF lab debug, tuning and characterization of RF/mmWave packages."
-      ]
-    },
+    // {
+    //   title: "IPD and RF Packaging Engineer",
+    //   type: "Full-time",
+    //   location: "San Jose, CA",
+    //   image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800",
+    //   requirements: [
+    //     "Wafer-level packaging, including RDL design. QFN package design.",
+    //     "Silicon/LTCC/TFS passives design, including IPDs.",
+    //     "mmWave package design, including design of mmWave components on substrate.",
+    //     "Understand fabrication vendor's technology/capabilities."
+    //   ],
+    //   responsibilities: [
+    //     "Design, simulate and validate RF/mmWave package/IPD",
+    //     "Partner with fabrication vendors to manufacture",
+    //     "Ensure seamless integration of the RF packages into wireless systems",
+    //     "RF lab debug, tuning and characterization of RF/mmWave packages."
+    //   ]
+    // },
     {
       title: "Lab Systems and Network Engineer",
       type: "Full-time",
@@ -83,10 +83,10 @@ export default function Careers() {
       ]
     },
     {
-      title: "PCB Layout Engineer",
+      title: "PCB Layout Engineer U.S",
       type: "Remote",
       location: "United States",
-      image: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?q=80&w=1000",
+      image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=800",
       requirements: [
         "5+ years RF testing experience",
         "Expertise in VNA and spectrum analyzers",
