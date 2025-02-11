@@ -150,7 +150,7 @@ export default function Home() {
                 {topic.icon}
                 <p className="text-1xl font-light mt-2 text-center">{topic.title}</p>
                 {index < 9 && (
-                  <hr className="w-full mt-4 h-[2px] border-0 bg-gradient-to-r from-pink-700 via-green-500 to-orange-500 animate-gradient" />
+                  <hr className="w-full mt-4 h-[2px] border-0 bg-gradient-to-r from-green-600 via-green-500 to-green-400 animate-gradient" />
                 )}
               </div>
             ))}
