@@ -34,10 +34,10 @@ export default function Careers() {
       location: "Sunnyvale, CA",
       image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900",
       requirements: [
-        "10+ years RF/Microwave design experience",
-        "Expertise in 5G/6G technologies",
-        "Experience with RF simulation tools (ADS, HFSS)",
-        "Strong background in antenna design and MIMO systems"
+        "Conduct validation and testing of...",
+        "Perform hardware-level debugging...",
+        "Debug electrical systems and circuits...",
+        "Flash firmware images onto hardware..."
       ],
       responsibilities: [
         "Lead RF system architecture design",
@@ -289,58 +289,79 @@ export default function Careers() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Current Opportunities
           </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-            {filteredPositions.map((position, index) => (
-              <div key={index} className="group relative rounded-2xl overflow-hidden">
-              <div className="absolute inset-0">
-                <Image
-                src={position.image}
-                alt={position.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                unoptimized
-                />
-                <div className="absolute inset-0 bg-black/80 group-hover:bg-black/95" />
-              </div>
-                <div className="relative p-8">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{position.title}</h3>
-                  <div className="flex items-center gap-2 mb-6">
-                    <span className="text-green-400">{position.type}</span>
-                    <span className="text-gray-400">•</span>
-                    <span className="text-gray-400">{position.location}</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPositions.map((position, index) => (
+                <div key={index} className="group relative rounded-2xl overflow-hidden flex flex-col min-h-[600px]">
+                  <div className="absolute inset-0">
+                    <Image
+                      src={position.image}
+                      alt={position.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-black/80 group-hover:bg-black/95" />
                   </div>
-                  <div className="mb-6">
-                    <h4 className="text-green-400 mb-2">Requirements:</h4>
-                    <ul className="space-y-2">
-                      {position.requirements.map((req, i) => (
-                        <li key={i} className="text-gray-300 flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="relative p-6 flex flex-col h-full">
+                    {/* Header Section */}
+                    <div className="mb-4">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2 line-clamp-2">
+                        {position.title}
+                      </h3>
+                      <div className="flex flex-wrap items-center gap-2 mb-4">
+                        <span className="text-green-400 text-sm">{position.type}</span>
+                        <span className="text-gray-400">•</span>
+                        <span className="text-gray-400 text-sm">{position.location}</span>
+                      </div>
+                    </div>
+
+                    {/* Scrollable Content Section */}
+                    <div className="flex-grow overflow-y-auto custom-scrollbar">
+                      <div className="space-y-4">
+                        {/* Requirements Section */}
+                        <div>
+                          <h4 className="text-green-400 text-sm font-semibold mb-2">Requirements:</h4>
+                          <ul className="space-y-2">
+                            {position.requirements.map((req, i) => (
+                              <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
+                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5 flex-shrink-0" />
+                                <span className="line-clamp-2">{req}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Responsibilities Section */}
+                        <div>
+                          <h4 className="text-green-400 text-sm font-semibold mb-2">Responsibilities:</h4>
+                          <ul className="space-y-2">
+                            {position.responsibilities.map((resp, i) => (
+                              <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
+                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5 flex-shrink-0" />
+                                <span className="line-clamp-2">{resp}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Button Section - Fixed at Bottom */}
+                    <div className="mt-6 pt-4 border-t border-green-500/20">
+                      <Button 
+                        className="w-full bg-gradient-to-r from-green-500 to-green-600 
+                                 hover:from-green-600 hover:to-green-700 transition-all" 
+                        asChild
+                      >
+                        <Link href={`/careers/apply?position=${position.title}`}>
+                          More Info & Apply
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
-                  <div className="mb-6">
-                    <h4 className="text-green-400 mb-2">Responsibilities:</h4>
-                    <ul className="space-y-2">
-                      {position.responsibilities.map((resp, i) => (
-                        <li key={i} className="text-gray-300 flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                          {resp}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 
-                                   hover:from-green-600 hover:to-green-700" asChild>
-                    <Link href={`/careers/apply?position=${position.title}`}>
-                      More Info & Apply
-                    </Link>
-                  </Button>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
         </div>
 
         {/* Benefits */}
