@@ -21,7 +21,8 @@ export default function Contact() {
     message: "",
     phone: "",
     budget: "",
-    timeline: ""
+    timeline: "",
+    referralSource: "" // Add this line
   });
 
   const projectTypes = [
@@ -31,6 +32,16 @@ export default function Contact() {
     "RF Testing",
     "Technical Consultation",
     "Research Collaboration"
+  ];
+
+  const referralSources = [
+    "Search Engine",
+    "Social Media",
+    "Professional Referral",
+    "Conference/Event",
+    "Industry Publication",
+    "LinkedIn",
+    "Other"
   ];
 
   const contactInfo = [
@@ -49,9 +60,9 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6 text-green-500" />,
       title: "Location",
-      details: ["100 Technology Drive", "Boston, MA 02116"],
-      link: "https://maps.google.com"
-    }
+      details: ["312 Arizona Ave", "Santa Monica, CA 90401"],
+      link: "https://www.google.com/maps/place/312+Arizona+Ave,+Santa+Monica,+CA+90401,+USA/@34.0171161,-118.5021195,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cf828fe6fb:0x98334bfc7af2a7bf!8m2!3d34.0171162!4d-118.4972486!16s%2Fg%2F11c21l9g43?entry=ttu&g_ep=EgoyMDI1MDIwOS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D"
+    },
   ];
 
   const expertise = [
@@ -155,6 +166,7 @@ export default function Contact() {
                     className="bg-white/5 border-green-900/20 text-white"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -165,6 +177,7 @@ export default function Contact() {
                     className="bg-white/5 border-green-900/20 text-white"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
                   />
                 </div>
               </div>
@@ -177,6 +190,7 @@ export default function Contact() {
                     className="bg-white/5 border-green-900/20 text-white"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -186,6 +200,7 @@ export default function Contact() {
                     className="bg-white/5 border-green-900/20 text-white"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    required
                   />
                 </div>
               </div>
@@ -218,6 +233,7 @@ export default function Contact() {
                     placeholder="e.g., $50,000 - $100,000"
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -228,8 +244,29 @@ export default function Contact() {
                     placeholder="e.g., 3-6 months"
                     value={formData.timeline}
                     onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
+                    required
+
                   />
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="referralSource" className="text-white">How did you hear about us?</Label>
+                <Select
+                  value={formData.referralSource}
+                  onValueChange={(value) => setFormData({ ...formData, referralSource: value })}
+                >
+                  <SelectTrigger className="bg-white/5 border-green-900/20 text-white">
+                    <SelectValue placeholder="Select referral source" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {referralSources.map((source) => (
+                      <SelectItem key={source} value={source}>
+                        {source}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
 
               <div className="space-y-2">
@@ -240,6 +277,7 @@ export default function Contact() {
                   placeholder="Tell us about your project requirements..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
                 />
               </div>
 
@@ -303,21 +341,38 @@ export default function Contact() {
         </div>
 
         {/* Map Section */}
-        <div className="relative h-[400px] rounded-2xl overflow-hidden">
+        <div className="relative h-[500px] rounded-2xl overflow-hidden group">
           <Image
-            src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2000"
+            src="https://www.worldatlas.com/upload/7d/db/c3/shutterstock-1558058690.jpg"
             alt="Location Map"
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
             unoptimized
           />
-          <div className="absolute inset-0 bg-black/60">
-            <div className="p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Visit Our Office</h2>
-              <p className="text-gray-300">
-                Schedule a meeting to discuss your RF engineering needs in person
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+            <div className="absolute bottom-0 w-full p-8 transform transition-all duration-300 group-hover:translate-y-[-10px]">
+              <div className="flex items-center space-x-3 mb-4">
+          <MapPin className="w-6 h-6 text-green-500" />
+          <h2 className="text-3xl font-bold text-white">Visit Our Office</h2>
+              </div>
+              <p className="text-gray-300 max-w-xl">
+          Schedule a meeting to discuss your RF engineering needs in person. 
+          Our state-of-the-art facility is equipped with the latest RF testing equipment.
               </p>
+              <Button 
+          className="mt-6 bg-green-500/20 border border-green-500 hover:bg-green-500/30 text-white"
+          onClick={() => window.open('https://www.google.com/maps/place/312+Arizona+Ave,+Santa+Monica,+CA+90401,+USA/@34.0171161,-118.5021195,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2a4cf828fe6fb:0x98334bfc7af2a7bf!8m2!3d34.0171162!4d-118.4972486!16s%2Fg%2F11c21l9g43?entry=ttu&g_ep=EgoyMDI1MDIwOS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D', '_blank')}
+              >
+          <MapPin className="w-4 h-4 mr-2" />
+          Get Directions
+              </Button>
             </div>
+          </div>
+          {/* Interactive Elements */}
+          <div className="absolute top-4 right-4 flex space-x-2">
+            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+            <div className="w-3 h-3 bg-green-500/60 rounded-full animate-pulse delay-150" />
+            <div className="w-3 h-3 bg-green-500/30 rounded-full animate-pulse delay-300" />
           </div>
         </div>
       </div>
