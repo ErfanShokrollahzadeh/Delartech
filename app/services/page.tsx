@@ -172,7 +172,7 @@ export default function Services() {
 
   const advancedServices = [
     {
-      title: "RF System Design & Integration",
+      title: "RF System Design & Integration Services for 5G/6G Networks also IoT  ",
       image: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?q=80&w=1000",
       categories: [
         {
@@ -442,32 +442,32 @@ export default function Services() {
               <br />
                     
               {/* text Areas */}
-              <div className="mb-20 bg-gray-800 p-8 rounded-lg">
+                <div className="mb-20 bg-black p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-start gap-12">
                   {/* Left Side */}
                   <div className="md:w-1/2">
-                    <h2 className="text-6xl md:text-6xl font-bold text-white">
-                      Engineering, Research &<br />
-                      <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">
-                        Development.
-                      </span>
-                    </h2>
+                  <h2 className="text-6xl md:text-6xl font-bold text-white">
+                    Engineering, Research &<br />
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">
+                    Development.
+                    </span>
+                  </h2>
                   </div>
                   
                   {/* Right Side */}
                   <div className="md:w-1/2">
-                    <p className="text-gray-50 text-lg leading-relaxed">
-                      We don’t just offer services — we partner with you to bring ideas to life.
-                      Whether it’s cutting-edge hardware, software innovation, or advanced wireless systems,
-                      we customize our expertise to fit your vision. Your products, our engineering — shaping the future, together.
-                    </p>
+                  <p className="text-gray-50 text-lg leading-relaxed">
+                    We don't just offer services — we partner with you to bring ideas to life.
+                    Whether it's cutting-edge hardware, software innovation, or advanced wireless systems,
+                    we customize our expertise to fit your vision. Your products, our engineering — shaping the future, together.
+                  </p>
                   </div>
                 </div>
-              </div>
+                </div>
               <br />
                     
               {/* compare of text and image */}
-              <section className="bg-gray-800 p-8 rounded-lg">
+              <section className="backdrop-blur-sm p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Text Side (Left) */}
                   <div className="md:w-1/2">
@@ -489,7 +489,7 @@ export default function Services() {
                 </div>
               </section>
       
-               <section className=" bg-gray-800 p-8 rounded-lg">
+               <section className="backdrop-blur-sm p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Image Side (Left) */}
                   <div className="md:w-1/2">
@@ -511,7 +511,7 @@ export default function Services() {
                 </div>
               </section>
       
-              <section className="bg-gray-800 p-8 rounded-lg">
+              <section className=" backdrop-blur-sm p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Text Side (Left) */}
                   <div className="md:w-1/2">
@@ -533,7 +533,7 @@ export default function Services() {
                 </div>
               </section>      
               
-              <section className=" bg-gray-800 p-8 rounded-lg">
+              <section className=" backdrop-blur-sm p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Image Side (Left) */}
                   <div className="md:w-1/2">
@@ -555,7 +555,7 @@ export default function Services() {
                 </div>
               </section>
                     
-              <section className="bg-gray-800 p-8 rounded-lg">
+              <section className=" backdrop-blur-sm p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Text Side (Left) */}
                   <div className="md:w-1/2">
@@ -577,7 +577,7 @@ export default function Services() {
                 </div>
               </section>
       
-              <section className=" bg-gray-800 p-8 rounded-lg">
+              <section className=" backdrop-blur-sm  p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Image Side (Left) */}
                   <div className="md:w-1/2">
@@ -599,7 +599,7 @@ export default function Services() {
                 </div>
               </section>
       
-              <section className="bg-gray-800 p-8 rounded-lg">
+              <section className=" backdrop-blur-sm p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Text Side (Left) */}
                   <div className="md:w-1/2">
@@ -621,7 +621,7 @@ export default function Services() {
                 </div>
               </section>
               
-              <section className=" bg-gray-800 p-8 rounded-lg">
+              <section className=" backdrop-blur-sm  p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Image Side (Left) */}
                   <div className="md:w-1/2">
@@ -643,7 +643,7 @@ export default function Services() {
                 </div>
               </section>
                     
-              <section className="mb-20 bg-gray-800 p-8 rounded-lg">
+              <section className="mb-20 backdrop-blur-sm p-8 rounded-lg">
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   {/* Text Side (Left) */}
                   <div className="md:w-1/2">
@@ -754,12 +754,12 @@ export default function Services() {
 
         {/* Advanced Technical Services */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">
             Advanced Technical Services
           </h2>
           <div className="space-y-12">
             {advancedServices.map((service, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl overflow-hidden">
+              <div key={index} className="backdrop-blur-md bg-black border border-green-900/20 rounded-2xl overflow-hidden">
                 <div className="relative h-64">
                   <Image
                     src={service.image}
