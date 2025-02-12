@@ -239,7 +239,7 @@ export default function About() {
         <br />
 
         {/* New Section */}
-        <div className="flex flex-col  md:flex-row items-center mb-20">
+        <div className="flex flex-col backdrop-blur  md:flex-row items-center mb-20">
           <div className="md:w-1/2 p-4">
             <p className="font-mono text-2xl text-white mt-5">EMPOWERING TECHNOLOGY LEADERS</p>
             <h2 className="text-5xl md:text-7xl text-green-500 mt-2">What We Do</h2>

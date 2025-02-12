@@ -275,7 +275,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Technical Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {technicalAreas.map((area, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 rounded-2xl p-8">
+              <div key={index} className="backdrop-blur-md border-green-900 hover:border-green-500 transition-all duration-300 
+                         hover:shadow-lg hover:shadow-green-500/10  border border-green-900/20 rounded-2xl p-8">
                 <h3 className="text-xl font-semibold text-green-500 mb-6">{area.title}</h3>
                 <div className="mb-6">
                   <h4 className="text-white mb-3">Key Topics:</h4>
@@ -313,8 +314,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {researchAreas.map((area, index) => (
               <div key={index} 
-                className="backdrop-blur-lg bg-white/5 border border-green-500/20 rounded-2xl p-8 
-                         hover:border-green-500/40 transition-all duration-300 
+                className="backdrop-blur-lg bg-black border border-green-900 rounded-2xl p-8 
+                         hover:border-green-500 transition-all duration-300 
                          hover:shadow-lg hover:shadow-green-500/10"
               >
                 <div className="flex items-center gap-3 mb-6">
@@ -329,7 +330,7 @@ export default function Home() {
                   {area.papers.map((paper, i) => (
                     <li key={i} 
                       className="text-gray-400 flex items-start gap-3 p-3 rounded-lg
-                               hover:bg-white/5 transition-colors duration-200"
+                               hover:bg-gray-900/70 transition-colors duration-200"
                     >
                       <Database className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
                       <span className="hover:text-green-400 transition-colors duration-200">
@@ -366,7 +367,7 @@ export default function Home() {
         <br /><br />
         
         {/* New Accordion Section */}
-        <section className="py-16 px-4 text-white relative">
+        <section className="py-16 px-4  backdrop-blur-md text-white relative">
           <h2 className="text-4xl text-green-600 font-bold text-center mb-8">
             Select Ideas We Helped Bring to Life
           </h2>
@@ -429,7 +430,7 @@ export default function Home() {
                   key={index} 
                   className="group relative"
                 >
-                  <div className="flex items-center space-x-4 p-6 rounded-lg backdrop-blur-sm bg-white/5 border border-green-500/20 
+                  <div className="flex items-center space-x-4 p-6 rounded-lg backdrop-blur-sm border border-green-500/20 
                                hover:border-green-500/40 transition-all duration-300 hover:bg-white/10
                                transform hover:translate-x-2">
                     <div className="text-green-500 transition-all duration-300 group-hover:scale-110">
