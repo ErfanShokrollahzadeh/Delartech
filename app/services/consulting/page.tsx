@@ -131,6 +131,42 @@ export default function Consulting() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-zinc-900 via-black to-zinc-900">
+      {/* Hardware-like Overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-1/4 w-24 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute bottom-30 left-5 w-12 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-1/4 left-10 w-16 h-1 bg-green-500 animate-pulse" />
+        <div className="absolute top-1/2 left-10 w-6 h-6 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+        <div className="absolute bottom-1/2 right-10 w-8 h-8 bg-green-500 rounded-full animate-[bounce_2s_infinite]" />
+      </div>
+      {/* Background Dots */}
+      <div className="fixed inset-0 pointer-events-none">
+        {Array.from({ length: 100 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-green-100/10 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
+            }}
+          />
+        ))}
+      </div>
+      {/* Grid Background */}
+      <div className="fixed inset-0 pointer-events-none flex items-center justify-center">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute border border-green-400/10 rounded-full"
+            style={{
+              width: `${(i + 1) * 20}%`,
+              height: `${(i + 1) * 20}%`,
+            }}
+          ></div>
+        ))}
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         {/* Hero Section */}
         <div className="relative text-center mb-20">
@@ -223,7 +259,7 @@ export default function Consulting() {
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 
+              <div key={index} className="backdrop-blur-md bg-black border border-green-900 
                                         rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="mb-4">{step.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
@@ -240,7 +276,7 @@ export default function Consulting() {
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 border border-green-900/20 
+              <div key={index} className="backdrop-blur-md bg-black border border-green-900 
                                         rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
@@ -252,12 +288,12 @@ export default function Consulting() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <h2 className="text-3xl font-bold text-green-600 mb-6">Ready to Get Started?</h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Contact us to discuss how our RF engineering consulting services can help your project succeed
           </p>
-          <Button asChild className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 
-                                   hover:to-green-700 text-white px-8 py-6 text-lg">
+          <Button asChild className="bg-black text-white border border-green-500 hover:bg-green-500 
+                               hover:text-black font-bold px-8 py-6 text-lg transition-all duration-300">
             <Link href="/contact">Schedule a Consultation</Link>
           </Button>
         </div>
