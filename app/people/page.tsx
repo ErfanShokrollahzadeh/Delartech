@@ -9,7 +9,7 @@ export default function People() {
   const team = [
     {
       name: "Alireza Tarighat Mehrabani",
-      role: "FOUNDER WIRELESS SYSTEMS",
+      role: "founder Wireless Seystem",
       bio: "Wireless and RF System Engineer",
       image: "/images/img1.webp",  // Updated path to use local image
       social: {
@@ -168,19 +168,19 @@ export default function People() {
                 <p className="text-green-500 mb-4">{member.role}</p>
                 <p className="text-gray-400 mb-6">{member.bio}</p>
                 <div className="flex space-x-4">
-                  <Link href={member.social.twitter} className="text-gray-400 hover:text-white transition-colors">
+                  <Link href={member.social.twitter} className="text-gray-300 hover:text-white transition-colors">
                     <Twitter className="w-5 h-5" />
                   </Link>
-                  <Link href={member.social.linkedin} className="text-gray-400 hover:text-white transition-colors">
+                  <Link href={member.social.linkedin} className="text-gray-300 hover:text-white transition-colors">
                     <Linkedin className="w-5 h-5" />
                   </Link>
-                  <Link href={member.social.github} className="text-gray-400 hover:text-white transition-colors">
+                  <Link href={member.social.github} className="text-gray-300 hover:text-white transition-colors">
                     <Github className="w-5 h-5" />
                   </Link>
                 </div>
                 <Link 
                   href={`/people/${encodeURIComponent(member.name)}`}
-                  className="mt-4 block text-sm text-gray-500 hover:text-green-500 transition-colors">
+                  className="mt-4 block text-sm text-gray-400 hover:text-green-500 transition-colors">
                   More Info
                 </Link>
               </div>
@@ -189,11 +189,13 @@ export default function People() {
 
           {/* CTA Section */}
           <div className="text-center mt-20">
-            <h2 className="text-3xl font-bold text-white mb-4">Want to Join Our Team?</h2>
-            <p className="text-gray-400 mb-8">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-green-600 to-green-400 text-transparent bg-clip-text mb-4">Want to Join Our Team?</h2>
+            <p className="text-gray-300 mb-8">
               We're always looking for talented individuals to join our growing team.
             </p>
-            <Button asChild className="bg-green-500 hover:bg-green-600 text-white">
+            <Button asChild className="bg-black hover:bg-green-400 hover:text-black text-white 
+                           border border-green-500 
+                           hover:border-green-500/40 px-8 py-6 text-lg">
               <Link href="/careers">View Open Positions</Link>
             </Button>
           </div>

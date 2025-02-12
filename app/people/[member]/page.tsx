@@ -103,7 +103,7 @@ const MemberDetail = ({ params }: MemberProps) => {
         {/* Image Section with updated size, without rounded corners, and with green border */}
         <div className="flex items-center justify-center p-8 mt-10">
           {/* Added rounded-md class for slight border radius */}
-          <div className="relative w-96 h-96 overflow-hidden border-4 border-green-500 shadow-xl rounded-md">
+          <div className="relative w-96 h-96 overflow-hidden border-2 border-green-500 shadow-2xl rounded-md">
             <Image 
               src={member.image} 
               alt={memberName} 
