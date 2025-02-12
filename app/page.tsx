@@ -275,8 +275,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Technical Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {technicalAreas.map((area, index) => (
-              <div key={index} className="backdrop-blur-md border-green-900 hover:border-green-500 transition-all duration-300 
-                         hover:shadow-lg hover:shadow-green-500/10  border border-green-900/20 rounded-2xl p-8">
+              <div key={index} className="backdrop-blur-md  hover:border-green-500 transition-all duration-300 
+                         hover:shadow-lg hover:shadow-green-500/10  border border-white rounded-2xl p-8">
                 <h3 className="text-xl font-semibold text-green-500 mb-6">{area.title}</h3>
                 <div className="mb-6">
                   <h4 className="text-white mb-3">Key Topics:</h4>
