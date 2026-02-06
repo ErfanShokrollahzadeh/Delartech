@@ -17,6 +17,18 @@ export default function About() {
     { number: "99.9%", label: "Design Accuracy" }
   ];
 
+  // Local fallback images that exist in /public/images
+  const expertiseImages = [
+    "/images/img-15.jpg",
+    "/images/img-16.jpg",
+    "/images/img-17.jpg",
+  ];
+
+  const achievementImages = [
+    "/images/img-18.jpg",
+    "/images/img-19.jpg",
+  ];
+
   const expertise = [
     {
       icon: <Radio className="w-8 h-8 text-green-500" />,
@@ -112,7 +124,7 @@ export default function About() {
                              hover:bg-green-900/20 transition-all duration-300">
                 <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
                   <Image
-                    src={`/images/expertise-${index + 1}.jpg`}
+                    src={expertiseImages[index % expertiseImages.length]}
                     alt={item.title}
                     fill
                     className="object-cover"
@@ -143,7 +155,7 @@ export default function About() {
                              hover:bg-green-900/20 transition-all duration-300">
                 <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden">
                   <Image
-                    src={`/images/achievement-${index + 1}.jpg`}
+                    src={achievementImages[index % achievementImages.length]}
                     alt={achievement.title}
                     fill
                     className="object-cover"
