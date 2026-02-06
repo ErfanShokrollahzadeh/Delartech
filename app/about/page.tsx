@@ -463,13 +463,13 @@ export default function About() {
         </div>
 
         {/* New Section with h2 tag on the right side */}
-        <div className="flex flex-col md:flex-row items-start ml-96 mb-20">
-          <div className="md:w-1/2">
+        <div className="flex flex-col md:flex-row items-start md:justify-end gap-6 md:gap-10 mb-20 px-4 md:px-0">
+          <div className="hidden md:block md:w-1/2" aria-hidden="true">
             {/* ...optional content or leave empty... */}
           </div>
-          <div className="md:w-1/2">
-            <h2 className="text-6xl font-bold text-white">One Day</h2>
-            <h3 className="text-6xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text">at a Time.</h3>
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">One Day</h2>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-transparent bg-clip-text leading-tight">at a Time.</h3>
           </div>
         </div>
         <br /> <br />
