@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: "standalone",
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -8,7 +8,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ["images.unsplash.com", "images.squarespace-cdn.com"],
     unoptimized: true,
   },
   // Improved cache and process handling
@@ -29,7 +29,7 @@ const nextConfig = {
     // Add this to handle local images
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|svg|webp)$/i,
-      type: 'asset/resource',
+      type: "asset/resource",
     });
     return config;
   },
@@ -37,7 +37,7 @@ const nextConfig = {
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
     pagesBufferLength: 2,
-  }
+  },
 };
 
 module.exports = nextConfig;

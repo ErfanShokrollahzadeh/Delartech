@@ -39,12 +39,6 @@ Payam holds a Ph.D. and M.S. degree in Electrical Engineering from Georgia Insti
 
 He holds 20+ granted U.S. and worldwide patents.`,
   },
-  "Rajesh Rasalkar": {
-    image: "/images/image-4.jpeg",
-    info: `Rajesh is a seasoned network engineering expert with profound knowledge of access, transport, and core network technologies, down to the protocol level. His blend of research, telecom, and software expertise drives advancements in 5G cloud-native networks. He has led initiatives in network architecture design, planning models, automated tools, and technical specifications for service providers and smart cities.
-
-With leadership roles at Bell Labs, Alcatel-Lucent, Oracle, and successful startups, Rajesh brings a wealth of experience to the team. He holds a Master’s in Management Science and a Bachelor’s in Electronics Engineering, along with multiple patents and published research in Telco Cloud and Mobile Networks.`,
-  },
   "DR. Vignesh Manohar": {
     image: "/images/img-5.jpeg",
     info: `Vignesh is a highly skilled antenna engineer with expertise in all stages of antenna development, from conceptualization and simulation to fabrication and measurement. He specializes in designing cellular, Wi-Fi, and GNSS antennas for next-generation AR/VR devices and leads the development of wireless charging coils for upcoming technologies.

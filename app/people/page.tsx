@@ -41,17 +41,6 @@ export default function People() {
       }
     },
     {
-      name: "Rajesh Rasalkar",
-      role: "Technical lead",
-      bio: "Technical lead, access, transport, core networks, cloud native networks",
-      image: "/images/image-4.jpeg",
-      social: {
-        twitter: "#",
-        linkedin: "https://www.linkedin.com/in/rajesh-rasalka/",
-        github: "#"
-      }
-    },
-    {
       name: "DR. Vignesh Manohar",
       role: "CEO",
       bio: "Delart Canada",
