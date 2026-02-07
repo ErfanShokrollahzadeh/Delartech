@@ -210,9 +210,51 @@ export default function Footer() {
           </Button>
         </div>
       </div>
-      <footer className="bg-zinc-900"> {/* change from class to className */}
-        <div className="container"> {/* change from class to className */}
-          {/* ...rest of footer content... */}
+      <footer className="bg-zinc-900 border-t border-green-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-gray-300">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-semibold text-green-400">DelarTech</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Empowering businesses through innovative RF engineering, wireless systems, and embedded expertise.
+            </p>
+            <div className="flex gap-3 text-green-400">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-green-300">LinkedIn</a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-green-300">Twitter</a>
+              <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-green-300">GitHub</a>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-white">Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/services/web-development">Web Development</Link></li>
+              <li><Link href="/services/cloud-solutions">Cloud Solutions</Link></li>
+              <li><Link href="/services/consulting">Consulting</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-white">Contact</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>contact@delartech.com</li>
+              <li>+1 (555) 123-4567</li>
+              <li>San Francisco, CA</li>
+            </ul>
+          </div>
+        </div>
+        <div className="border-t border-green-900/30 py-6 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} DelarTech. All rights reserved.
         </div>
       </footer>
     </main>
