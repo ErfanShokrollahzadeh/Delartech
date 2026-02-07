@@ -2,14 +2,18 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { 
-  Radio, Antenna, CircuitBoard, 
-  Waves, Cpu, Network 
+import {
+  Radio,
+  Antenna,
+  CircuitBoard,
+  Waves,
+  Cpu,
+  Network
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function About() {
+export default function Footer() {
   const stats = [
     { number: "25+", label: "Years RF Experience" },
     { number: "150+", label: "RF Projects" },
