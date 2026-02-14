@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import "@/styles/animations.css"; // add import for animation styles
 
 export default function Home() {
@@ -169,6 +169,15 @@ export default function Home() {
   ];
   const [currentShowcaseIndex, setCurrentShowcaseIndex] = useState(0);
 
+  const dotPositions = useMemo(
+    () =>
+      Array.from({ length: 100 }, (_, index) => ({
+        left: `${(index % 10) * 10 + 5}%`,
+        top: `${Math.floor(index / 10) * 10 + 5}%`,
+      })),
+    []
+  );
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentShowcaseIndex(prev => (prev + 1) % imageShowcaseImages.length);
@@ -197,13 +206,13 @@ export default function Home() {
       </div>
       {/* Background Dots */}
       <div className="fixed inset-0 pointer-events-none">
-        {Array.from({ length: 100 }).map((_, i) => (
+        {dotPositions.map((dot, i) => (
           <div
         key={i}
         className="absolute w-1 h-1 bg-green-100/10 rounded-full"
         style={{
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`
+          left: dot.left,
+          top: dot.top
         }}
           />
         ))}
@@ -231,7 +240,7 @@ export default function Home() {
               alt="RF Engineering"
               fill
               className="object-cover opacity-20"
-              unoptimized
+              priority
             />
           </div>
           <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-green-600">
@@ -243,7 +252,7 @@ export default function Home() {
             Since our founding in 2017, we have been at the forefront of designing cutting-edge networking, telecommunications, and consumer products, while driving end-to-end project execution and creating transformative technology applications.
           </p>
           <Button className="bg-black text-white border border-green-500 font-extrabold hover:bg-green-500 hover:text-black">
-            <Link href="/about">LAERN MORE</Link>
+            <Link href="/about">LEARN MORE</Link>
           </Button>
         </div>
 
@@ -257,7 +266,6 @@ export default function Home() {
                   alt={item.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-colors" />
               </div>
@@ -378,8 +386,11 @@ export default function Home() {
             {accordionItems.map((item, index) => (
               <div key={index} className="relative">
                 <button
+                  type="button"
                   onClick={() => toggleAccordion(index)}
                   className="flex justify-between items-center w-full p-4"
+                  aria-expanded={activeIndex === index}
+                  aria-controls={`accordion-panel-${index}`}
                 >
                   <span className="font-semibold">{item.title}</span>
                   <span className="text-green-400 text-3xl font-bold">
@@ -387,7 +398,11 @@ export default function Home() {
                   </span>
                 </button>
                 {activeIndex === index && (
-                  <div className="mb-1 p-4 animate-slideDown transition-all duration-300 ease-out">
+                  <div
+                    id={`accordion-panel-${index}`}
+                    role="region"
+                    className="mb-1 p-4 animate-slideDown transition-all duration-300 ease-out"
+                  >
                     <p className="whitespace-pre-wrap">{item.details}</p>
                   </div>
                 )}
@@ -401,10 +416,12 @@ export default function Home() {
         {/* New Image Showcase Section */}
         <section className="py-8 px-4 text-center">
           <div className="relative mx-auto w-full max-w-7xl h-screen rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
-            <img
+            <Image
               src={imageShowcaseImages[currentShowcaseIndex]}
-              alt="Showcase"
-              className="w-full h-full object-cover transition-all duration-500"
+              alt="Engineering showcase"
+              fill
+              className="object-cover transition-all duration-500"
+              sizes="100vw"
             />
           </div>
         </section>

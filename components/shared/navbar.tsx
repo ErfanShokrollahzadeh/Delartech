@@ -1,12 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -27,6 +21,17 @@ export function Navbar() {
       document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -53,7 +58,7 @@ export function Navbar() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <span className="text-white text-3xl font-bold">Delart</span>
-                <div className="relative ml-2">
+                <div className="relative ml-2" aria-hidden="true">
                   {/* Shadow ball */}
                   <div className="absolute w-5 h-5 rounded-full bg-green-500 -top-2 -right-2" />
                   {/* Main ball */}
@@ -67,6 +72,8 @@ export function Navbar() {
               onClick={toggleMenu}
               className="relative w-12 h-12 rounded-full hover:bg-green-500/20 transition-all duration-300 flex items-center justify-center"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu-overlay"
             >
               <Menu 
                 className={`absolute w-6 h-6 text-white transition-all duration-300 ${
@@ -100,6 +107,10 @@ export function Navbar() {
         
         {/* Menu Content */}
         <div 
+          id="mobile-menu-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Main menu"
           className={`fixed inset-0 pointer-events-auto ${
             isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
           } transition-opacity duration-300 delay-200`}

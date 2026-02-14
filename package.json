@@ -2,7 +2,11 @@
   "name": "delartech",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17 <23"
+  },
   "scripts": {
+    "predev": "node -e \"const major=Number(process.versions.node.split('.')[0]);if(major>=23){console.warn('Warning: Node.js '+process.versions.node+' may be unstable with this Next.js version. Recommended: Node 20 LTS.')}\"",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

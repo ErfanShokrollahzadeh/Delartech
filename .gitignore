@@ -1,6 +1,7 @@
 # Next.js
 .next/
 out/
+.next-dev/
 .next-env.d.ts
 next-env.d.ts
 next-telemetry

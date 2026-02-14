@@ -4,6 +4,23 @@ Delartech is a web application built with Next.js and Tailwind CSS. It includes 
 
 ## Installation
 
+### Node.js version
+
+This project uses Next.js 13 and should run on **Node.js 20 LTS**.
+
+If you use `nvm`:
+
+```bash
+nvm use
+```
+
+or
+
+```bash
+nvm install 20
+nvm use 20
+```
+
 To install the project, follow these steps:
 
 1. Clone the repository:

@@ -218,9 +218,9 @@ export default function Footer() {
               Empowering businesses through innovative RF engineering, wireless systems, and embedded expertise.
             </p>
             <div className="flex gap-3 text-green-400">
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-green-300">LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-green-300">Twitter</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-green-300">GitHub</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn" className="hover:text-green-300">LinkedIn</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Twitter" className="hover:text-green-300">Twitter</a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub" className="hover:text-green-300">GitHub</a>
             </div>
           </div>
 
