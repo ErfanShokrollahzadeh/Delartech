@@ -415,13 +415,13 @@ export default function Home() {
         
         {/* New Image Showcase Section */}
         <section className="py-8 px-4 text-center">
-          <div className="relative mx-auto w-full max-w-7xl h-screen rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
+          <div className="relative mx-auto w-full max-w-7xl h-[280px] sm:h-[420px] md:h-[560px] lg:h-[700px] rounded-xl overflow-hidden border-2 border-green-500 shadow-lg">
             <Image
               src={imageShowcaseImages[currentShowcaseIndex]}
               alt="Engineering showcase"
               fill
               className="object-cover transition-all duration-500"
-              sizes="100vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1280px"
             />
           </div>
         </section>
