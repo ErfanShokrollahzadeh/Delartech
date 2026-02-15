@@ -6,10 +6,10 @@
     "node": ">=18.17 <23"
   },
   "scripts": {
-    "predev": "node -e \"const major=Number(process.versions.node.split('.')[0]);if(major>=23){console.warn('Warning: Node.js '+process.versions.node+' may be unstable with this Next.js version. Recommended: Node 20 LTS.')}\"",
-    "dev": "next dev",
+    "predev": "node scripts/predev.js",
+    "dev": "NODE_OPTIONS=\"--require ./scripts/normalize-process-exit.js\" next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_OPTIONS=\"--require ./scripts/normalize-process-exit.js\" next start",
     "lint": "next lint"
   },
   "dependencies": {
