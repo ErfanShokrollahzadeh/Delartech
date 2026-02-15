@@ -137,10 +137,10 @@ export default function About() {
   const [sliderIndex, setSliderIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
-      setSliderIndex(prev => (prev + 1) % images.expertise.length);
+      setSliderIndex((prev) => (prev + 1) % images.expertise_2.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, [images.expertise.length]);
+  }, [images.expertise_2.length]);
 
   // Pre-calculate dot positions using a grid pattern instead of random
   const dotPositions = Array.from({ length: 100 }, (_, i) => ({
@@ -251,13 +251,13 @@ export default function About() {
               <Link href="/contact">LEARN MORE</Link>
             </Button>
           </div>
-          <div className="md:w-1/2 relative h-80">
+          <div className="w-full md:w-1/2 relative h-[240px] sm:h-[320px] md:h-80">
             <Image
               src={images.tech}
               alt="Innovative Technology"
               fill
-              style={{ objectFit: 'cover' }}
-              className="rounded-lg"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="rounded-lg object-cover"
             />
           </div>
         </div>
@@ -265,13 +265,13 @@ export default function About() {
 
         {/* New Culture Section */}
         <div className="flex flex-col md:flex-row items-center bg-black mb-20 min-h-[600px]">
-          <div className="md:w-1/2 relative h-[600px] mr-20">
+          <div className="w-full md:w-1/2 relative h-[280px] sm:h-[420px] md:h-[600px] md:mr-20">
             <Image
               src={images.culture}
               alt="Our Culture"
               fill
-              style={{ objectFit: 'cover' }}
-              className="rounded-lg"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="rounded-lg object-cover"
             />
           </div>
           <div className="md:w-1/2 p-4">
@@ -293,11 +293,12 @@ export default function About() {
         {/* New Image Slider Section */}
         
         <div className="mb-20">
-          <div className="relative w-full h-[700px] border-2 border-green-500 rounded-lg overflow-hidden">
+          <div className="relative w-full h-[260px] sm:h-[380px] md:h-[520px] lg:h-[700px] border-2 border-green-500 rounded-lg overflow-hidden">
             <Image
               src={images.expertise_2[sliderIndex % images.expertise_2.length]}
               alt={`Slider Image ${sliderIndex + 1}`}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
               className="object-cover transition-opacity duration-500"
             />
           </div>
